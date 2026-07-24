@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="contact-hero.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- CONTACT HERO SECTION -->
+    <!-- ========================= -->
+
+    <section class="contactHero">
+
+        <!-- Background Video -->
+
+        <video autoplay
+            muted
+            loop
+            playsinline
+            class="contactHero-video">
+
+            <source src="./istockphoto-2150392663-640_adpp_is.mp4"
+                type="video/mp4">
+
+        </video>
+
+        <!-- Dark Overlay -->
+
+        <div class="contactHero-overlay"></div>
+
+        <!-- Animated Shapes -->
+
+        <div class="contactHero-circle circle1"></div>
+        <div class="contactHero-circle circle2"></div>
+
+        <!-- Hero Content -->
+
+        <div class="contactHero-container">
+
+            <div class="contactGlass">
+
+                <span class="contactTag">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    We Are Here To Help
+
+                </span>
+
+                <h1>
+
+                    Contact Our
+
+                    <span>Experts</span>
+
+                </h1>
+
+                <p>
+
+                    Whether you need consulting, digital transformation,
+                    software development, or enterprise solutions,
+                    our experienced professionals are ready to support
+                    your business growth.
+
+                </p>
+
+                <!-- Breadcrumb -->
+
+                <div class="contactBread">
+
+                    <a href="index.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Home
+
+                    </a>
+
+                    <span>
+
+                        <i class="fa-solid fa-angle-right"></i>
+
+                    </span>
+
+                    <strong>
+
+                        Contact
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <style>
+        /* ==========================
+GLOBAL
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#fff;
+overflow-x:hidden;
+
+}
+
+/* ==========================
+HERO
+========================== */
+
+.contactHero{
+
+position:relative;
+height:100vh;
+width:100%;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+/* ==========================
+VIDEO
+========================== */
+
+.contactHero-video{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-3;
+
+}
+
+/* ==========================
+OVERLAY
+========================== */
+
+.contactHero-overlay{
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(rgba(0,0,0,.55),
+rgba(0,0,0,.65));
+
+z-index:-2;
+
+}
+
+/* ==========================
+GLASS BOX
+========================== */
+
+.contactHero-container{
+
+width:90%;
+max-width:1200px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.contactGlass{
+
+width:700px;
+
+padding:55px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:
+
+0 10px 45px rgba(0,0,0,.35);
+
+animation:fadeUp 1.2s;
+
+}
+
+/* ==========================
+TAG
+========================== */
+
+.contactTag{
+
+display:inline-flex;
+align-items:center;
+gap:12px;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.18);
+
+color:#fff;
+
+font-size:.95rem;
+
+margin-bottom:30px;
+
+}
+
+.contactTag i{
+
+color:#43e97b;
+
+}
+
+/* ==========================
+TITLE
+========================== */
+
+.contactGlass h1{
+
+font-size:4rem;
+font-weight:700;
+color:#fff;
+line-height:1.2;
+margin-bottom:20px;
+
+}
+
+.contactGlass h1 span{
+
+color:#42f5d7;
+
+}
+
+/* ==========================
+TEXT
+========================== */
+
+.contactGlass p{
+
+color:#f2f2f2;
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:40px;
+
+}
+
+/* ==========================
+BREADCRUMB
+========================== */
+
+.contactBread{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.contactBread a{
+
+text-decoration:none;
+
+color:#fff;
+
+font-weight:500;
+
+transition:.4s;
+
+}
+
+.contactBread a:hover{
+
+color:#42f5d7;
+
+}
+
+.contactBread strong{
+
+color:#42f5d7;
+
+font-weight:600;
+
+}
+
+.contactBread span{
+
+color:#fff;
+
+}
+
+/* ==========================
+ANIMATED CIRCLES
+========================== */
+
+.contactHero-circle{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(15px);
+
+opacity:.35;
+
+animation:float 10s linear infinite;
+
+}
+
+.circle1{
+
+height:260px;
+width:260px;
+
+background:#00d2ff;
+
+top:10%;
+left:5%;
+
+}
+
+.circle2{
+
+height:340px;
+width:340px;
+
+background:#43e97b;
+
+right:4%;
+bottom:10%;
+
+animation-delay:3s;
+
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-35px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ==========================
+LAPTOP
+========================== */
+
+@media(max-width:1200px){
+
+.contactGlass{
+
+width:650px;
+
+padding:50px;
+
+}
+
+.contactGlass h1{
+
+font-size:3.4rem;
+
+}
+
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media(max-width:992px){
+
+.contactHero{
+
+height:85vh;
+
+}
+
+.contactGlass{
+
+width:100%;
+
+padding:45px;
+
+}
+
+.contactGlass h1{
+
+font-size:3rem;
+
+}
+
+.contactGlass p{
+
+font-size:17px;
+
+}
+
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.contactHero{
+
+height:80vh;
+
+}
+
+.contactGlass{
+
+padding:35px 25px;
+
+border-radius:22px;
+
+}
+
+.contactTag{
+
+font-size:.85rem;
+
+padding:10px 18px;
+
+}
+
+.contactGlass h1{
+
+font-size:2.4rem;
+
+}
+
+.contactGlass p{
+
+font-size:15px;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+}
+
+.contactBread{
+
+font-size:15px;
+
+gap:8px;
+
+}
+
+.circle1{
+
+width:180px;
+height:180px;
+
+}
+
+.circle2{
+
+width:220px;
+height:220px;
+
+}
+
+}
+
+/* ==========================
+SMALL MOBILE
+========================== */
+
+@media(max-width:480px){
+
+.contactHero{
+
+height:72vh;
+
+}
+
+.contactGlass{
+
+padding:25px 18px;
+
+}
+
+.contactGlass h1{
+
+font-size:2rem;
+
+}
+
+.contactGlass p{
+
+font-size:14px;
+
+}
+
+.contactTag{
+
+font-size:13px;
+
+}
+
+.contactBread{
+
+font-size:14px;
+
+}
+
+}
+    </style>
+
+
+<!-- ========================================================= -->
+<!-- CONTACT SECTION START -->
+<!-- ========================================================= -->
+
+<section class="bs-contact-section">
+
+    <div class="bs-contact-wrapper">
+
+        <!-- ======================================= -->
+        <!-- LEFT SIDE : CONTACT FORM -->
+        <!-- ======================================= -->
+
+        <div class="bs-contact-left">
+
+            <div class="bs-contact-glass">
+
+                <span class="bs-contact-small-title">
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Get In Touch
+
+                </span>
+
+                <h2 class="bs-contact-heading">
+
+                    Let's Build Something
+                    <span>Great Together</span>
+
+                </h2>
+
+                <p class="bs-contact-description">
+
+                    Have a question or need professional business solutions?
+                    Fill out the form below and our experts will get back to
+                    you as soon as possible.
+
+                </p>
+
+                <!-- Success / Error Popup -->
+
+                <div id="bsFormPopup"
+                    class="bs-form-popup">
+
+                </div>
+
+                <!-- FORM -->
+
+                <form id="bsContactForm"
+                    class="bs-contact-form"
+                    novalidate>
+
+                    <!-- ================= -->
+                    <!-- NAME -->
+                    <!-- ================= -->
+
+                    <div class="bs-input-group">
+
+                        <label>
+
+                            Full Name
+
+                        </label>
+
+                        <div class="bs-input-box">
+
+                            <i class="fas fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="bsName"
+                                placeholder="Enter your full name">
+
+                        </div>
+
+                        <small
+                            id="bsNameError"
+                            class="bs-error-text">
+
+                        </small>
+
+                    </div>
+
+                    <!-- ================= -->
+                    <!-- EMAIL -->
+                    <!-- ================= -->
+
+                    <div class="bs-input-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <div class="bs-input-box">
+
+                            <i class="fas fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="bsEmail"
+                                placeholder="example@email.com">
+
+                        </div>
+
+                        <small
+                            id="bsEmailError"
+                            class="bs-error-text">
+
+                        </small>
+
+                    </div>
+
+                    <!-- ================= -->
+                    <!-- PHONE -->
+                    <!-- ================= -->
+
+                    <div class="bs-input-group">
+
+                        <label>
+
+                            Phone Number
+
+                        </label>
+
+                        <div class="bs-input-box">
+
+                            <i class="fas fa-phone-alt"></i>
+
+                            <input
+                                type="tel"
+                                id="bsPhone"
+                                placeholder="+91 9876543210">
+
+                        </div>
+
+                        <small
+                            id="bsPhoneError"
+                            class="bs-error-text">
+
+                        </small>
+
+                    </div>
+
+                    <!-- ================= -->
+                    <!-- COMPANY -->
+                    <!-- ================= -->
+
+                    <div class="bs-input-group">
+
+                        <label>
+
+                            Company Name
+
+                        </label>
+
+                        <div class="bs-input-box">
+
+                            <i class="fas fa-building"></i>
+
+                            <input
+                                type="text"
+                                id="bsCompany"
+                                placeholder="Company Name">
+
+                        </div>
+
+                        <small
+                            id="bsCompanyError"
+                            class="bs-error-text">
+
+                        </small>
+
+                    </div>
+
+                    <!-- ================= -->
+                    <!-- SERVICE -->
+                    <!-- ================= -->
+
+                    <div class="bs-input-group">
+
+                        <label>
+
+                            Service Type
+
+                        </label>
+
+                        <div class="bs-input-box">
+
+                            <i class="fas fa-briefcase"></i>
+
+                            <select id="bsService">
+
+                                <option value="">
+                                    Select Service
+                                </option>
+
+                                <option>
+                                    Business Consulting
+                                </option>
+
+                                <option>
+                                    Software Development
+                                </option>
+
+                                <option>
+                                    Cloud Solutions
+                                </option>
+
+                                <option>
+                                    Digital Transformation
+                                </option>
+
+                                <option>
+                                    IT Support
+                                </option>
+
+                                <option>
+                                    Web Development
+                                </option>
+
+                                <option>
+                                    Mobile App Development
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <small
+                            id="bsServiceError"
+                            class="bs-error-text">
+
+                        </small>
+
+                    </div>
+
+                    <!-- ================= -->
+                    <!-- COMMENTS -->
+                    <!-- ================= -->
+
+                    <div class="bs-input-group">
+
+                        <label>
+
+                            Comments
+
+                        </label>
+
+                        <div class="bs-input-box textarea-box">
+
+                            <i class="fas fa-comment-dots"></i>
+
+                            <textarea
+                                id="bsComments"
+                                rows="5"
+                                placeholder="Write your message here..."></textarea>
+
+                        </div>
+
+                        <small
+                            id="bsCommentsError"
+                            class="bs-error-text">
+
+                        </small>
+
+                    </div>
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="bs-contact-btn">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================= -->
+        <!-- RIGHT SIDE -->
+        <!-- COMPANY DETAILS -->
+        <!-- ======================================= -->
+
+        <div class="bs-contact-right">
+
+            <div class="bs-company-card">
+
+                <span class="bs-company-tag">
+
+                    Contact Information
+
+                </span>
+
+                <h2>
+
+                    Business Solutions
+
+                </h2>
+
+                <p>
+
+                    We'd love to hear from you.
+                    Reach out using the information below.
+
+                </p>
+
+                <!-- COMPANY NAME -->
+
+                <div class="bs-info-item">
+
+                    <div class="bs-icon">
+
+                        <i class="fas fa-building"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+
+                            Company
+
+                        </h4>
+
+                        <p>
+
+                            Business Solutions Pvt Ltd
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="bs-info-item">
+
+                    <div class="bs-icon">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+
+                            Email
+
+                        </h4>
+
+                        <p>
+
+                            contact@businesssolutions.com
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- PHONE -->
+
+                <div class="bs-info-item">
+
+                    <div class="bs-icon">
+
+                        <i class="fas fa-phone-alt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+
+                            Phone
+
+                        </h4>
+
+                        <p>
+
+                            +91 98765 43210
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- OFFICE HOURS -->
+
+                <div class="bs-info-item">
+
+                    <div class="bs-icon">
+
+                        <i class="fas fa-clock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+
+                            Office Hours
+
+                        </h4>
+
+                        <p>
+
+                            Monday - Friday
+
+                            <br>
+
+                            9:00 AM - 6:00 PM
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ADDRESS -->
+
+                <div class="bs-info-item">
+
+                    <div class="bs-icon">
+
+                        <i class="fas fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+
+                            Office Address
+
+                        </h4>
+
+                        <p>
+
+                            Business Park,<br>
+
+                            Chennai,<br>
+
+                            Tamil Nadu - 600001
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SOCIAL ICONS -->
+
+                <div class="bs-social-icons">
+
+                    <a href="#">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- CONTACT SECTION END -->
+<!-- ========================================================= -->
+<!-- ========================================================= -->
+<!-- OFFICE LOCATION SECTION START -->
+<!-- ========================================================= -->
+
+<section class="bs-office-section">
+
+    <div class="bs-office-container">
+
+        <!-- Section Heading -->
+
+        <div class="bs-office-header">
+
+            <span class="bs-office-subtitle">
+
+                <i class="fas fa-map-marker-alt"></i>
+
+                Visit Our Office
+
+            </span>
+
+            <h2>
+
+                Find Us On The Map
+
+            </h2>
+
+            <p>
+
+                We welcome clients, partners, and visitors to our office.
+                Feel free to schedule a meeting and visit us during
+                business hours.
+
+            </p>
+
+        </div>
+
+        <!-- Office Cards -->
+
+        
+        </div>
+
+        <!-- Map Container -->
+
+        <div class="bs-map-wrapper">
+
+            <iframe
+                class="bs-google-map"
+                src="https://www.google.com/maps?q=Salem,Tamilnadu&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- OFFICE LOCATION SECTION END -->
+<!-- ========================================================= -->
+
+<style>
+    /* ==========================================================
+   CONTACT SECTION - PART 3A.1
+   Global + Contact Form
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f8fc;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/*==========================================================
+CONTACT SECTION
+==========================================================*/
+
+.bs-contact-section{
+
+width:100%;
+
+padding:90px 6%;
+
+position:relative;
+
+background:
+linear-gradient(
+rgba(8,32,50,.82),
+rgba(8,32,50,.82)),
+url("./corp1.webp");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+}
+.bs-contact-wrapper{
+
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+
+    gap:45px;
+    align-items:flex-start;
+
+}
+
+/*==========================================================
+LEFT SIDE
+==========================================================*/
+
+.bs-contact-left{
+
+    width:100%;
+
+}
+
+.bs-contact-glass{
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+TOP TITLE
+==========================================================*/
+
+.bs-contact-small-title{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#e9f8ff;
+
+    color:#0089d0;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.bs-contact-small-title i{
+
+    color:#00b894;
+
+}
+
+.bs-contact-heading{
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    color:#082032;
+
+    margin-bottom:18px;
+
+    line-height:1.25;
+
+}
+
+.bs-contact-heading span{
+
+    color:#00b894;
+
+}
+
+.bs-contact-description{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+/*==========================================================
+POPUP
+==========================================================*/
+
+.bs-form-popup{
+
+    display:none;
+
+    margin-bottom:25px;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    animation:fadePopup .4s ease;
+
+}
+
+.bs-popup-success{
+
+    display:block;
+
+    color:#fff;
+
+    background:#00b894;
+
+}
+
+.bs-popup-error{
+
+    display:block;
+
+    color:#fff;
+
+    background:#e74c3c;
+
+}
+
+@keyframes fadePopup{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==========================================================
+FORM
+==========================================================*/
+
+.bs-contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+/*==========================================================
+INPUT GROUP
+==========================================================*/
+
+.bs-input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.bs-input-group label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+}
+
+/*==========================================================
+INPUT BOX
+==========================================================*/
+
+.bs-input-box{
+
+    position:relative;
+
+}
+
+.bs-input-box i{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#00b894;
+
+    font-size:18px;
+
+    z-index:2;
+
+}
+
+/*==========================================================
+INPUT
+==========================================================*/
+
+.bs-input-box input,
+
+.bs-input-box select{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#ffffff;
+
+    padding-left:55px;
+
+    padding-right:18px;
+
+    font-size:15px;
+
+    color:#333;
+
+    border:1px solid #dde5ef;
+
+    transition:.35s;
+
+}
+
+.bs-input-box input:focus,
+
+.bs-input-box select:focus{
+
+    border-color:#00b894;
+
+    box-shadow:
+    0 0 0 4px rgba(0,184,148,.12);
+
+}
+
+/*==========================================================
+TEXTAREA
+==========================================================*/
+
+.textarea-box{
+
+    position:relative;
+
+}
+
+.textarea-box i{
+
+    top:28px;
+
+}
+
+.textarea-box textarea{
+
+    width:100%;
+
+    min-height:160px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    border:1px solid #dde5ef;
+
+    padding:22px 18px 18px 55px;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.textarea-box textarea:focus{
+
+    border-color:#00b894;
+
+    box-shadow:
+    0 0 0 4px rgba(0,184,148,.12);
+
+}
+
+/*==========================================================
+ERROR TEXT
+==========================================================*/
+
+.bs-error-text{
+
+    font-size:13px;
+
+    color:#e74c3c;
+
+    margin-top:7px;
+
+    min-height:18px;
+
+    font-weight:500;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.bs-contact-btn{
+
+    margin-top:12px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    height:60px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(135deg,#0099ff,#00c896);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.bs-contact-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(0,153,255,.25);
+
+}
+
+.bs-contact-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/*==========================================================
+RIGHT SIDE
+COMPANY DETAILS
+==========================================================*/
+
+.bs-contact-right{
+    width:100%;
+}
+
+.bs-company-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:28px;
+
+    padding:45px 35px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+.bs-company-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+    right:-120px;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    background:rgba(0,184,148,.08);
+
+}
+
+.bs-company-tag{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:#eafcff;
+
+    color:#0099ff;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.bs-company-card h2{
+
+    font-size:2rem;
+
+    color:#082032;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.bs-company-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+}
+
+/*==========================================================
+CONTACT INFO ITEMS
+==========================================================*/
+
+.bs-info-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:22px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#ffffff;
+
+    transition:.35s;
+
+    border:1px solid #edf1f6;
+
+}
+
+.bs-info-item:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 12px 30px rgba(0,153,255,.12);
+
+}
+
+.bs-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#0099ff,#00c896);
+
+    color:#fff;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.bs-info-item h4{
+
+    color:#082032;
+
+    margin-bottom:6px;
+
+    font-size:17px;
+
+}
+
+.bs-info-item p{
+
+    margin:0;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+/*==========================================================
+SOCIAL ICONS
+==========================================================*/
+
+.bs-social-icons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.bs-social-icons a{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#0099ff,#00c896);
+
+    transition:.35s;
+
+    font-size:18px;
+
+}
+
+.bs-social-icons a:hover{
+
+    transform:translateY(-6px) rotate(360deg);
+
+    box-shadow:
+    0 10px 25px rgba(0,153,255,.30);
+
+}
+
+/*==========================================================
+OFFICE LOCATION
+==========================================================*/
+
+.bs-office-section{
+
+width:100%;
+
+padding:90px 6%;
+
+background:
+
+linear-gradient(
+rgba(245,249,255,.92),
+rgba(245,249,255,.92)),
+
+url("./corp1.webp");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+}
+.bs-office-container{
+
+    max-width:1350px;
+
+    margin:auto;
+
+}
+
+.bs-office-header{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+.bs-office-subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:#eafcff;
+
+    color:#0099ff;
+
+    font-weight:600;
+
+}
+
+.bs-office-header h2{
+
+    margin-top:20px;
+
+    font-size:2.7rem;
+
+    color:#082032;
+
+    margin-bottom:15px;
+
+}
+
+.bs-office-header p{
+
+    color:#666;
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+OFFICE CARDS
+==========================================================*/
+
+.bs-office-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-bottom:50px;
+
+}
+
+.bs-office-card{
+
+    background:rgba(255,255,255,.70);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.06);
+
+}
+
+.bs-office-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 45px rgba(0,153,255,.12);
+
+}
+
+.bs-office-icon{
+
+    width:75px;
+    height:75px;
+
+    margin:auto auto 22px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#0099ff,#00c896);
+
+    color:#fff;
+
+    font-size:28px;
+
+}
+
+.bs-office-card h3{
+
+    color:#082032;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.bs-office-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+GOOGLE MAP
+==========================================================*/
+
+.bs-map-wrapper{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:#fff;
+
+    padding:10px;
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.bs-google-map{
+
+    width:100%;
+
+    height:500px;
+
+    border:none;
+
+    border-radius:20px;
+
+}
+
+/*==========================================================
+SCROLL ANIMATION
+==========================================================*/
+
+.bs-contact-left,
+.bs-contact-right,
+.bs-office-card,
+.bs-map-wrapper{
+
+    animation:bsFadeUp .8s ease both;
+
+}
+
+@keyframes bsFadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+FLOATING DECORATION
+==========================================================*/
+
+.bs-company-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-70px;
+    bottom:-70px;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    background:rgba(0,153,255,.06);
+
+}
+/*==========================================================
+RESPONSIVE CSS
+PART 3B
+==========================================================*/
+
+/*==========================================================
+Large Desktop
+==========================================================*/
+
+@media (max-width:1400px){
+
+.bs-contact-wrapper{
+
+max-width:1200px;
+
+gap:35px;
+
+}
+
+.bs-contact-heading{
+
+font-size:2.4rem;
+
+}
+
+}
+
+/*==========================================================
+Laptop
+==========================================================*/
+
+@media (max-width:1200px){
+
+.bs-contact-section{
+
+padding:80px 5%;
+
+}
+
+.bs-office-section{
+
+padding:80px 5%;
+
+}
+
+.bs-contact-wrapper{
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+.bs-contact-glass{
+
+padding:40px;
+
+}
+
+.bs-company-card{
+
+padding:40px 30px;
+
+}
+
+.bs-contact-heading{
+
+font-size:2.2rem;
+
+}
+
+.bs-office-header h2{
+
+font-size:2.4rem;
+
+}
+
+.bs-office-cards{
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+.bs-google-map{
+
+height:450px;
+
+}
+
+}
+
+/*==========================================================
+Tablet
+==========================================================*/
+
+@media (max-width:992px){
+
+.bs-contact-wrapper{
+
+grid-template-columns:1fr;
+
+gap:35px;
+
+}
+
+.bs-contact-left{
+
+order:1;
+
+}
+
+.bs-contact-right{
+
+order:2;
+
+}
+
+.bs-office-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.bs-contact-heading{
+
+font-size:2rem;
+
+}
+
+.bs-office-header h2{
+
+font-size:2.2rem;
+
+}
+
+.bs-google-map{
+
+height:420px;
+
+}
+
+}
+
+/*==========================================================
+Large Mobile
+==========================================================*/
+
+@media (max-width:768px){
+
+.bs-contact-section{
+
+padding:60px 20px;
+
+}
+
+.bs-office-section{
+
+padding:60px 20px;
+
+}
+
+.bs-contact-glass{
+
+padding:30px 22px;
+
+border-radius:20px;
+
+}
+
+.bs-company-card{
+
+padding:30px 22px;
+
+border-radius:20px;
+
+}
+
+.bs-contact-small-title{
+
+font-size:.82rem;
+
+padding:8px 16px;
+
+}
+
+.bs-company-tag{
+
+font-size:.82rem;
+
+padding:8px 16px;
+
+}
+
+.bs-contact-heading{
+
+font-size:1.8rem;
+
+line-height:1.35;
+
+}
+
+.bs-contact-description{
+
+font-size:15px;
+
+}
+
+.bs-input-box input,
+
+.bs-input-box select{
+
+height:54px;
+
+font-size:14px;
+
+padding-left:50px;
+
+}
+
+.textarea-box textarea{
+
+min-height:140px;
+
+font-size:14px;
+
+padding-left:50px;
+
+}
+
+.bs-contact-btn{
+
+height:55px;
+
+font-size:15px;
+
+}
+
+.bs-info-item{
+
+padding:15px;
+
+gap:14px;
+
+}
+
+.bs-icon{
+
+width:50px;
+
+height:50px;
+
+font-size:20px;
+
+}
+
+.bs-office-header{
+
+margin-bottom:40px;
+
+}
+
+.bs-office-header h2{
+
+font-size:1.9rem;
+
+}
+
+.bs-office-cards{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.bs-office-card{
+
+padding:28px;
+
+}
+
+.bs-office-icon{
+
+width:65px;
+
+height:65px;
+
+font-size:24px;
+
+}
+
+.bs-google-map{
+
+height:350px;
+
+border-radius:15px;
+
+}
+
+.bs-map-wrapper{
+
+padding:8px;
+
+border-radius:18px;
+
+}
+
+}
+
+/*==========================================================
+Mobile
+==========================================================*/
+
+@media (max-width:576px){
+
+.bs-contact-section{
+
+padding:50px 15px;
+
+}
+
+.bs-office-section{
+
+padding:50px 15px;
+
+}
+
+.bs-contact-glass{
+
+padding:25px 18px;
+
+}
+
+.bs-company-card{
+
+padding:25px 18px;
+
+}
+
+.bs-contact-heading{
+
+font-size:1.6rem;
+
+}
+
+.bs-contact-description{
+
+font-size:14px;
+
+line-height:1.8;
+
+}
+
+.bs-input-group label{
+
+font-size:14px;
+
+}
+
+.bs-input-box input,
+
+.bs-input-box select{
+
+height:50px;
+
+font-size:14px;
+
+}
+
+.textarea-box textarea{
+
+min-height:120px;
+
+}
+
+.bs-contact-btn{
+
+height:50px;
+
+font-size:14px;
+
+}
+
+.bs-info-item{
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.bs-icon{
+
+margin-bottom:10px;
+
+}
+
+.bs-social-icons{
+
+justify-content:center;
+
+}
+
+.bs-social-icons a{
+
+width:42px;
+
+height:42px;
+
+font-size:16px;
+
+}
+
+.bs-office-header h2{
+
+font-size:1.6rem;
+
+}
+
+.bs-office-header p{
+
+font-size:14px;
+
+}
+
+.bs-office-card{
+
+padding:24px 18px;
+
+}
+
+.bs-office-card h3{
+
+font-size:18px;
+
+}
+
+.bs-office-card p{
+
+font-size:14px;
+
+}
+
+.bs-google-map{
+
+height:300px;
+
+}
+
+}
+
+/*==========================================================
+Small Mobile
+==========================================================*/
+
+@media (max-width:380px){
+
+.bs-contact-heading{
+
+font-size:1.45rem;
+
+}
+
+.bs-contact-description{
+
+font-size:13px;
+
+}
+
+.bs-input-box input,
+
+.bs-input-box select{
+
+padding-left:45px;
+
+font-size:13px;
+
+}
+
+.textarea-box textarea{
+
+padding-left:45px;
+
+font-size:13px;
+
+}
+
+.bs-input-box i{
+
+left:14px;
+
+font-size:16px;
+
+}
+
+.bs-contact-btn{
+
+font-size:13px;
+
+}
+
+.bs-office-header h2{
+
+font-size:1.45rem;
+
+}
+
+.bs-google-map{
+
+height:260px;
+
+}
+
+}
+
+/*==========================================================
+Landscape Phones
+==========================================================*/
+
+@media (max-height:600px) and (orientation:landscape){
+
+.bs-contact-section{
+
+padding:40px 20px;
+
+}
+
+.bs-office-section{
+
+padding:40px 20px;
+
+}
+
+.bs-google-map{
+
+height:250px;
+
+}
+
+}
+
+</style>
+
+<Script>
+    /*==========================================================
+CONTACT FORM VALIDATION
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const form = document.getElementById("bsContactForm");
+
+if (!form) return;
+
+const popup = document.getElementById("bsFormPopup");
+
+const name = document.getElementById("bsName");
+const email = document.getElementById("bsEmail");
+const phone = document.getElementById("bsPhone");
+const company = document.getElementById("bsCompany");
+const service = document.getElementById("bsService");
+const comments = document.getElementById("bsComments");
+
+const nameError = document.getElementById("bsNameError");
+const emailError = document.getElementById("bsEmailError");
+const phoneError = document.getElementById("bsPhoneError");
+const companyError = document.getElementById("bsCompanyError");
+const serviceError = document.getElementById("bsServiceError");
+const commentsError = document.getElementById("bsCommentsError");
+
+/*=============================
+CLEAR ERRORS
+=============================*/
+
+function clearErrors() {
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    companyError.textContent = "";
+    serviceError.textContent = "";
+    commentsError.textContent = "";
+
+}
+
+/*=============================
+SHOW POPUP
+=============================*/
+
+function showPopup(message, success) {
+
+    popup.textContent = message;
+
+    popup.classList.remove(
+        "bs-popup-success",
+        "bs-popup-error"
+    );
+
+    if (success) {
+
+        popup.classList.add("bs-popup-success");
+
+    } else {
+
+        popup.classList.add("bs-popup-error");
+
+    }
+
+    popup.style.display = "block";
+
+}
+
+/*=============================
+EMAIL REGEX
+=============================*/
+
+const emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/*=============================
+PHONE REGEX
+=============================*/
+
+const phonePattern =
+    /^[6-9]\d{9}$/;
+
+/*=============================
+SUBMIT
+=============================*/
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    clearErrors();
+
+    popup.style.display = "none";
+
+    let valid = true;
+
+    /*=========================
+    NAME
+    =========================*/
+
+    if (name.value.trim() === "") {
+
+        nameError.textContent =
+            "Please enter your name.";
+
+        valid = false;
+
+    }
+
+    /*=========================
+    EMAIL
+    =========================*/
+
+    else if (!emailPattern.test(email.value.trim())) {
+
+        emailError.textContent =
+            "Please enter a valid email address.";
+
+        valid = false;
+
+    }
+
+    /*=========================
+    PHONE
+    =========================*/
+
+    if (!phonePattern.test(phone.value.trim())) {
+
+        phoneError.textContent =
+            "Enter a valid 10-digit mobile number.";
+
+        valid = false;
+
+    }
+
+    /*=========================
+    COMPANY
+    =========================*/
+
+    if (company.value.trim() === "") {
+
+        companyError.textContent =
+            "Please enter company name.";
+
+        valid = false;
+
+    }
+
+    /*=========================
+    SERVICE
+    =========================*/
+
+    if (service.value === "") {
+
+        serviceError.textContent =
+            "Please select a service.";
+
+        valid = false;
+
+    }
+
+    /*=========================
+    COMMENTS
+    =========================*/
+
+    if (comments.value.trim().length < 10) {
+
+        commentsError.textContent =
+            "Please enter at least 10 characters.";
+
+        valid = false;
+
+    }
+
+    /*=========================
+    RESULT
+    =========================*/
+
+    if (!valid) {
+
+        showPopup(
+            "Please fill all details correctly.",
+            false
+        );
+
+        return;
+
+    }
+
+    /*=========================
+    SUCCESS
+    =========================*/
+
+    showPopup(
+        "✅ Message Sent Successfully!",
+        true
+    );
+
+    form.reset();
+
+    /*=========================
+    REDIRECT
+    =========================*/
+
+    setTimeout(function () {
+
+        window.location.href = "404.html";
+
+    }, 2000);
+
+});
+
+});
+</Script>
+
+
+</body>
+
+</html>
