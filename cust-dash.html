@@ -1,0 +1,4366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- =======================================================
+        BACKGROUND
+    ======================================================== -->
+
+    <div class="stk-dashboard-bg"></div>
+    <div class="stk-dashboard-overlay"></div>
+
+    <!-- =======================================================
+        SIDEBAR
+    ======================================================== -->
+
+    <aside class="stk-sidebar" id="stkSidebar">
+
+        <!-- Logo -->
+
+        <div class="stk-logo-area">
+
+            <a href="index.html">
+
+                <img src="./logo.webp"
+                    alt="Logo">
+
+            </a>
+
+            <button class="stk-close-sidebar"
+                id="stkCloseSidebar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="stk-sidebar-nav">
+
+            <ul>
+
+                <li >
+
+                    <a href="./client-dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./analytics-dash.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>Analytics</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./projects-dash.html">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                        <span>Projects</span>
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="./cust-dash.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>Customers</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./reports-dash.html">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <span>Reports</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="404.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="404.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        <span>Support</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <button
+                        id="stkLogoutBtn"
+                        class="stk-logout-btn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>Logout</span>
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- =======================================================
+        MAIN
+    ======================================================== -->
+
+    <main class="stk-main">
+
+        <!-- ===================================================
+            TOP BAR
+        ==================================================== -->
+
+        <header class="stk-topbar">
+
+            <!-- Mobile -->
+
+            <button
+                class="stk-menu-btn"
+                id="stkMenuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <!-- Search -->
+
+            <div class="stk-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+            
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    placeholder="Search anything...">
+            
+            </div>
+
+            <!-- Right -->
+
+            <div class="stk-top-right">
+
+                <button class="stk-icon">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="stk-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <!-- User -->
+
+                <div class="stk-user-box">
+
+                    <img src="./ava1.webp"
+                        alt="User">
+
+                    <div>
+
+                        <h4 id="userName">
+                            Loading...
+                        </h4>
+
+                        <span id="userRole">
+                            Loading...
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===================================================
+            HERO
+        ==================================================== -->
+
+        <section class="stk-hero">
+
+            <div class="stk-hero-content">
+
+                <div>
+
+                    <span class="stk-tag">
+
+                        Welcome Back 👋
+
+                    </span>
+
+                    <h1>
+
+                        Dashboard Overview
+
+                    </h1>
+
+                    <p>
+
+                        Manage your projects, monitor reports,
+                        track customers and analyze performance
+                        from one beautiful dashboard.
+
+                    </p>
+
+                    <a href="404.html"
+                        class="stk-primary-btn">
+
+                        Explore More
+
+                    </a>
+
+                </div>
+
+                <!-- User Card -->
+
+                <div class="stk-profile-card">
+
+                    <img src="./ava1.webp"
+                        alt="Profile">
+
+                    <h3 id="profileName">
+
+                        Loading...
+
+                    </h3>
+
+                    <p id="profileEmail">
+
+                        Loading...
+
+                    </p>
+
+                    <span id="profileRole">
+
+                        Loading...
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--==========================================================
+CUSTOMER DASHBOARD
+PART 1
+NON-CONFLICTING
+PREFIX : customerdash-
+==========================================================-->
+
+<section class="customerdash-wrapper">
+
+    <!--==============================
+        HEADER
+    ==============================-->
+
+    <div class="customerdash-header">
+
+        <div class="customerdash-header-left">
+
+            <span class="customerdash-badge">
+
+                <i class="fa-solid fa-users"></i>
+
+                Customer Dashboard
+
+            </span>
+
+            <h2>
+
+                Manage Your Customers Efficiently
+
+            </h2>
+
+            <p>
+
+                Monitor customer activity, memberships,
+                subscriptions and engagement from a single dashboard.
+
+            </p>
+
+        </div>
+
+        <div class="customerdash-header-right">
+
+            <div class="customerdash-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search customer...">
+
+            </div>
+
+            <a href="404.html"
+               class="customerdash-add-btn">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Add Customer
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!--==============================
+        KPI CARDS
+    ==============================-->
+
+    <div class="customerdash-kpi-grid">
+
+        <div class="customerdash-kpi-card">
+
+            <div class="customerdash-icon customerdash-blue">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div>
+
+                <span>Total Customers</span>
+
+                <h2>12,458</h2>
+
+                <small>
+
+                    +15% this month
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="customerdash-kpi-card">
+
+            <div class="customerdash-icon customerdash-green">
+
+                <i class="fa-solid fa-user-check"></i>
+
+            </div>
+
+            <div>
+
+                <span>Active Customers</span>
+
+                <h2>10,296</h2>
+
+                <small>
+
+                    82% Active
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="customerdash-kpi-card">
+
+            <div class="customerdash-icon customerdash-orange">
+
+                <i class="fa-solid fa-crown"></i>
+
+            </div>
+
+            <div>
+
+                <span>Premium Members</span>
+
+                <h2>2,540</h2>
+
+                <small>
+
+                    Gold & Platinum
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="customerdash-kpi-card">
+
+            <div class="customerdash-icon customerdash-purple">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+            </div>
+
+            <div>
+
+                <span>New Customers</span>
+
+                <h2>348</h2>
+
+                <small>
+
+                    This Week
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--==============================
+        TOP CUSTOMERS
+    ==============================-->
+
+    <div class="customerdash-section-title">
+
+        <h3>
+
+            Top Customers
+
+        </h3>
+
+        <a href="404.html">
+
+            View All
+
+        </a>
+
+    </div>
+
+
+
+    <div class="customerdash-card-grid">
+
+
+
+
+        <!-- CUSTOMER -->
+
+        <div class="customerdash-card">
+
+            <div class="customerdash-card-top">
+
+                <img
+                    src="./arjun.webp"
+                    alt="Customer">
+
+                <span class="customerdash-status active">
+
+                    Active
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Arjun Kumar
+
+            </h3>
+
+            <p>
+
+                Premium Customer
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    arjun@email.com
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9876543210
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Chennai
+
+                </li>
+
+            </ul>
+
+            <div class="customerdash-footer">
+
+                <span>
+
+                    ₹2,45,000
+
+                </span>
+
+                <a href="404.html">
+
+                    Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- CUSTOMER -->
+
+        <div class="customerdash-card">
+
+            <div class="customerdash-card-top">
+
+                <img
+                    src="./nithiya.webp"
+                    alt="Customer">
+
+                <span class="customerdash-status premium">
+
+                    Premium
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Priya Sharma
+
+            </h3>
+
+            <p>
+
+                Enterprise Member
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    priya@email.com
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9870012345
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Bengaluru
+
+                </li>
+
+            </ul>
+
+            <div class="customerdash-footer">
+
+                <span>
+
+                    ₹3,80,000
+
+                </span>
+
+                <a href="404.html">
+
+                    Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- CUSTOMER -->
+
+        <div class="customerdash-card">
+
+            <div class="customerdash-card-top">
+
+                <img
+                    src="./joe.webp"
+                    alt="Customer">
+
+                <span class="customerdash-status inactive">
+
+                    Inactive
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Rahul Verma
+
+            </h3>
+
+            <p>
+
+                Standard Member
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    rahul@email.com
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9988776655
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Hyderabad
+
+                </li>
+
+            </ul>
+
+            <div class="customerdash-footer">
+
+                <span>
+
+                    ₹98,000
+
+                </span>
+
+                <a href="404.html">
+
+                    Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- CUSTOMER -->
+
+        <div class="customerdash-card">
+
+            <div class="customerdash-card-top">
+
+                <img
+                    src="./sana.webp"
+                    alt="Customer">
+
+                <span class="customerdash-status active">
+
+                    Active
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Sneha Reddy
+
+            </h3>
+
+            <p>
+
+                Gold Member
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    sneha@email.com
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9123456789
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Coimbatore
+
+                </li>
+
+            </ul>
+
+            <div class="customerdash-footer">
+
+                <span>
+
+                    ₹1,75,000
+
+                </span>
+
+                <a href="404.html">
+
+                    Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <!--=========================================
+        CUSTOMER ANALYTICS
+    ==========================================-->
+
+    <div class="customerdash-grid-two">
+
+        <!-- Customer Growth -->
+
+        <div class="customerdash-box">
+
+            <div class="customerdash-box-header">
+
+                <h3>
+
+                    Customer Growth
+
+                </h3>
+
+                <!-- <select class="customerdash-select">
+
+                    <option>This Month</option>
+
+                    <option>Last Month</option>
+
+                    <option>This Year</option>
+
+                </select> -->
+
+            </div>
+
+            <div class="customerdash-chart">
+
+                <canvas id="customerdashGrowthChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- Customer Satisfaction -->
+
+        <div class="customerdash-box">
+
+            <div class="customerdash-box-header">
+
+                <h3>
+
+                    Customer Satisfaction
+
+                </h3>
+
+            </div>
+
+            <div class="customerdash-rating">
+
+                <div class="customerdash-rating-circle">
+
+                    <h2>
+
+                        96%
+
+                    </h2>
+
+                    <span>
+
+                        Happy Clients
+
+                    </span>
+
+                </div>
+
+                <div class="customerdash-rating-content">
+
+                    <h4>
+
+                        Overall Experience
+
+                    </h4>
+
+                    <p>
+
+                        Customer satisfaction has improved
+                        significantly compared to last month.
+
+                    </p>
+
+                    <div class="customerdash-stars">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--=========================================
+        RECENT CUSTOMER ACTIVITY
+    ==========================================-->
+
+    <div class="customerdash-box">
+
+        <div class="customerdash-box-header">
+
+            <h3>
+
+                Recent Customer Activities
+
+            </h3>
+
+        </div>
+
+        <div class="customerdash-activity-list">
+
+            <div class="customerdash-activity">
+
+                <div class="customerdash-activity-icon">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Arjun Kumar joined Premium Plan
+
+                    </h4>
+
+                    <span>
+
+                        10 Minutes Ago
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="customerdash-activity">
+
+                <div class="customerdash-activity-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Priya renewed annual subscription
+
+                    </h4>
+
+                    <span>
+
+                        45 Minutes Ago
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="customerdash-activity">
+
+                <div class="customerdash-activity-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Rahul submitted a support ticket
+
+                    </h4>
+
+                    <span>
+
+                        2 Hours Ago
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="customerdash-activity">
+
+                <div class="customerdash-activity-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Sneha completed a purchase
+
+                    </h4>
+
+                    <span>
+
+                        Today
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--=========================================
+        RECENT ORDERS TABLE
+    ==========================================-->
+
+    <div class="customerdash-box">
+
+        <div class="customerdash-box-header">
+
+            <h3>
+
+                Recent Customer Orders
+
+            </h3>
+
+        </div>
+
+        <div class="customerdash-table-responsive">
+
+            <table class="customerdash-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Customer</th>
+
+                        <th>Order ID</th>
+
+                        <th>Plan</th>
+
+                        <th>Amount</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Arjun Kumar</td>
+
+                        <td>#CUS1054</td>
+
+                        <td>Premium</td>
+
+                        <td>₹2,499</td>
+
+                        <td>
+
+                            <span class="customerdash-badge-success">
+
+                                Paid
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Priya Sharma</td>
+
+                        <td>#CUS1055</td>
+
+                        <td>Enterprise</td>
+
+                        <td>₹5,999</td>
+
+                        <td>
+
+                            <span class="customerdash-badge-success">
+
+                                Paid
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Rahul Verma</td>
+
+                        <td>#CUS1056</td>
+
+                        <td>Basic</td>
+
+                        <td>₹999</td>
+
+                        <td>
+
+                            <span class="customerdash-badge-pending">
+
+                                Pending
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Sneha Reddy</td>
+
+                        <td>#CUS1057</td>
+
+                        <td>Gold</td>
+
+                        <td>₹3,999</td>
+
+                        <td>
+
+                            <span class="customerdash-badge-success">
+
+                                Paid
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!--=========================================
+        QUICK ACTIONS
+    ==========================================-->
+
+    <div class="customerdash-action-grid">
+
+        <a href="404.html" class="customerdash-action-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <span>
+
+                Add Customer
+
+            </span>
+
+        </a>
+
+        <a href="404.html" class="customerdash-action-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>
+
+                Email Campaign
+
+            </span>
+
+        </a>
+
+        <a href="404.html" class="customerdash-action-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+
+                Customer Analytics
+
+            </span>
+
+        </a>
+
+        <a href="404.html" class="customerdash-action-card">
+
+            <i class="fa-solid fa-file-export"></i>
+
+            <span>
+
+                Export Report
+
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+        <!-- =======================================================
+        ATTRACTIVE LOGOUT POPUP
+    ======================================================== -->
+
+    <div
+    class="stk-popup-overlay"
+    id="logoutPopup">
+
+    <div class="stk-popup">
+
+        <div class="stk-popup-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+        <h2>
+
+            Logout?
+
+        </h2>
+
+        <p>
+
+            Are you sure you want to logout from your dashboard?
+
+        </p>
+
+        <div class="stk-popup-buttons">
+
+            <button
+                id="cancelLogout"
+                class="stk-cancel">
+
+                Cancel
+
+            </button>
+
+            <button
+                id="confirmLogout"
+                class="stk-confirm">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<style>
+    /*==========================================================
+STACKLY CUSTOMER DASHBOARD
+GLASSMORPHISM VERSION
+PART 1
+PREFIX : customerdash-
+NON-CONFLICTING
+==========================================================*/
+
+/*========================
+WRAPPER
+=========================*/
+
+.customerdash-wrapper{
+
+width:100%;
+padding:30px;
+display:flex;
+flex-direction:column;
+gap:30px;
+box-sizing:border-box;
+
+}
+
+.customerdash-wrapper *{
+
+box-sizing:border-box;
+
+}
+
+.customerdash-wrapper a{
+
+text-decoration:none;
+
+}
+
+/*========================
+COMMON GLASS EFFECT
+=========================*/
+
+.customerdash-header,
+.customerdash-kpi-card,
+.customerdash-card{
+
+position:relative;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:26px;
+
+box-shadow:
+
+0 10px 35px rgba(0,0,0,.15);
+
+overflow:hidden;
+
+}
+
+.customerdash-header::before,
+.customerdash-kpi-card::before,
+.customerdash-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.02)
+);
+
+pointer-events:none;
+
+}
+
+/*========================
+HEADER
+=========================*/
+
+.customerdash-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:35px;
+
+padding:35px;
+
+}
+
+.customerdash-header-left{
+
+flex:1;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.customerdash-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+background:linear-gradient(
+90deg,
+#44c4ff,
+#1976ff);
+
+color:#fff;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+.customerdash-header-left h2{
+
+color:#fff;
+
+font-size:38px;
+
+margin:20px 0 15px;
+
+font-weight:700;
+
+}
+
+.customerdash-header-left p{
+
+color:rgba(255,255,255,.75);
+
+line-height:1.8;
+
+max-width:650px;
+
+}
+
+/*========================
+HEADER RIGHT
+=========================*/
+
+.customerdash-header-right{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/*========================
+SEARCH
+=========================*/
+
+.customerdash-search{
+
+width:330px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:15px 20px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+.customerdash-search i{
+
+color:#fff;
+
+}
+
+.customerdash-search input{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+background:none;
+
+color:#fff;
+
+font-size:15px;
+
+}
+
+.customerdash-search input::placeholder{
+
+color:rgba(255,255,255,.55);
+
+}
+
+/*========================
+BUTTON
+=========================*/
+
+.customerdash-add-btn{
+
+padding:15px 28px;
+
+border-radius:50px;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+background:linear-gradient(
+90deg,
+#44c4ff,
+#1976ff);
+
+color:#fff;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.customerdash-add-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 12px 25px rgba(25,118,255,.45);
+
+}
+
+/*========================
+KPI GRID
+=========================*/
+
+.customerdash-kpi-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+/*========================
+KPI CARD
+=========================*/
+
+.customerdash-kpi-card{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+padding:28px;
+
+transition:.4s;
+
+}
+
+.customerdash-kpi-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.customerdash-icon{
+
+width:72px;
+
+height:72px;
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+font-size:30px;
+
+flex-shrink:0;
+
+}
+
+.customerdash-blue{
+
+background:linear-gradient(
+135deg,
+#4fc3ff,
+#1976ff);
+
+}
+
+.customerdash-green{
+
+background:linear-gradient(
+135deg,
+#1de9b6,
+#00b894);
+
+}
+
+.customerdash-orange{
+
+background:linear-gradient(
+135deg,
+#ffb347,
+#ff7043);
+
+}
+
+.customerdash-purple{
+
+background:linear-gradient(
+135deg,
+#8e54ff,
+#5b5fff);
+
+}
+
+.customerdash-kpi-card span{
+
+display:block;
+
+color:rgba(255,255,255,.70);
+
+margin-bottom:8px;
+
+}
+
+.customerdash-kpi-card h2{
+
+color:#fff;
+
+font-size:34px;
+
+margin-bottom:8px;
+
+}
+
+.customerdash-kpi-card small{
+
+color:#59ffa4;
+
+font-weight:600;
+
+}
+
+/*========================
+SECTION TITLE
+=========================*/
+
+.customerdash-section-title{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.customerdash-section-title h3{
+
+color:#fff;
+
+font-size:30px;
+
+}
+
+.customerdash-section-title a{
+
+color:#44c4ff;
+
+font-weight:600;
+
+}
+
+/*========================
+CUSTOMER GRID
+=========================*/
+
+.customerdash-card-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+/*========================
+CUSTOMER CARD
+=========================*/
+
+.customerdash-card{
+
+padding:28px;
+
+transition:.4s;
+
+}
+
+.customerdash-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.customerdash-card-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:22px;
+
+}
+
+.customerdash-card-top img{
+
+width:75px;
+
+height:75px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid rgba(255,255,255,.25);
+
+}
+
+.customerdash-status{
+
+padding:8px 18px;
+
+border-radius:30px;
+
+color:#fff;
+
+font-size:12px;
+
+font-weight:600;
+
+}
+
+.customerdash-status.active{
+
+background:#00c853;
+
+}
+
+.customerdash-status.premium{
+
+background:#1976ff;
+
+}
+
+.customerdash-status.inactive{
+
+background:#ff5252;
+
+}
+
+.customerdash-card h3{
+
+color:#fff;
+
+font-size:24px;
+
+margin-bottom:8px;
+
+}
+
+.customerdash-card p{
+
+color:#44c4ff;
+
+margin-bottom:20px;
+
+}
+
+.customerdash-card ul{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.customerdash-card ul li{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+color:rgba(255,255,255,.75);
+
+margin-bottom:15px;
+
+}
+
+.customerdash-card ul li i{
+
+color:#44c4ff;
+
+width:20px;
+
+}
+
+/*========================
+FOOTER
+=========================*/
+
+.customerdash-footer{
+
+margin-top:25px;
+
+padding-top:20px;
+
+border-top:1px solid rgba(255,255,255,.10);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.customerdash-footer span{
+
+color:#fff;
+
+font-size:22px;
+
+font-weight:700;
+
+}
+
+.customerdash-footer a{
+
+padding:12px 24px;
+
+border-radius:50px;
+
+background:linear-gradient(
+90deg,
+#44c4ff,
+#1976ff);
+
+color:#fff;
+
+transition:.35s;
+
+}
+
+.customerdash-footer a:hover{
+
+transform:translateY(-4px);
+
+}
+
+/*==========================================================
+STACKLY CUSTOMER DASHBOARD
+GLASSMORPHISM
+PART 2
+==========================================================*/
+
+/*====================================
+GRID
+====================================*/
+
+.customerdash-grid-two{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+
+
+}
+
+/*====================================
+COMMON GLASS BOX
+====================================*/
+
+.customerdash-box{
+
+position:relative;
+
+padding:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:26px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.18);
+
+overflow:hidden;
+
+}
+
+.customerdash-box::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+
+135deg,
+
+rgba(255,255,255,.06),
+
+rgba(255,255,255,.02)
+
+);
+
+pointer-events:none;
+
+}
+
+.customerdash-box>*{
+
+position:relative;
+
+z-index:2;
+
+}
+
+/*====================================
+HEADER
+====================================*/
+
+.customerdash-box-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+}
+
+.customerdash-box-header h3{
+
+color:#fff;
+
+font-size:30px;
+
+font-weight:700;
+
+}
+
+/*====================================
+SELECT
+====================================*/
+
+.customerdash-select{
+
+padding:12px 18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+color:#fff;
+
+outline:none;
+
+}
+
+.customerdash-select option{
+
+color:#000;
+
+}
+
+/*====================================
+CHART
+====================================*/
+
+.customerdash-chart{
+
+width:100%;
+
+height:330px;
+
+}
+
+.customerdash-chart canvas{
+
+width:100%!important;
+
+height:100%!important;
+
+}
+
+/*====================================
+SATISFACTION
+====================================*/
+
+.customerdash-rating{
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+}
+
+.customerdash-rating-circle{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+background:linear-gradient(
+
+135deg,
+
+#44c4ff,
+
+#1976ff
+
+);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+box-shadow:0 10px 30px rgba(25,118,255,.35);
+
+}
+
+.customerdash-rating-circle h2{
+
+font-size:40px;
+
+margin-bottom:8px;
+
+}
+
+.customerdash-rating-content{
+
+flex:1;
+
+}
+
+.customerdash-rating-content h4{
+
+color:#fff;
+
+font-size:26px;
+
+margin-bottom:12px;
+
+}
+
+.customerdash-rating-content p{
+
+color:rgba(255,255,255,.75);
+
+line-height:1.8;
+
+}
+
+.customerdash-stars{
+
+display:flex;
+
+gap:6px;
+
+margin-top:15px;
+
+}
+
+.customerdash-stars i{
+
+color:#FFD54F;
+
+font-size:20px;
+
+}
+
+/*====================================
+ACTIVITY
+====================================*/
+
+.customerdash-activity-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.customerdash-activity{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+padding:18px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.customerdash-activity:hover{
+
+transform:translateX(10px);
+
+background:rgba(255,255,255,.10);
+
+}
+
+.customerdash-activity-icon{
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+background:linear-gradient(
+
+135deg,
+
+#44c4ff,
+
+#1976ff
+
+);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+font-size:22px;
+
+}
+
+.customerdash-activity h4{
+
+color:#fff;
+
+margin-bottom:6px;
+
+}
+
+.customerdash-activity span{
+
+color:rgba(255,255,255,.60);
+
+}
+
+/*====================================
+TABLE
+====================================*/
+
+.customerdash-table-responsive{
+
+overflow:auto;
+
+}
+
+.customerdash-table{
+
+width:100%;
+
+min-width:750px;
+
+border-collapse:collapse;
+
+}
+
+.customerdash-table th{
+
+background:rgba(255,255,255,.08);
+
+color:#fff;
+
+padding:18px;
+
+font-weight:600;
+
+}
+
+.customerdash-table td{
+
+color:rgba(255,255,255,.75);
+
+padding:18px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.customerdash-table tbody tr{
+
+transition:.35s;
+
+}
+
+.customerdash-table tbody tr:hover{
+
+background:rgba(255,255,255,.05);
+
+}
+
+/*====================================
+STATUS
+====================================*/
+
+.customerdash-badge-success{
+
+background:#00C853;
+
+color:#fff;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:13px;
+
+}
+
+.customerdash-badge-pending{
+
+background:#FF9800;
+
+color:#fff;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:13px;
+
+}
+
+/*====================================
+ACTION GRID
+====================================*/
+
+.customerdash-action-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.customerdash-action-card{
+
+padding:35px 20px;
+
+border-radius:24px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+text-align:center;
+
+transition:.4s;
+
+color:#fff;
+
+}
+
+.customerdash-action-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.20);
+
+}
+
+.customerdash-action-card i{
+
+font-size:38px;
+
+margin-bottom:18px;
+
+color:#44c4ff;
+
+display:block;
+
+}
+
+.customerdash-action-card span{
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+/*====================================
+REVEAL ANIMATION
+====================================*/
+
+.customerdash-header,
+
+.customerdash-kpi-card,
+
+.customerdash-card,
+
+.customerdash-box,
+
+.customerdash-action-card{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.8s ease;
+
+}
+
+.customerdash-show{
+
+opacity:1!important;
+
+transform:translateY(0)!important;
+
+}
+
+/*==========================================================
+STACKLY CUSTOMER DASHBOARD
+GLASSMORPHISM
+PART 3
+RESPONSIVE
+==========================================================*/
+
+/*==================================================
+LARGE LAPTOP
+==================================================*/
+
+@media (max-width:1400px){
+
+.customerdash-wrapper{
+
+    padding:25px;
+
+}
+
+.customerdash-kpi-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.customerdash-card-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.customerdash-grid-two{
+
+    grid-template-columns:1fr;
+
+}
+
+.customerdash-action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media (max-width:991px){
+
+.customerdash-wrapper{
+
+    padding:20px;
+
+    gap:20px;
+
+}
+
+.customerdash-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.customerdash-header-right{
+
+    width:100%;
+
+    flex-direction:column;
+
+}
+
+.customerdash-search{
+
+    width:100%;
+
+}
+
+.customerdash-add-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.customerdash-kpi-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.customerdash-card-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.customerdash-rating{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.customerdash-box-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.customerdash-action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+.customerdash-wrapper{
+
+    padding:15px;
+
+}
+
+.customerdash-header{
+
+    padding:20px;
+
+}
+
+.customerdash-header-left h2{
+
+    font-size:28px;
+
+}
+
+.customerdash-header-left p{
+
+    font-size:14px;
+
+}
+
+.customerdash-badge{
+
+    font-size:13px;
+
+}
+
+.customerdash-kpi-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.customerdash-kpi-card{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.customerdash-card{
+
+    padding:22px;
+
+}
+
+.customerdash-card-top{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.customerdash-card-top img{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+.customerdash-footer{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.customerdash-footer a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.customerdash-rating-circle{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.customerdash-rating-circle h2{
+
+    font-size:30px;
+
+}
+
+.customerdash-chart{
+
+    height:260px;
+
+}
+
+.customerdash-action-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.customerdash-action-card{
+
+    padding:25px;
+
+}
+
+}
+
+/*==================================================
+SMALL MOBILE
+==================================================*/
+
+@media (max-width:576px){
+
+.customerdash-wrapper{
+
+    padding:12px;
+
+    gap:18px;
+
+}
+
+.customerdash-header{
+
+    padding:18px;
+
+}
+
+.customerdash-header-left h2{
+
+    font-size:24px;
+
+}
+
+.customerdash-header-left p{
+
+    font-size:13px;
+
+}
+
+.customerdash-kpi-card{
+
+    padding:22px;
+
+}
+
+.customerdash-kpi-card h2{
+
+    font-size:28px;
+
+}
+
+.customerdash-icon{
+
+    width:65px;
+
+    height:65px;
+
+    font-size:26px;
+
+}
+
+.customerdash-box{
+
+    padding:20px;
+
+}
+
+.customerdash-box-header h3{
+
+    font-size:24px;
+
+}
+
+.customerdash-rating{
+
+    gap:20px;
+
+}
+
+.customerdash-rating-circle{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+.customerdash-rating-circle h2{
+
+    font-size:24px;
+
+}
+
+.customerdash-rating-content h4{
+
+    font-size:20px;
+
+}
+
+.customerdash-rating-content p{
+
+    font-size:14px;
+
+}
+
+.customerdash-stars{
+
+    justify-content:center;
+
+}
+
+.customerdash-activity{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.customerdash-activity-icon{
+
+    margin-bottom:10px;
+
+}
+
+.customerdash-table{
+
+    min-width:650px;
+
+}
+
+.customerdash-action-card{
+
+    padding:22px;
+
+}
+
+.customerdash-action-card i{
+
+    font-size:30px;
+
+}
+
+.customerdash-action-card span{
+
+    font-size:16px;
+
+}
+
+}
+
+/*==================================================
+EXTRA SMALL MOBILE
+==================================================*/
+
+@media (max-width:380px){
+
+.customerdash-header-left h2{
+
+    font-size:22px;
+
+}
+
+.customerdash-badge{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.customerdash-add-btn{
+
+    font-size:14px;
+
+    padding:14px;
+
+}
+
+.customerdash-search{
+
+    padding:14px;
+
+}
+
+.customerdash-card h3{
+
+    font-size:22px;
+
+}
+
+.customerdash-footer span{
+
+    font-size:18px;
+
+}
+
+.customerdash-footer a{
+
+    padding:12px;
+
+}
+
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="customer-dashboard.js"></script>
+<script>
+    /*==========================================================
+CUSTOMER DASHBOARD
+JAVASCRIPT
+NON-CONFLICTING
+PREFIX : customerdash-
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+"use strict";
+
+/*=========================================
+  SEARCH CUSTOMER
+=========================================*/
+
+const customerSearch =
+    document.querySelector(".customerdash-search input");
+
+const customerCards =
+    document.querySelectorAll(".customerdash-card");
+
+if (customerSearch) {
+
+    customerSearch.addEventListener("keyup", function () {
+
+        const value = this.value.toLowerCase().trim();
+
+        customerCards.forEach(function (card) {
+
+            const text = card.innerText.toLowerCase();
+
+            if (text.indexOf(value) > -1) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+}
+
+/*=========================================
+  KPI COUNTER
+=========================================*/
+
+const counters =
+    document.querySelectorAll(".customerdash-kpi-card h2");
+
+counters.forEach(function (counter) {
+
+    const finalValue =
+        parseInt(counter.innerText.replace(/,/g, ""));
+
+    if (isNaN(finalValue)) return;
+
+    let current = 0;
+
+    const increment =
+        Math.ceil(finalValue / 80);
+
+    const timer = setInterval(function () {
+
+        current += increment;
+
+        if (current >= finalValue) {
+
+            current = finalValue;
+
+            clearInterval(timer);
+
+        }
+
+        counter.innerText =
+            current.toLocaleString("en-IN");
+
+    }, 20);
+
+});
+
+/*=========================================
+  REVEAL ANIMATION
+=========================================*/
+
+const revealItems = document.querySelectorAll(
+
+    ".customerdash-header," +
+    ".customerdash-kpi-card," +
+    ".customerdash-card," +
+    ".customerdash-box," +
+    ".customerdash-action-card"
+
+);
+
+function revealContent() {
+
+    const trigger =
+        window.innerHeight - 100;
+
+    revealItems.forEach(function (item) {
+
+        const top =
+            item.getBoundingClientRect().top;
+
+        if (top < trigger) {
+
+            item.classList.add("customerdash-show");
+
+        }
+
+    });
+
+}
+
+revealContent();
+
+window.addEventListener(
+
+    "scroll",
+
+    revealContent
+
+);
+
+/*=========================================
+  CARD HOVER EFFECT
+=========================================*/
+
+customerCards.forEach(function (card) {
+
+    card.addEventListener("mouseenter", function () {
+
+        card.style.transform =
+
+            "translateY(-8px)";
+
+    });
+
+    card.addEventListener("mouseleave", function () {
+
+        card.style.transform =
+
+            "translateY(0px)";
+
+    });
+
+});
+
+/*=========================================
+  ACTION CARD EFFECT
+=========================================*/
+
+const actions = document.querySelectorAll(
+
+    ".customerdash-action-card"
+
+);
+
+actions.forEach(function (item) {
+
+    item.addEventListener("mouseenter", function () {
+
+        item.style.transform =
+
+            "translateY(-8px) scale(1.02)";
+
+    });
+
+    item.addEventListener("mouseleave", function () {
+
+        item.style.transform =
+
+            "translateY(0px) scale(1)";
+
+    });
+
+});
+
+/*=========================================
+  CUSTOMER GROWTH CHART
+  (Requires Chart.js)
+=========================================*/
+
+const chartCanvas =
+
+    document.getElementById(
+
+        "customerdashGrowthChart"
+
+    );
+
+if (chartCanvas && typeof Chart !== "undefined") {
+
+    new Chart(chartCanvas, {
+
+        type: "line",
+
+        data: {
+
+            labels: [
+
+                "Jan",
+
+                "Feb",
+
+                "Mar",
+
+                "Apr",
+
+                "May",
+
+                "Jun",
+
+                "Jul"
+
+            ],
+
+            datasets: [
+
+                {
+
+                    label: "Customers",
+
+                    data: [
+
+                        2400,
+
+                        3500,
+
+                        4800,
+
+                        6200,
+
+                        8100,
+
+                        10200,
+
+                        12458
+
+                    ],
+
+                    borderColor: "#2563eb",
+
+                    backgroundColor:
+
+                        "rgba(37,99,235,.15)",
+
+                    fill: true,
+
+                    tension: .4,
+
+                    borderWidth: 3,
+
+                    pointRadius: 5
+
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    display: false
+
+                }
+
+            },
+
+            scales: {
+
+                y: {
+
+                    beginAtZero: true
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
+
+});
+</script>
+<style>
+   
+        /*==========================================================
+STACKLY DASHBOARD
+dashboard.css
+PART 1
+==========================================================*/
+
+/*=========================
+GOOGLE FONT
+=========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:#eef4ff;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+/*=========================
+BACKGROUND
+=========================*/
+
+.stk-dashboard-bg{
+    position:fixed;
+    inset:0;
+    background:url("./corp1.webp") center center/cover no-repeat;
+    z-index:-3;
+}
+
+.stk-dashboard-overlay{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(
+    135deg,
+    rgba(28,44,120,.88),
+    rgba(103,58,183,.78),
+    rgba(0,188,212,.60));
+    backdrop-filter:blur(2px);
+    z-index:-2;
+}
+
+/*=========================
+MAIN LAYOUT
+=========================*/
+
+.stk-main{
+    margin-left:280px;
+    padding:30px;
+    min-height:100vh;
+    transition:.35s;
+}
+
+/*=========================
+SIDEBAR
+=========================*/
+
+.stk-sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:
+    rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border-right:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.25);
+
+    overflow:auto;
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.stk-logo-area{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.15);
+
+}
+
+.stk-logo-area img{
+
+    width:170px;
+
+}
+
+.stk-close-sidebar{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#ff5f6d,#ffc371);
+
+    font-size:18px;
+
+}
+
+/*=========================
+SIDEBAR MENU
+=========================*/
+
+.stk-sidebar-nav{
+
+    padding:25px 15px;
+
+}
+
+.stk-sidebar-nav ul{
+
+    list-style:none;
+
+}
+
+.stk-sidebar-nav li{
+
+    margin-bottom:14px;
+
+}
+
+.stk-sidebar-nav a,
+.stk-logout-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.stk-sidebar-nav a:hover,
+.stk-sidebar-nav li.active a,
+.stk-logout-btn:hover{
+
+    background:
+    linear-gradient(135deg,#5d7cff,#00d4ff);
+
+    transform:translateX(6px);
+
+    box-shadow:
+    0 12px 25px rgba(0,212,255,.35);
+
+}
+
+.stk-sidebar-nav i{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+/*=========================
+TOP BAR
+=========================*/
+
+.stk-topbar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 25px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+}
+
+/*=========================
+MENU BUTTON
+=========================*/
+
+.stk-menu-btn{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:20px;
+
+    background:
+    linear-gradient(135deg,#6a11cb,#2575fc);
+
+}
+
+/*=========================
+SEARCH
+=========================*/
+
+.stk-search{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#ffffff;
+
+    border-radius:50px;
+
+    padding:0 20px;
+
+    height:52px;
+
+}
+
+.stk-search i{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+.stk-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:15px;
+
+    color:#222;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/*=========================
+RIGHT AREA
+=========================*/
+
+.stk-top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/*=========================
+ICON BUTTON
+=========================*/
+
+.stk-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:
+    linear-gradient(135deg,#ff9966,#ff5e62);
+
+    transition:.35s;
+
+}
+
+.stk-icon:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+    0 10px 20px rgba(255,94,98,.45);
+
+}
+
+/*=========================
+USER BOX
+=========================*/
+
+.stk-user-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:
+    rgba(255,255,255,.18);
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+}
+
+.stk-user-box img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #ffffff;
+
+}
+
+.stk-user-box h4{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#fff;
+
+}
+
+.stk-user-box span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#f5f5f5;
+
+}
+
+/*==========================================================
+HERO SECTION
+==========================================================*/
+
+.stk-hero{
+    margin-bottom:35px;
+}
+
+.stk-hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    padding:45px;
+    border-radius:28px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.20);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+}
+
+.stk-tag{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:#222;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.stk-hero h1{
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.stk-hero p{
+    max-width:650px;
+    line-height:1.9;
+    color:#f4f4f4;
+    margin-bottom:30px;
+}
+
+.stk-primary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    color:#fff;
+    font-weight:600;
+    transition:.4s;
+}
+
+.stk-primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,114,255,.45);
+}
+
+/*==========================================================
+PROFILE CARD
+==========================================================*/
+
+.stk-profile-card{
+    width:320px;
+    text-align:center;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.stk-profile-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #fff;
+    margin-bottom:20px;
+}
+
+.stk-profile-card h3{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.stk-profile-card p{
+    color:#eeeeee;
+    margin-bottom:15px;
+    word-break:break-word;
+}
+
+.stk-profile-card span{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#43cea2,#185a9d);
+    font-weight:600;
+}
+
+
+
+/*==========================================================
+ATTRACTIVE LOGOUT POPUP
+==========================================================*/
+
+.stk-popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    z-index:99999;
+}
+
+.stk-popup-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.stk-popup{
+    width:430px;
+    max-width:90%;
+    padding:40px 30px;
+    text-align:center;
+    border-radius:28px;
+    background:linear-gradient(135deg,#7b2ff7,#f107a3);
+    color:#fff;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    animation:stkPopupScale .35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.stk-popup::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    top:-70px;
+    right:-70px;
+}
+
+.stk-popup::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-60px;
+    left:-60px;
+}
+
+.stk-popup-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#f107a3;
+    font-size:38px;
+    margin-bottom:20px;
+    box-shadow:0 15px 30px rgba(255,255,255,.25);
+}
+
+.stk-popup h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.stk-popup p{
+    font-size:16px;
+    line-height:1.7;
+    color:#f7f7f7;
+    margin-bottom:28px;
+}
+
+.stk-popup-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.stk-cancel,
+.stk-confirm{
+    min-width:140px;
+    padding:14px 25px;
+    border:none;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.stk-cancel{
+    background:#ffffff;
+    color:#333;
+}
+
+.stk-confirm{
+    background:linear-gradient(135deg,#00e676,#00b894);
+    color:#fff;
+}
+
+.stk-cancel:hover,
+.stk-confirm:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+/*==========================================================
+ANIMATIONS
+==========================================================*/
+
+@keyframes stkPopupScale{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+@keyframes stkFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+.stk-card,
+.stk-profile-card,
+.stk-chart-box{
+    animation:stkFloat 5s ease-in-out infinite;
+}
+
+/*==========================================================
+CUSTOM SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#d7d7d7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#00c6ff,#0072ff);
+    border-radius:50px;
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:1200px){
+
+.stk-main{
+    margin-left:0;
+    padding:20px;
+}
+
+.stk-sidebar{
+    left:-100%;
+}
+
+.stk-sidebar.active{
+    left:0;
+}
+
+.stk-close-sidebar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stk-menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stk-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.stk-chart-grid{
+    grid-template-columns:1fr;
+}
+
+.stk-hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.stk-profile-card{
+    width:100%;
+    max-width:380px;
+}
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+.stk-topbar{
+    flex-wrap:wrap;
+    padding:18px;
+}
+
+.stk-search{
+    width:100%;
+    order:3;
+}
+
+.stk-top-right{
+    width:100%;
+    justify-content:space-between;
+}
+
+.stk-user-box{
+    flex:1;
+}
+
+.stk-user-box img{
+    width:48px;
+    height:48px;
+}
+
+.stk-user-box h4{
+    font-size:14px;
+}
+
+.stk-user-box span{
+    font-size:12px;
+}
+
+.stk-hero-content{
+    padding:25px;
+}
+
+.stk-hero h1{
+    font-size:34px;
+}
+
+.stk-cards{
+    grid-template-columns:1fr;
+}
+
+.stk-card{
+    padding:22px;
+}
+
+.stk-chart-box{
+    padding:20px;
+}
+
+.stk-chart-box canvas{
+    height:250px !important;
+}
+
+table{
+    min-width:650px;
+}
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+.stk-main{
+    padding:15px;
+}
+
+.stk-topbar{
+    border-radius:18px;
+}
+
+.stk-search{
+    height:48px;
+}
+
+.stk-search input{
+    font-size:14px;
+}
+
+.stk-hero h1{
+    font-size:28px;
+}
+
+.stk-hero p{
+    font-size:14px;
+}
+
+.stk-primary-btn{
+    width:100%;
+}
+
+.stk-popup{
+    padding:30px 20px;
+}
+
+.stk-popup h2{
+    font-size:26px;
+}
+
+.stk-popup p{
+    font-size:14px;
+}
+
+.stk-popup-buttons{
+    flex-direction:column;
+}
+
+.stk-confirm,
+.stk-cancel{
+    width:100%;
+}
+
+}
+
+/*==========================================================
+DESKTOP ENHANCEMENTS
+==========================================================*/
+
+@media(min-width:1400px){
+
+.stk-main{
+    padding:35px;
+}
+
+.stk-hero h1{
+    font-size:56px;
+}
+
+.stk-card h2{
+    font-size:40px;
+}
+
+}
+
+/*==========================================================
+HOVER EFFECTS
+==========================================================*/
+
+.stk-sidebar-nav a:hover i,
+.stk-logout-btn:hover i{
+    transform:rotate(-8deg) scale(1.15);
+    transition:.3s;
+}
+
+.stk-card:hover i{
+    transform:scale(1.15) rotate(10deg);
+    transition:.3s;
+}
+
+.stk-user-box img:hover,
+.stk-profile-card img:hover{
+    transform:rotate(8deg) scale(1.08);
+    transition:.4s;
+}
+
+/*==========================================================
+END OF FILE
+==========================================================*/
+    </style>
+
+    <script>
+        /*==========================================================
+STACKLY DASHBOARD
+dashboard.js
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*======================================================
+    LOCAL STORAGE USER DETAILS
+======================================================*/
+
+const userName =
+    localStorage.getItem("userName") ||
+    localStorage.getItem("name") ||
+    "Guest User";
+
+const userEmail =
+    localStorage.getItem("userEmail") ||
+    localStorage.getItem("email") ||
+    "guest@example.com";
+
+const userRole =
+    localStorage.getItem("userRole") ||
+    localStorage.getItem("role") ||
+    "User";
+
+// Topbar
+
+const topName = document.getElementById("userName");
+const topRole = document.getElementById("userRole");
+
+if (topName) topName.textContent = userName;
+if (topRole) topRole.textContent = userRole;
+
+// Hero Card
+
+const profileName = document.getElementById("profileName");
+const profileEmail = document.getElementById("profileEmail");
+const profileRole = document.getElementById("profileRole");
+
+if (profileName) profileName.textContent = userName;
+if (profileEmail) profileEmail.textContent = userEmail;
+if (profileRole) profileRole.textContent = userRole;
+
+/*======================================================
+    MOBILE SIDEBAR
+======================================================*/
+
+const menuBtn = document.getElementById("stkMenuBtn");
+const closeBtn = document.getElementById("stkCloseSidebar");
+const sidebar = document.getElementById("stkSidebar");
+
+if (menuBtn) {
+
+    menuBtn.addEventListener("click", () => {
+
+        sidebar.classList.add("active");
+
+    });
+
+}
+
+if (closeBtn) {
+
+    closeBtn.addEventListener("click", () => {
+
+        sidebar.classList.remove("active");
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (
+        window.innerWidth <= 1200 &&
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+
+        sidebar.classList.remove("active");
+
+    }
+
+});
+
+/*======================================================
+    LOGOUT POPUP
+======================================================*/
+
+const logoutBtn = document.getElementById("stkLogoutBtn");
+const popup = document.getElementById("logoutPopup");
+const cancelBtn = document.getElementById("cancelLogout");
+const confirmBtn = document.getElementById("confirmLogout");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", () => {
+
+        popup.classList.add("active");
+
+    });
+
+}
+
+if (cancelBtn) {
+
+    cancelBtn.addEventListener("click", () => {
+
+        popup.classList.remove("active");
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === popup) {
+
+        popup.classList.remove("active");
+
+    }
+
+});
+
+if (confirmBtn) {
+
+    confirmBtn.addEventListener("click", () => {
+
+        popup.classList.remove("active");
+
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userEmail");
+        localStorage.removeItem("userRole");
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 400);
+
+    });
+
+}
+
+/*======================================================
+    SCROLL ANIMATION
+======================================================*/
+
+const cards = document.querySelectorAll(
+
+    ".stk-card,.stk-chart-box,.stk-profile-card,.stk-table-card"
+
+);
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold: 0.2
+
+    }
+
+);
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+    card.style.transform = "translateY(50px)";
+    card.style.transition = ".8s ease";
+
+    observer.observe(card);
+
+});
+
+});
+
+/*======================================================
+SEARCH
+======================================================*/
+
+const searchInput = document.getElementById("dashboardSearch");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keypress", function (e) {
+
+        if (e.key === "Enter") {
+
+            const value = this.value.trim();
+
+            if (value !== "") {
+
+                window.location.href = "404.html";
+
+            }
+
+        }
+
+    });
+
+}
+    </script>
+</body>
+
+</html>

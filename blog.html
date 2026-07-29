@@ -1,0 +1,8760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Business Consulting</title>
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<!--==================================================
+STACKLY PRELOADER START
+===================================================-->
+
+<div class="stackly-preloader" id="stacklyPreloader">
+
+    <div class="stackly-preloader-wrapper">
+
+        <!-- Animated Rings -->
+
+        <div class="stackly-preloader-ring stackly-ring-one"></div>
+
+        <div class="stackly-preloader-ring stackly-ring-two"></div>
+
+        <div class="stackly-preloader-ring stackly-ring-three"></div>
+
+        <!-- Logo -->
+
+        <div class="stackly-preloader-logo">
+
+            <img src="./logo.webp"
+                 alt="Stackly Logo">
+
+        </div>
+
+    </div>
+
+    <!-- Company Name -->
+
+    <h2 class="stackly-preloader-title">
+
+        STACKLY
+
+    </h2>
+
+    <!-- Subtitle -->
+
+    <p class="stackly-preloader-subtitle">
+
+        Business Consulting Solutions
+
+    </p>
+
+    <!-- Loading Animation -->
+
+    <div class="stackly-preloader-loading">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+    <!-- Loading Text -->
+
+    <p class="stackly-preloader-text">
+
+        Loading Your Experience...
+
+    </p>
+
+</div>
+
+<style>
+    /*==================================================
+STACKLY PRELOADER
+==================================================*/
+
+.stackly-preloader{
+
+position:fixed;
+
+inset:0;
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+z-index:999999;
+
+background:
+linear-gradient(
+135deg,
+rgba(89,108,203,.95),
+rgba(125,100,169,.92),
+rgba(0,188,212,.88));
+
+transition:opacity .8s ease,
+           visibility .8s ease;
+
+}
+
+
+
+/*==================================
+HIDE
+==================================*/
+
+.stackly-preloader.hide{
+
+opacity:0;
+
+visibility:hidden;
+
+pointer-events:none;
+
+}
+
+
+
+/*==================================
+BACKGROUND GLOW
+==================================*/
+
+.stackly-preloader::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+filter:blur(90px);
+
+top:-180px;
+
+left:-150px;
+
+}
+
+.stackly-preloader::after{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.10);
+
+filter:blur(100px);
+
+right:-150px;
+
+bottom:-170px;
+
+}
+
+
+
+/*==================================
+WRAPPER
+==================================*/
+
+.stackly-preloader-wrapper{
+
+position:relative;
+
+width:220px;
+
+height:220px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+/*==================================
+LOGO
+==================================*/
+
+.stackly-preloader-logo{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#ffffff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.20),
+
+0 0 30px rgba(255,255,255,.35);
+
+z-index:10;
+
+}
+
+.stackly-preloader-logo img{
+
+width:70%;
+
+height:auto;
+
+object-fit:contain;
+
+}
+
+
+
+/*==================================
+RINGS
+==================================*/
+
+.stackly-preloader-ring{
+
+position:absolute;
+
+border-radius:50%;
+
+border-style:solid;
+
+border-color:transparent;
+
+}
+
+.stackly-ring-one{
+
+width:150px;
+
+height:150px;
+
+border-width:4px;
+
+border-top-color:#ffffff;
+
+border-right-color:#ffffff;
+
+}
+
+.stackly-ring-two{
+
+width:185px;
+
+height:185px;
+
+border-width:4px;
+
+border-left-color:#00e5ff;
+
+border-bottom-color:#ffffff;
+
+}
+
+.stackly-ring-three{
+
+width:220px;
+
+height:220px;
+
+border-width:3px;
+
+border-top-color:#ffffff;
+
+border-left-color:#7d64a9;
+
+}
+
+
+
+/*==================================
+TITLE
+==================================*/
+
+.stackly-preloader-title{
+
+margin-top:35px;
+
+font-size:42px;
+
+font-weight:800;
+
+letter-spacing:4px;
+
+color:#ffffff;
+
+text-transform:uppercase;
+
+}
+
+
+
+/*==================================
+SUBTITLE
+==================================*/
+
+.stackly-preloader-subtitle{
+
+margin-top:10px;
+
+font-size:18px;
+
+color:rgba(255,255,255,.92);
+
+text-align:center;
+
+max-width:500px;
+
+}
+
+
+
+/*==================================
+LOADING DOTS
+==================================*/
+
+.stackly-preloader-loading{
+
+display:flex;
+
+gap:12px;
+
+margin-top:35px;
+
+}
+
+.stackly-preloader-loading span{
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:#ffffff;
+
+}
+
+
+
+/*==================================
+TEXT
+==================================*/
+
+.stackly-preloader-text{
+
+margin-top:18px;
+
+font-size:16px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+color:#ffffff;
+
+}
+
+/*==================================================
+STACKLY PRELOADER
+PREMIUM ANIMATIONS
+==================================================*/
+
+
+/*=========================================
+MAIN BACKGROUND
+=========================================*/
+
+.stackly-preloader{
+
+animation:stacklyBackgroundMove 10s linear infinite;
+
+background-size:300% 300%;
+
+}
+
+@keyframes stacklyBackgroundMove{
+
+0%{
+
+    background-position:0% 50%;
+
+}
+
+50%{
+
+    background-position:100% 50%;
+
+}
+
+100%{
+
+    background-position:0% 50%;
+
+}
+
+}
+
+
+
+/*=========================================
+LOGO FLOAT
+=========================================*/
+
+.stackly-preloader-logo{
+
+animation:
+stacklyLogoFloat 3.5s ease-in-out infinite,
+stacklyLogoGlow 2.8s infinite alternate;
+
+}
+
+@keyframes stacklyLogoFloat{
+
+0%{
+
+    transform:translateY(0px);
+
+}
+
+50%{
+
+    transform:translateY(-10px);
+
+}
+
+100%{
+
+    transform:translateY(0px);
+
+}
+
+}
+
+@keyframes stacklyLogoGlow{
+
+from{
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.18),
+
+    0 0 20px rgba(255,255,255,.20);
+
+}
+
+to{
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.25),
+
+    0 0 45px rgba(255,255,255,.55);
+
+}
+
+}
+
+
+
+/*=========================================
+LOGO IMAGE
+=========================================*/
+
+.stackly-preloader-logo img{
+
+animation:stacklyLogoZoom 4s ease-in-out infinite;
+
+}
+
+@keyframes stacklyLogoZoom{
+
+0%{
+
+    transform:scale(1);
+
+}
+
+50%{
+
+    transform:scale(1.08);
+
+}
+
+100%{
+
+    transform:scale(1);
+
+}
+
+}
+
+
+
+/*=========================================
+ROTATING RINGS
+=========================================*/
+
+.stackly-ring-one{
+
+animation:stacklyRotateClockwise 2.5s linear infinite;
+
+}
+
+.stackly-ring-two{
+
+animation:stacklyRotateAnti 4s linear infinite;
+
+}
+
+.stackly-ring-three{
+
+animation:stacklyRotateClockwise 6s linear infinite;
+
+}
+
+@keyframes stacklyRotateClockwise{
+
+from{
+
+    transform:rotate(0deg);
+
+}
+
+to{
+
+    transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes stacklyRotateAnti{
+
+from{
+
+    transform:rotate(360deg);
+
+}
+
+to{
+
+    transform:rotate(0deg);
+
+}
+
+}
+
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.stackly-preloader-title{
+
+animation:stacklyTitleFade 1.4s ease forwards;
+
+}
+
+@keyframes stacklyTitleFade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/*=========================================
+SUBTITLE
+=========================================*/
+
+.stackly-preloader-subtitle{
+
+animation:stacklySubtitleFade 1.8s ease forwards;
+
+}
+
+@keyframes stacklySubtitleFade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/*=========================================
+LOADING DOTS
+=========================================*/
+
+.stackly-preloader-loading span:nth-child(1){
+
+animation:stacklyDot 1s infinite;
+
+}
+
+.stackly-preloader-loading span:nth-child(2){
+
+animation:stacklyDot 1s .2s infinite;
+
+}
+
+.stackly-preloader-loading span:nth-child(3){
+
+animation:stacklyDot 1s .4s infinite;
+
+}
+
+@keyframes stacklyDot{
+
+0%{
+
+    transform:translateY(0);
+
+    opacity:.5;
+
+}
+
+50%{
+
+    transform:translateY(-14px);
+
+    opacity:1;
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+    opacity:.5;
+
+}
+
+}
+
+
+
+/*=========================================
+LOADING TEXT
+=========================================*/
+
+.stackly-preloader-text{
+
+animation:stacklyLoadingText 2s infinite;
+
+}
+
+@keyframes stacklyLoadingText{
+
+0%{
+
+    letter-spacing:1px;
+
+    opacity:.6;
+
+}
+
+50%{
+
+    letter-spacing:3px;
+
+    opacity:1;
+
+}
+
+100%{
+
+    letter-spacing:1px;
+
+    opacity:.6;
+
+}
+
+}
+
+
+
+/*=========================================
+WRAPPER PULSE
+=========================================*/
+
+.stackly-preloader-wrapper{
+
+animation:stacklyWrapperPulse 4s ease-in-out infinite;
+
+}
+
+@keyframes stacklyWrapperPulse{
+
+0%{
+
+    transform:scale(1);
+
+}
+
+50%{
+
+    transform:scale(1.05);
+
+}
+
+100%{
+
+    transform:scale(1);
+
+}
+
+}
+
+
+
+/*=========================================
+SOFT PULSE CIRCLE
+=========================================*/
+
+.stackly-preloader-wrapper::before{
+
+content:"";
+
+position:absolute;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+border:2px solid rgba(255,255,255,.15);
+
+animation:stacklyPulseCircle 3s linear infinite;
+
+}
+
+@keyframes stacklyPulseCircle{
+
+from{
+
+    transform:scale(.85);
+
+    opacity:1;
+
+}
+
+to{
+
+    transform:scale(1.25);
+
+    opacity:0;
+
+}
+
+}
+
+
+
+/*=========================================
+SMOOTH PAGE EXIT
+=========================================*/
+
+.stackly-preloader.hide{
+
+animation:stacklyFadeOut .8s forwards;
+
+}
+
+@keyframes stacklyFadeOut{
+
+from{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+to{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+}
+
+/*==================================================
+STACKLY PRELOADER
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-preloader-wrapper{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.stackly-ring-one{
+
+    width:190px;
+
+    height:190px;
+
+}
+
+.stackly-ring-two{
+
+    width:235px;
+
+    height:235px;
+
+}
+
+.stackly-ring-three{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:58px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:22px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:19px;
+
+}
+
+}
+
+
+
+/*=========================================
+LAPTOP
+=========================================*/
+
+@media (max-width:1400px){
+
+.stackly-preloader-wrapper{
+
+    width:210px;
+
+    height:210px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:115px;
+
+    height:115px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:40px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-preloader-wrapper{
+
+    width:200px;
+
+    height:200px;
+
+}
+
+.stackly-ring-one{
+
+    width:145px;
+
+    height:145px;
+
+}
+
+.stackly-ring-two{
+
+    width:175px;
+
+    height:175px;
+
+}
+
+.stackly-ring-three{
+
+    width:200px;
+
+    height:200px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:38px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:17px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:992px){
+
+.stackly-preloader-wrapper{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+.stackly-ring-one{
+
+    width:130px;
+
+    height:130px;
+
+}
+
+.stackly-ring-two{
+
+    width:160px;
+
+    height:160px;
+
+}
+
+.stackly-ring-three{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:34px;
+
+    letter-spacing:3px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:16px;
+
+    padding:0 20px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET PORTRAIT
+=========================================*/
+
+@media (max-width:768px){
+
+.stackly-preloader{
+
+    padding:20px;
+
+}
+
+.stackly-preloader-wrapper{
+
+    width:170px;
+
+    height:170px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.stackly-ring-one{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.stackly-ring-two{
+
+    width:145px;
+
+    height:145px;
+
+}
+
+.stackly-ring-three{
+
+    width:170px;
+
+    height:170px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    max-width:320px;
+
+}
+
+}
+
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-preloader-wrapper{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:82px;
+
+    height:82px;
+
+}
+
+.stackly-preloader-logo img{
+
+    width:65%;
+
+}
+
+.stackly-ring-one{
+
+    width:105px;
+
+    height:105px;
+
+    border-width:3px;
+
+}
+
+.stackly-ring-two{
+
+    width:128px;
+
+    height:128px;
+
+    border-width:3px;
+
+}
+
+.stackly-ring-three{
+
+    width:150px;
+
+    height:150px;
+
+    border-width:2px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:26px;
+
+    margin-top:28px;
+
+    letter-spacing:2px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:14px;
+
+    padding:0 18px;
+
+}
+
+.stackly-preloader-loading{
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.stackly-preloader-loading span{
+
+    width:12px;
+
+    height:12px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:14px;
+
+    text-align:center;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-preloader-wrapper{
+
+    width:135px;
+
+    height:135px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:74px;
+
+    height:74px;
+
+}
+
+.stackly-ring-one{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.stackly-ring-two{
+
+    width:115px;
+
+    height:115px;
+
+}
+
+.stackly-ring-three{
+
+    width:135px;
+
+    height:135px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:23px;
+
+    letter-spacing:1.5px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:13px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+/*=========================================
+EXTRA SMALL DEVICES
+=========================================*/
+
+@media (max-width:340px){
+
+.stackly-preloader-wrapper{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+.stackly-ring-one{
+
+    width:85px;
+
+    height:85px;
+
+}
+
+.stackly-ring-two{
+
+    width:102px;
+
+    height:102px;
+
+}
+
+.stackly-ring-three{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:20px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:12px;
+
+}
+
+}
+
+
+
+/*=========================================
+LANDSCAPE MOBILE
+=========================================*/
+
+@media (max-height:500px){
+
+.stackly-preloader{
+
+    padding:15px;
+
+}
+
+.stackly-preloader-wrapper{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.stackly-ring-one{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+.stackly-ring-two{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.stackly-ring-three{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.stackly-preloader-title{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    margin-top:5px;
+
+    font-size:12px;
+
+}
+
+.stackly-preloader-loading{
+
+    margin-top:15px;
+
+}
+
+.stackly-preloader-text{
+
+    margin-top:10px;
+
+    font-size:12px;
+
+}
+
+}
+</style>
+
+<script>
+    /*==================================================
+STACKLY PRELOADER
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /*=========================================
+    ELEMENTS
+    =========================================*/
+
+    const stacklyPreloader =
+        document.getElementById("stacklyPreloader");
+
+
+
+    if(!stacklyPreloader){
+
+        return;
+
+    }
+
+
+
+    /*=========================================
+    DISABLE SCROLL
+    =========================================*/
+
+    document.body.style.overflow = "hidden";
+
+
+
+    /*=========================================
+    MINIMUM DISPLAY TIME
+    =========================================*/
+
+    const minimumTime = 1800;
+
+    const startTime = Date.now();
+
+
+
+    /*=========================================
+    HIDE PRELOADER
+    =========================================*/
+
+    function stacklyHidePreloader(){
+
+        const elapsedTime = Date.now() - startTime;
+
+        const remainingTime = Math.max(0, minimumTime - elapsedTime);
+
+
+
+        setTimeout(()=>{
+
+            stacklyPreloader.classList.add("hide");
+
+
+
+            document.body.style.overflow = "";
+
+
+
+            setTimeout(()=>{
+
+                stacklyPreloader.remove();
+
+            },800);
+
+
+
+        },remainingTime);
+
+    }
+
+
+
+    /*=========================================
+    WAIT FOR PAGE LOAD
+    =========================================*/
+
+    window.addEventListener("load",()=>{
+
+        stacklyHidePreloader();
+
+    });
+
+
+
+    /*=========================================
+    SAFETY FALLBACK
+    =========================================*/
+
+    setTimeout(()=>{
+
+        if(document.body.contains(stacklyPreloader)){
+
+            stacklyHidePreloader();
+
+        }
+
+    },5000);
+
+
+
+
+
+    /*=========================================
+    LOGO TILT EFFECT
+    =========================================*/
+
+    const logo =
+        document.querySelector(".stackly-preloader-logo");
+
+
+
+    if(logo){
+
+        document.addEventListener("mousemove",(e)=>{
+
+            const x =
+            (window.innerWidth/2-e.clientX)/60;
+
+            const y =
+            (window.innerHeight/2-e.clientY)/60;
+
+            logo.style.transform =
+            `rotateY(${x}deg) rotateX(${-y}deg)`;
+
+        });
+
+
+
+        document.addEventListener("mouseleave",()=>{
+
+            logo.style.transform =
+            "rotateY(0deg) rotateX(0deg)";
+
+        });
+
+    }
+
+
+
+
+
+    /*=========================================
+    LOADING TEXT
+    =========================================*/
+
+    const loadingText =
+        document.querySelector(".stackly-preloader-text");
+
+
+
+    if(loadingText){
+
+        const messages = [
+
+            "Loading Your Experience...",
+
+            "Preparing Business Solutions...",
+
+            "Almost Ready...",
+
+            "Launching Stackly..."
+
+        ];
+
+
+
+        let current = 0;
+
+
+
+        setInterval(()=>{
+
+            current++;
+
+            if(current >= messages.length){
+
+                current = 0;
+
+            }
+
+            loadingText.textContent = messages[current];
+
+        },1200);
+
+    }
+
+
+
+
+
+    /*=========================================
+    TITLE LETTER ANIMATION
+    =========================================*/
+
+    const title =
+        document.querySelector(".stackly-preloader-title");
+
+
+
+    if(title){
+
+        title.innerHTML = title.textContent
+
+        .split("")
+
+        .map(letter=>{
+
+            return `<span>${letter}</span>`;
+
+        })
+
+        .join("");
+
+
+
+        const letters =
+        title.querySelectorAll("span");
+
+
+
+        letters.forEach((letter,index)=>{
+
+            letter.style.display="inline-block";
+
+            letter.style.animation=
+            `stacklyLetterBounce .8s ease ${index*0.08}s infinite alternate`;
+
+        });
+
+    }
+
+});
+    </script>
+
+<!--==================================================
+STACKLY PRELOADER END
+===================================================-->
+
+
+<body>
+
+<!--================ HEADER START ================-->
+
+<header class="site-header">
+
+    <div class="site-header-container">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="site-logo">
+
+            <img src="./logo.webp" alt="Logo">
+
+        </a>
+
+        <!-- Desktop Menu -->
+
+        <nav class="site-nav" id="siteNav">
+
+            <!-- Close Button -->
+
+            <button class="site-close-btn" id="closeMenu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <ul>
+
+                <li><a href="./index.html" >Home</a></li>
+
+                <li><a href="./about.html">About Us</a></li>
+
+                <li><a href="./services.html">Services</a></li>
+
+                <li><a href="./blog.html" class="active">Blog</a></li>
+
+                <li><a href="./contact.html" >Contact Us</a></li>
+
+            </ul>
+
+            <a href="login.html" class="site-login-btn">
+
+                Login
+
+            </a>
+
+        </nav>
+
+        <!-- Hamburger -->
+
+        <button class="site-menu-btn" id="openMenu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+</section>
+
+<style>
+    .site-nav ul li a.active{
+
+color: white;
+
+font-weight: 600;
+
+}
+
+.site-nav ul li a.active::after{
+
+content: "";
+
+position: absolute;
+
+left: 0;
+
+bottom: -6px;
+
+width: 100%;
+
+height: 3px;
+
+background: #ab09e1;
+
+border-radius: 20px;
+
+}
+    /*=============================
+HEADER RESET
+=============================*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+
+}
+
+/*=============================
+HEADER
+=============================*/
+
+.site-header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:90px;
+
+background:#450969;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+z-index:99999;
+
+}
+
+.site-header-container{
+
+max-width:1400px;
+
+height:90px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+ 
+}
+
+/*=============================
+LOGO
+=============================*/
+
+.site-logo{
+
+display:flex;
+
+align-items:center;
+
+text-decoration:none;
+
+}
+
+.site-logo img{
+
+width:180px;
+
+height:auto;
+
+display:block;
+
+}
+
+/*=============================
+NAVIGATION
+=============================*/
+
+.site-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+.site-nav ul{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+.site-nav ul li a{
+
+text-decoration:none;
+
+font-size:16px;
+
+font-weight:600;
+
+color: white;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+.site-nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-6px;
+
+left:0;
+
+width:0;
+
+height:3px;
+
+background:#ab09e1;
+
+transition:.4s;
+
+border-radius:20px;
+
+}
+
+.site-nav ul li a:hover{
+
+color:#ab09e1;
+
+}
+
+.site-nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+/*=============================
+LOGIN BUTTON
+=============================*/
+
+.site-login-btn{
+
+text-decoration:none;
+
+padding:13px 34px;
+
+background:#ab09e1;
+
+color:#fff;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.site-login-btn:hover{
+
+background:#af70c4;
+
+transform:translateY(-2px);
+
+}
+
+/*=============================
+MENU BUTTON
+=============================*/
+
+.site-menu-btn{
+
+display:none;
+
+border:none;
+
+background:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+/*=============================
+CLOSE BUTTON
+=============================*/
+
+.site-close-btn{
+
+display:none;
+
+background:none;
+color:white;
+
+border:none;
+
+font-size:32px;
+
+position:absolute;
+
+right:25px;
+
+top:25px;
+
+cursor:pointer;
+
+}
+
+/*=============================
+HEADER SPACE
+=============================*/
+
+.site-header-space{
+
+height:90px;
+
+}
+
+/*=============================
+TABLET
+=============================*/
+
+@media(max-width:992px){
+
+.site-header-container{
+
+padding:0 25px;
+
+}
+
+.site-logo img{
+
+width:160px;
+
+}
+
+.site-menu-btn{
+
+display:block;
+
+}
+
+.site-nav{
+
+position:fixed;
+
+right:-100%;
+
+top:0;
+
+width:320px;
+
+height:100vh;
+
+background: black;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+transition:.4s;
+
+box-shadow:-5px 0 20px rgba(0,0,0,.15);
+
+z-index:999999;
+
+}
+
+.site-nav.active{
+
+right:0;
+
+}
+
+.site-close-btn{
+
+display:block;
+
+}
+
+.site-nav ul{
+
+flex-direction:column;
+
+gap:28px;
+
+}
+
+.site-nav ul li a{
+
+font-size:20px;
+
+}
+
+.site-login-btn{
+
+margin-top:25px;
+
+}
+
+}
+
+
+/*=============================
+MOBILE
+=============================*/
+
+@media(max-width:576px){
+
+.site-header{
+
+height:75px;
+
+}
+
+.site-header-space{
+
+height:75px;
+
+}
+
+.site-header-container{
+
+height:75px;
+
+padding:0 20px;
+
+}
+
+.site-logo img{
+
+width:145px;
+
+}
+
+.site-nav{
+
+width:100%;
+
+}
+
+.site-menu-btn{
+
+font-size:28px;
+
+}
+
+.site-nav ul li a{
+
+font-size:18px;
+
+}
+
+.site-login-btn{
+
+width:180px;
+
+text-align:center;
+
+padding:14px;
+
+}
+
+}
+
+/*=============================
+LARGE DESKTOP
+=============================*/
+
+@media(min-width:1400px){
+
+.site-header-container{
+
+max-width:1500px;
+
+}
+
+.site-logo img{
+
+width:190px;
+
+}
+
+.site-nav ul{
+
+gap:42px;
+
+}
+
+}
+
+</style>
+
+<script>
+    const openMenu = document.getElementById("openMenu");
+
+const closeMenu = document.getElementById("closeMenu");
+
+const nav = document.getElementById("siteNav");
+
+openMenu.addEventListener("click", () => {
+
+    nav.classList.add("active");
+
+});
+
+closeMenu.addEventListener("click", () => {
+
+    nav.classList.remove("active");
+
+});
+
+// Close menu after clicking a link
+
+document.querySelectorAll(".site-nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("active");
+
+    });
+
+});
+
+// Close menu when clicking outside
+
+document.addEventListener("click", function(e){
+
+    if(
+        !nav.contains(e.target) &&
+        !openMenu.contains(e.target)
+    ){
+
+        nav.classList.remove("active");
+
+    }
+
+});
+    </script>
+
+
+<!-- ======================================================
+     STACKLY BLOG SECTION
+====================================================== -->
+
+<section class="stackly-blog-section">
+
+    <div class="stackly-blog-container">
+
+        <!-- Heading -->
+
+        <div class="stackly-blog-heading stackly-blog-top">
+
+            <span class="stackly-blog-subtitle">
+                <i class="fa-solid fa-book-open"></i>
+                Our Latest Blog
+            </span>
+
+            <h2>
+                Insights, Ideas &
+                <span>Business Stories</span>
+            </h2>
+
+            <p>
+                Stay updated with expert insights, business strategies,
+                technology trends, and innovative solutions that help your
+                organization grow faster in today's competitive market.
+            </p>
+
+        </div>
+
+
+
+        <!--=============================
+            BLOG GRID
+        ==============================-->
+
+        <div class="stackly-blog-grid">
+
+
+
+            <!-- CARD 1 -->
+
+            <article class="stackly-blog-card stackly-blog-up">
+
+                <div class="stackly-blog-content">
+
+                    <div class="stackly-blog-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Abinaya
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            July 29, 2026
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Empowering Businesses Through Digital Innovation
+                        And Smart Growth Strategies
+
+                    </h3>
+
+                </div>
+
+
+
+                <div class="stackly-blog-image">
+
+                    <img src="./bus 7.webp"
+                    alt="Business Meeting">
+
+                    <span class="stackly-blog-category">
+
+                        Consulting
+
+                    </span>
+
+
+
+                    <div class="stackly-blog-overlay">
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- CARD 2 -->
+
+            <article class="stackly-blog-card stackly-blog-up">
+
+                <div class="stackly-blog-content">
+
+                    <div class="stackly-blog-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-user"></i>
+
+                            David
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            July 25, 2026
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Grow Your Business By Leveraging Cloud Technology
+                        And Intelligent Automation
+
+                    </h3>
+
+                </div>
+
+
+
+                <div class="stackly-blog-image">
+
+                    <img src="./bus 6.webp"
+                    alt="Business Discussion">
+
+                    <span class="stackly-blog-category">
+
+                        Technology
+
+                    </span>
+
+
+
+                    <div class="stackly-blog-overlay">
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- CARD 3 -->
+
+            <article class="stackly-blog-card stackly-blog-up">
+
+                <div class="stackly-blog-content">
+
+                    <div class="stackly-blog-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Samantha
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            July 18, 2026
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Building Strong Client Relationships Through
+                        Modern Business Solutions
+
+                    </h3>
+
+                </div>
+
+
+
+                <div class="stackly-blog-image">
+
+                    <img src="./h2.webp"
+                    alt="Office Team">
+
+                    <span class="stackly-blog-category">
+
+                        Branding
+
+                    </span>
+
+
+
+                    <div class="stackly-blog-overlay">
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- CARD 4 -->
+
+            <article class="stackly-blog-card stackly-blog-up">
+
+                <div class="stackly-blog-content">
+
+                    <div class="stackly-blog-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Michael
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            July 12, 2026
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Why Every Startup Needs A Strong Digital Presence
+                        From Day One
+
+                    </h3>
+
+                </div>
+
+
+
+                <div class="stackly-blog-image">
+
+                    <img src="./bus 5.webp"
+                    alt="Startup">
+
+                    <span class="stackly-blog-category">
+
+                        Startups
+
+                    </span>
+
+
+
+                    <div class="stackly-blog-overlay">
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- CARD 5 -->
+
+            <article class="stackly-blog-card stackly-blog-up">
+
+                <div class="stackly-blog-content">
+
+                    <div class="stackly-blog-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Jennifer
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            July 06, 2026
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Five Proven Ways To Increase Customer Engagement
+                        And Brand Loyalty
+
+                    </h3>
+
+                </div>
+
+
+
+                <div class="stackly-blog-image">
+
+                    <img src="./bus 3.webp"
+                    alt="Business Growth">
+
+                    <span class="stackly-blog-category">
+
+                        Marketing
+
+                    </span>
+
+
+
+                    <div class="stackly-blog-overlay">
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- CARD 6 -->
+
+            <article class="stackly-blog-card stackly-blog-up">
+
+                <div class="stackly-blog-content">
+
+                    <div class="stackly-blog-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Robert
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            June 30, 2026
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        Measuring Business Success Using Modern Analytics
+                        And Smart KPI Dashboards
+
+                    </h3>
+
+                </div>
+
+
+
+                <div class="stackly-blog-image">
+
+                    <img src="./corp1.webp"
+                    alt="Analytics">
+
+                    <span class="stackly-blog-category">
+
+                        Analytics
+
+                    </span>
+
+
+
+                    <div class="stackly-blog-overlay">
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+    /*==================================================
+STACKLY BLOG SECTION
+==================================================*/
+
+.stackly-blog-section{
+
+padding:110px 6%;
+background:linear-gradient(
+135deg,
+rgba(89, 108, 203, 0.88),
+rgba(125, 100, 169, 0.78),
+rgba(0,188,212,.60));
+
+overflow-x:hidden;
+
+
+position:relative;
+overflow:hidden;
+
+}
+
+
+/*====================================
+BACKGROUND
+====================================*/
+
+.stackly-blog-section::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+height:420px;
+
+border-radius:50%;
+
+top:-180px;
+left:-180px;
+
+background:rgba(89,108,203,.08);
+
+filter:blur(80px);
+
+}
+
+.stackly-blog-section::after{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+height:450px;
+
+border-radius:50%;
+
+right:-180px;
+bottom:-180px;
+
+background:rgba(0,188,212,.08);
+
+filter:blur(80px);
+
+}
+
+
+/*====================================
+CONTAINER
+====================================*/
+
+.stackly-blog-container{
+
+max-width:1450px;
+margin:auto;
+position:relative;
+z-index:2;
+
+}
+
+
+/*====================================
+HEADING
+====================================*/
+
+.stackly-blog-heading{
+
+max-width:760px;
+margin:0 auto 70px;
+text-align:center;
+
+}
+
+.stackly-blog-subtitle{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 24px;
+
+border-radius:50px;
+
+background:rgba(89,108,203,.12);
+
+color:#596ccb;
+
+font-size:15px;
+
+font-weight:700;
+
+}
+
+.stackly-blog-subtitle i{
+
+color:#13c8e0;
+
+}
+
+.stackly-blog-heading h2{
+
+font-size:54px;
+
+margin:22px 0;
+
+line-height:1.2;
+
+font-weight:800;
+
+color:#1f2438;
+
+}
+
+.stackly-blog-heading h2 span{
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.stackly-blog-heading p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color: black;
+
+}
+
+
+/*====================================
+GRID
+====================================*/
+
+.stackly-blog-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+
+/*====================================
+CARD
+====================================*/
+
+/*=========================================
+BLOG GRID
+=========================================*/
+
+.stackly-blog-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,minmax(0,1fr));
+
+gap:35px;
+
+align-items:stretch;
+
+}
+
+
+
+/*=========================================
+BLOG CARD
+=========================================*/
+
+.stackly-blog-card{
+
+display:flex;
+
+flex-direction:column;
+
+height:100%;
+
+min-height:670px;
+
+background:#fff;
+
+border-radius:24px;
+
+overflow:hidden;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+position:relative;
+
+}
+
+
+
+/*=========================================
+TOP CONTENT
+=========================================*/
+
+.stackly-blog-content{
+
+padding:28px;
+
+display:flex;
+
+flex-direction:column;
+
+flex:1;
+
+}
+
+
+
+/*=========================================
+META
+=========================================*/
+
+.stackly-blog-meta{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+min-height:32px;
+
+margin-bottom:22px;
+
+}
+
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.stackly-blog-content h3{
+
+font-size:31px;
+
+font-weight:800;
+
+line-height:1.4;
+
+color:#1f2438;
+
+margin:0;
+
+flex:1;
+
+display:-webkit-box;
+
+-webkit-line-clamp:3;
+
+-webkit-box-orient:vertical;
+
+overflow:hidden;
+
+}
+
+
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.stackly-blog-image{
+
+position:relative;
+
+height:310px;
+
+overflow:hidden;
+
+margin-top:auto;
+
+}
+
+
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.stackly-blog-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+
+
+/*=========================================
+CATEGORY
+=========================================*/
+
+.stackly-blog-category{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+padding:10px 24px;
+
+border-radius:50px;
+
+font-size:14px;
+
+font-weight:700;
+
+}
+
+
+
+/*=========================================
+BOTTOM BAR
+=========================================*/
+
+.stackly-blog-overlay{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-85px;
+
+height:85px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#1d2438;
+
+}
+
+
+
+/*=========================================
+LINK
+=========================================*/
+
+.stackly-blog-overlay a{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:700;
+
+font-size:17px;
+
+}
+
+
+
+/*=========================================
+CARD HOVER
+=========================================*/
+
+.stackly-blog-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.stackly-blog-card:hover .stackly-blog-overlay{
+
+bottom:0;
+
+}
+
+.stackly-blog-card:hover img{
+
+transform:scale(1.12);
+
+}
+
+
+/*====================================
+TOP CONTENT
+====================================*/
+
+.stackly-blog-content{
+
+padding:28px;
+
+}
+
+
+/*====================================
+META
+====================================*/
+
+.stackly-blog-meta{
+
+display:flex;
+
+gap:28px;
+
+flex-wrap:wrap;
+
+margin-bottom:20px;
+
+}
+
+.stackly-blog-meta span{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+font-size:16px;
+
+color:#616977;
+
+}
+
+.stackly-blog-meta i{
+
+color:#596ccb;
+
+}
+
+
+/*====================================
+TITLE
+====================================*/
+
+.stackly-blog-content h3{
+
+font-size:33px;
+
+line-height:1.35;
+
+color:#1f2438;
+
+font-weight:800;
+
+transition:.35s;
+
+}
+
+
+/*====================================
+IMAGE
+====================================*/
+
+.stackly-blog-image{
+
+position:relative;
+
+overflow:hidden;
+
+height:310px;
+
+}
+
+.stackly-blog-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.7s;
+
+}
+
+
+/*====================================
+CATEGORY
+====================================*/
+
+.stackly-blog-category{
+
+position:absolute;
+
+left:22px;
+
+top:22px;
+
+padding:12px 26px;
+
+border-radius:50px;
+
+background:#1f2742;
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:700;
+
+z-index:5;
+
+}
+
+
+/*====================================
+READ MORE BAR
+====================================*/
+
+.stackly-blog-overlay{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-90px;
+
+background:#1f2438;
+
+padding:22px;
+
+transition:.45s;
+
+text-align:center;
+
+}
+
+.stackly-blog-overlay a{
+
+text-decoration:none;
+
+color:#fff;
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:18px;
+
+font-weight:700;
+
+}
+
+.stackly-blog-overlay i{
+
+transition:.35s;
+
+}
+
+
+/*====================================
+HOVER
+====================================*/
+
+.stackly-blog-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+}
+
+.stackly-blog-card:hover .stackly-blog-overlay{
+
+bottom:0;
+
+}
+
+.stackly-blog-card:hover .stackly-blog-image img{
+
+transform:scale(1.12);
+
+}
+
+.stackly-blog-card:hover .stackly-blog-content h3{
+
+color:#596ccb;
+
+}
+
+.stackly-blog-card:hover .stackly-blog-overlay i{
+
+transform:translateX(8px);
+
+}
+
+
+/*====================================
+SCROLL ANIMATION
+====================================*/
+
+.stackly-blog-top{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.stackly-blog-up{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.stackly-blog-show{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/*==================================================
+STACKLY BLOG
+PREMIUM HOVER ANIMATIONS
+==================================================*/
+
+
+/*=========================================
+CARD BORDER
+=========================================*/
+
+.stackly-blog-card{
+
+isolation:isolate;
+
+}
+
+.stackly-blog-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+padding:2px;
+
+border-radius:24px;
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:0;
+
+transition:.45s;
+
+z-index:20;
+
+}
+
+.stackly-blog-card:hover::before{
+
+opacity:1;
+
+}
+
+
+/*=========================================
+SHINE EFFECT
+=========================================*/
+
+.stackly-blog-card::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-160%;
+
+width:70%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+z-index:30;
+
+}
+
+.stackly-blog-card:hover::after{
+
+left:180%;
+
+}
+
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.stackly-blog-image img{
+
+transition:
+transform .8s,
+filter .8s;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-image img{
+
+transform:scale(1.12) rotate(2deg);
+
+filter:brightness(.78);
+
+}
+
+
+/*=========================================
+IMAGE DARK OVERLAY
+=========================================*/
+
+.stackly-blog-image::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.05);
+
+transition:.5s;
+
+z-index:1;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-image::before{
+
+background:rgba(0,0,0,.35);
+
+}
+
+
+/*=========================================
+CATEGORY BADGE
+=========================================*/
+
+.stackly-blog-category{
+
+transition:.45s;
+
+z-index:5;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-category{
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+transform:translateY(-8px) scale(1.08);
+
+box-shadow:0 15px 30px rgba(89,108,203,.35);
+
+}
+
+
+/*=========================================
+READ MORE BAR
+=========================================*/
+
+.stackly-blog-overlay{
+
+transition:.45s;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-overlay{
+
+bottom:0;
+
+}
+
+.stackly-blog-overlay a{
+
+position:relative;
+
+}
+
+.stackly-blog-overlay a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#ffffff;
+
+transition:.35s;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-overlay a::after{
+
+width:100%;
+
+}
+
+
+/*=========================================
+ARROW
+=========================================*/
+
+.stackly-blog-overlay i{
+
+transition:.35s;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-overlay i{
+
+transform:translateX(8px) rotate(-45deg);
+
+}
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.stackly-blog-content h3{
+
+transition:.35s;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-content h3{
+
+color:#596ccb;
+
+letter-spacing:.3px;
+
+}
+
+
+/*=========================================
+META
+=========================================*/
+
+.stackly-blog-meta span{
+
+transition:.35s;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-meta span{
+
+color:#1f2438;
+
+}
+
+.stackly-blog-card:hover
+.stackly-blog-meta i{
+
+color:#00bcd4;
+
+}
+
+
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+.stackly-blog-card{
+
+animation:stacklyBlogFloat 5s ease-in-out infinite;
+
+}
+
+.stackly-blog-card:nth-child(2){
+
+animation-delay:.25s;
+
+}
+
+.stackly-blog-card:nth-child(3){
+
+animation-delay:.5s;
+
+}
+
+.stackly-blog-card:nth-child(4){
+
+animation-delay:.75s;
+
+}
+
+.stackly-blog-card:nth-child(5){
+
+animation-delay:1s;
+
+}
+
+.stackly-blog-card:nth-child(6){
+
+animation-delay:1.25s;
+
+}
+
+@keyframes stacklyBlogFloat{
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-8px);
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+/*=========================================
+HEADING
+=========================================*/
+
+.stackly-blog-heading h2 span{
+
+background-size:220%;
+
+animation:stacklyBlogGradient 6s linear infinite;
+
+}
+
+@keyframes stacklyBlogGradient{
+
+from{
+
+    background-position:0%;
+
+}
+
+to{
+
+    background-position:220%;
+
+}
+
+}
+
+
+/*=========================================
+SUBTITLE
+=========================================*/
+
+.stackly-blog-subtitle{
+
+animation:stacklyBlogGlow 2.8s infinite alternate;
+
+}
+
+@keyframes stacklyBlogGlow{
+
+from{
+
+    box-shadow:0 0 0 rgba(89,108,203,0);
+
+}
+
+to{
+
+    box-shadow:0 0 20px rgba(89,108,203,.30);
+
+}
+
+}
+
+
+/*=========================================
+PREMIUM SHADOW
+=========================================*/
+
+.stackly-blog-card:hover{
+
+box-shadow:
+0 30px 70px rgba(89,108,203,.20),
+0 18px 45px rgba(0,0,0,.15);
+
+}
+
+
+/*=========================================
+SMOOTH TRANSITIONS
+=========================================*/
+
+.stackly-blog-card,
+.stackly-blog-image img,
+.stackly-blog-overlay,
+.stackly-blog-category,
+.stackly-blog-content h3,
+.stackly-blog-meta span,
+.stackly-blog-overlay a,
+.stackly-blog-overlay i{
+
+transition:all .4s ease;
+
+}
+
+/*==================================================
+STACKLY BLOG
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-blog-container{
+
+    max-width:1600px;
+
+}
+
+.stackly-blog-grid{
+
+    gap:40px;
+
+}
+
+.stackly-blog-heading h2{
+
+    font-size:64px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:36px;
+
+}
+
+.stackly-blog-image{
+
+    height:360px;
+
+}
+
+}
+
+
+
+/*=========================================
+LAPTOP
+=========================================*/
+
+@media (max-width:1400px){
+
+.stackly-blog-section{
+
+    padding:100px 5%;
+
+}
+
+.stackly-blog-grid{
+
+    gap:28px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:29px;
+
+}
+
+.stackly-blog-image{
+
+    height:290px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-blog-heading h2{
+
+    font-size:46px;
+
+}
+
+.stackly-blog-heading p{
+
+    max-width:720px;
+
+    margin:auto;
+
+}
+
+.stackly-blog-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+.stackly-blog-content{
+
+    padding:24px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:27px;
+
+}
+
+.stackly-blog-image{
+
+    height:300px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:992px){
+
+.stackly-blog-section{
+
+    padding:90px 5%;
+
+}
+
+.stackly-blog-heading{
+
+    margin-bottom:55px;
+
+}
+
+.stackly-blog-heading h2{
+
+    font-size:40px;
+
+}
+
+.stackly-blog-heading p{
+
+    font-size:16px;
+
+}
+
+.stackly-blog-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.stackly-blog-content{
+
+    padding:22px;
+
+}
+
+.stackly-blog-meta{
+
+    gap:16px;
+
+}
+
+.stackly-blog-meta span{
+
+    font-size:15px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:24px;
+
+    line-height:1.4;
+
+}
+
+.stackly-blog-category{
+
+    font-size:14px;
+
+    padding:10px 20px;
+
+}
+
+.stackly-blog-image{
+
+    height:280px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET PORTRAIT
+=========================================*/
+
+@media (max-width:768px){
+
+.stackly-blog-section{
+
+    padding:80px 25px;
+
+}
+
+.stackly-blog-heading{
+
+    margin-bottom:45px;
+
+}
+
+.stackly-blog-heading h2{
+
+    font-size:35px;
+
+}
+
+.stackly-blog-heading p{
+
+    font-size:15px;
+
+}
+
+.stackly-blog-grid{
+
+    grid-template-columns:1fr;
+
+    gap:28px;
+
+}
+
+.stackly-blog-card{
+
+    /* Laptop */
+
+@media(max-width:1200px){
+
+.stackly-blog-card{
+
+    min-height:630px;
+
+}
+
+}
+
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.stackly-blog-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.stackly-blog-card{
+
+    min-height:610px;
+
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.stackly-blog-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.stackly-blog-card{
+
+    min-height:580px;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+}
+
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.stackly-blog-card{
+
+    min-height:540px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:24px;
+
+}
+
+.stackly-blog-image{
+
+    height:240px;
+
+}
+
+}
+
+}
+
+.stackly-blog-image{
+
+    height:330px;
+
+}
+
+.stackly-blog-overlay{
+
+    padding:20px;
+
+}
+
+}
+
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-blog-section{
+
+    padding:70px 18px;
+
+}
+
+.stackly-blog-heading{
+
+    margin-bottom:40px;
+
+}
+
+.stackly-blog-subtitle{
+
+    font-size:13px;
+
+    padding:9px 18px;
+
+}
+
+.stackly-blog-heading h2{
+
+    font-size:29px;
+
+    line-height:1.3;
+
+}
+
+.stackly-blog-heading p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.stackly-blog-content{
+
+    padding:18px;
+
+}
+
+.stackly-blog-meta{
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-bottom:16px;
+
+}
+
+.stackly-blog-meta span{
+
+    font-size:14px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:22px;
+
+    line-height:1.45;
+
+}
+
+.stackly-blog-image{
+
+    height:250px;
+
+}
+
+.stackly-blog-category{
+
+    left:15px;
+
+    top:15px;
+
+    font-size:13px;
+
+    padding:8px 18px;
+
+}
+
+.stackly-blog-overlay{
+
+    padding:18px;
+
+}
+
+.stackly-blog-overlay a{
+
+    font-size:16px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-blog-section{
+
+    padding:60px 15px;
+
+}
+
+.stackly-blog-heading h2{
+
+    font-size:25px;
+
+}
+
+.stackly-blog-heading p{
+
+    font-size:13px;
+
+}
+
+.stackly-blog-content{
+
+    padding:16px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:19px;
+
+}
+
+.stackly-blog-meta span{
+
+    font-size:13px;
+
+}
+
+.stackly-blog-image{
+
+    height:220px;
+
+}
+
+.stackly-blog-category{
+
+    font-size:12px;
+
+    padding:8px 15px;
+
+}
+
+.stackly-blog-overlay{
+
+    padding:16px;
+
+}
+
+.stackly-blog-overlay a{
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+/*=========================================
+EXTRA SMALL DEVICES
+=========================================*/
+
+@media (max-width:340px){
+
+.stackly-blog-heading h2{
+
+    font-size:22px;
+
+}
+
+.stackly-blog-content h3{
+
+    font-size:18px;
+
+}
+
+.stackly-blog-image{
+
+    height:200px;
+
+}
+
+}
+
+
+
+/*=========================================
+TOUCH DEVICES
+=========================================*/
+
+@media (hover:none){
+
+.stackly-blog-card:hover{
+
+    transform:none;
+
+}
+
+.stackly-blog-card:hover .stackly-blog-image img{
+
+    transform:none;
+
+}
+
+.stackly-blog-card:hover .stackly-blog-overlay{
+
+    bottom:0;
+
+}
+
+}
+</style>
+
+<script>
+    /*==================================================
+STACKLY BLOG SECTION
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+/*=========================================
+ELEMENTS
+=========================================*/
+
+const stacklyBlogCards =
+    document.querySelectorAll(".stackly-blog-card");
+
+const stacklyBlogReveal =
+    document.querySelectorAll(".stackly-blog-top, .stackly-blog-up");
+
+
+
+/*=========================================
+SCROLL REVEAL
+=========================================*/
+
+const stacklyBlogObserver = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("stackly-blog-show");
+
+                stacklyBlogObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold:0.18
+
+    }
+
+);
+
+
+
+stacklyBlogReveal.forEach((item,index)=>{
+
+    item.style.transitionDelay=(index*0.15)+"s";
+
+    stacklyBlogObserver.observe(item);
+
+});
+
+
+
+
+/*=========================================
+CARD HOVER
+=========================================*/
+
+stacklyBlogCards.forEach((card)=>{
+
+    card.addEventListener("mouseenter",()=>{
+
+        card.style.transform="translateY(-15px)";
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+IMAGE PARALLAX
+=========================================*/
+
+stacklyBlogCards.forEach((card)=>{
+
+    const image = card.querySelector(".stackly-blog-image img");
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        const moveX = (x - rect.width/2) / 35;
+
+        const moveY = (y - rect.height/2) / 35;
+
+        image.style.transform =
+        `scale(1.12) translate(${moveX}px,${moveY}px)`;
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        image.style.transform="scale(1)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+FLOATING CATEGORY
+=========================================*/
+
+document.querySelectorAll(".stackly-blog-category")
+
+.forEach((badge,index)=>{
+
+    badge.animate(
+
+        [
+
+            {
+
+                transform:"translateY(0)"
+
+            },
+
+            {
+
+                transform:"translateY(-8px)"
+
+            },
+
+            {
+
+                transform:"translateY(0)"
+
+            }
+
+        ],
+
+        {
+
+            duration:2400+(index*180),
+
+            iterations:Infinity,
+
+            easing:"ease-in-out"
+
+        }
+
+    );
+
+});
+
+
+
+
+/*=========================================
+READ MORE ARROW
+=========================================*/
+
+document.querySelectorAll(".stackly-blog-overlay a")
+
+.forEach((link)=>{
+
+    const icon = link.querySelector("i");
+
+
+
+    link.addEventListener("mouseenter",()=>{
+
+        icon.style.transform="translateX(8px) rotate(-45deg)";
+
+    });
+
+
+
+    link.addEventListener("mouseleave",()=>{
+
+        icon.style.transform="translateX(0) rotate(0deg)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+KEYBOARD ACCESSIBILITY
+=========================================*/
+
+stacklyBlogCards.forEach((card)=>{
+
+    card.setAttribute("tabindex","0");
+
+
+
+    card.addEventListener("focus",()=>{
+
+        card.style.transform="translateY(-15px)";
+
+    });
+
+
+
+    card.addEventListener("blur",()=>{
+
+        card.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+RIPPLE EFFECT
+=========================================*/
+
+document.querySelectorAll(".stackly-blog-overlay a")
+
+.forEach((button)=>{
+
+    button.style.position="relative";
+
+    button.style.overflow="hidden";
+
+
+
+    button.addEventListener("click",(e)=>{
+
+        const ripple=document.createElement("span");
+
+        ripple.className="stackly-blog-ripple";
+
+
+
+        const rect=button.getBoundingClientRect();
+
+        const size=Math.max(rect.width,rect.height);
+
+
+
+        ripple.style.width=size+"px";
+
+        ripple.style.height=size+"px";
+
+
+
+        ripple.style.left=
+        (e.clientX-rect.left-size/2)+"px";
+
+        ripple.style.top=
+        (e.clientY-rect.top-size/2)+"px";
+
+
+
+        button.appendChild(ripple);
+
+
+
+        setTimeout(()=>{
+
+            ripple.remove();
+
+        },700);
+
+    });
+
+});
+
+});
+</script>
+
+<!--==================================================
+STACKLY OUR PROJECTS SECTION
+===================================================-->
+
+<section class="stackly-project-section">
+
+    <div class="stackly-project-container">
+
+        <!-- Heading -->
+
+        <div class="stackly-project-heading stackly-project-top">
+
+            <span class="stackly-project-subtitle">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Our Recent Projects
+
+            </span>
+
+            <h2>
+
+                Delivering
+                <span>Successful Solutions</span>
+
+            </h2>
+
+            <p>
+
+                We help businesses transform ideas into innovative digital
+                solutions through strategy, technology, creativity, and
+                business excellence.
+
+            </p>
+
+        </div>
+
+
+
+        <!--=========================
+        PROJECT GRID
+        ==========================-->
+
+        <div class="stackly-project-grid">
+
+
+
+            <!--================ CARD 1 ================-->
+
+            <article class="stackly-project-card stackly-project-up">
+
+                <div class="stackly-project-image">
+
+                    <img src="./bus 7.webp"
+                    alt="Business Consulting">
+
+                    <span class="stackly-project-category">
+
+                        Consulting
+
+                    </span>
+
+                </div>
+
+                <div class="stackly-project-content">
+
+                    <div class="stackly-project-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Corporate Business Transformation
+
+                    </h3>
+
+                    <p>
+
+                        Helping enterprises improve productivity,
+                        business growth and customer engagement
+                        through digital transformation.
+
+                    </p>
+
+                    <div class="stackly-project-tags">
+
+                        <span>Strategy</span>
+
+                        <span>Analytics</span>
+
+                        <span>Growth</span>
+
+                    </div>
+
+                    <a href="404.html">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!--================ CARD 2 ================-->
+
+            <article class="stackly-project-card stackly-project-up">
+
+                <div class="stackly-project-image">
+
+                    <img src="./bus 6.webp"
+                    alt="Technology">
+
+                    <span class="stackly-project-category">
+
+                        Technology
+
+                    </span>
+
+                </div>
+
+                <div class="stackly-project-content">
+
+                    <div class="stackly-project-icon">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Smart Enterprise Platform
+
+                    </h3>
+
+                    <p>
+
+                        Cloud-based business management platform
+                        designed for modern organizations with
+                        scalable architecture.
+
+                    </p>
+
+                    <div class="stackly-project-tags">
+
+                        <span>Cloud</span>
+
+                        <span>AI</span>
+
+                        <span>Automation</span>
+
+                    </div>
+
+                    <a href="404.html">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!--================ CARD 3 ================-->
+
+            <article class="stackly-project-card stackly-project-up">
+
+                <div class="stackly-project-image">
+
+                    <img src="./bus 5.webp"
+                    alt="Marketing">
+
+                    <span class="stackly-project-category">
+
+                        Branding
+
+                    </span>
+
+                </div>
+
+                <div class="stackly-project-content">
+
+                    <div class="stackly-project-icon">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Global Marketing Campaign
+
+                    </h3>
+
+                    <p>
+
+                        Complete digital branding strategy with
+                        SEO, social media marketing and
+                        customer engagement solutions.
+
+                    </p>
+
+                    <div class="stackly-project-tags">
+
+                        <span>SEO</span>
+
+                        <span>Social Media</span>
+
+                        <span>Branding</span>
+
+                    </div>
+
+                    <a href="404.html">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!--================ CARD 4 ================-->
+
+            <article class="stackly-project-card stackly-project-up">
+
+                <div class="stackly-project-image">
+
+                    <img src="./bus 4.webp"
+                    alt="Finance">
+
+                    <span class="stackly-project-category">
+
+                        Finance
+
+                    </span>
+
+                </div>
+
+                <div class="stackly-project-content">
+
+                    <div class="stackly-project-icon">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Financial Dashboard System
+
+                    </h3>
+
+                    <p>
+
+                        Intelligent reporting dashboard with
+                        real-time analytics and business
+                        performance monitoring.
+
+                    </p>
+
+                    <div class="stackly-project-tags">
+
+                        <span>Dashboard</span>
+
+                        <span>Reports</span>
+
+                        <span>Finance</span>
+
+                    </div>
+
+                    <a href="404.html">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!--================ CARD 5 ================-->
+
+            <article class="stackly-project-card stackly-project-up">
+
+                <div class="stackly-project-image">
+
+                    <img src="./bus 5.webp"
+                    alt="Analytics">
+
+                    <span class="stackly-project-category">
+
+                        Analytics
+
+                    </span>
+
+                </div>
+
+                <div class="stackly-project-content">
+
+                    <div class="stackly-project-icon">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Business Intelligence Suite
+
+                    </h3>
+
+                    <p>
+
+                        Powerful analytics platform providing
+                        business insights through interactive
+                        dashboards and KPIs.
+
+                    </p>
+
+                    <div class="stackly-project-tags">
+
+                        <span>BI</span>
+
+                        <span>KPIs</span>
+
+                        <span>Insights</span>
+
+                    </div>
+
+                    <a href="404.html">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!--================ CARD 6 ================-->
+
+            <article class="stackly-project-card stackly-project-up">
+
+                <div class="stackly-project-image">
+
+                    <img src="./h2.webp"
+                    alt="Innovation">
+
+                    <span class="stackly-project-category">
+
+                        Innovation
+
+                    </span>
+
+                </div>
+
+                <div class="stackly-project-content">
+
+                    <div class="stackly-project-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Digital Innovation Program
+
+                    </h3>
+
+                    <p>
+
+                        End-to-end innovation consulting helping
+                        organizations modernize operations
+                        and accelerate growth.
+
+                    </p>
+
+                    <div class="stackly-project-tags">
+
+                        <span>Innovation</span>
+
+                        <span>Digital</span>
+
+                        <span>Future</span>
+
+                    </div>
+
+                    <a href="404.html">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+    /*==================================================
+STACKLY PROJECT SECTION
+==================================================*/
+
+.stackly-project-section{
+
+padding:110px 6%;
+background:linear-gradient(
+135deg,
+rgba(89, 108, 203, 0.88),
+rgba(125, 100, 169, 0.78),
+rgba(0,188,212,.60));
+
+overflow-x:hidden;
+
+
+position:relative;
+overflow:hidden;
+
+}
+
+/*==================================
+BACKGROUND
+==================================*/
+
+.stackly-project-section::before{
+
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+border-radius:50%;
+background:rgba(89,108,203,.08);
+top:-180px;
+left:-180px;
+filter:blur(80px);
+
+}
+
+.stackly-project-section::after{
+
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+border-radius:50%;
+background:rgba(0,188,212,.08);
+right:-180px;
+bottom:-180px;
+filter:blur(80px);
+
+}
+
+/*==================================
+CONTAINER
+==================================*/
+
+.stackly-project-container{
+
+max-width:1450px;
+margin:auto;
+position:relative;
+z-index:2;
+
+}
+
+/*==================================
+HEADING
+==================================*/
+
+.stackly-project-heading{
+
+max-width:760px;
+margin:0 auto 70px;
+text-align:center;
+
+}
+
+.stackly-project-subtitle{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+padding:10px 24px;
+
+border-radius:50px;
+
+background:rgba(89,108,203,.10);
+
+color:#596ccb;
+
+font-size:15px;
+
+font-weight:700;
+
+}
+
+.stackly-project-subtitle i{
+
+color:#00bcd4;
+
+}
+
+.stackly-project-heading h2{
+
+font-size:54px;
+font-weight:800;
+line-height:1.2;
+margin:22px 0;
+
+color:#1d2436;
+
+}
+
+.stackly-project-heading h2 span{
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.stackly-project-heading p{
+
+font-size:17px;
+color: black;
+line-height:1.9;
+
+}
+
+/*==================================
+GRID
+==================================*/
+
+.stackly-project-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+align-items:stretch;
+
+}
+
+/*==================================
+CARD
+==================================*/
+
+.stackly-project-card{
+
+background:#fff;
+
+border-radius:24px;
+
+overflow:hidden;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+transition:.45s;
+
+display:flex;
+
+flex-direction:column;
+
+min-height:690px;
+
+position:relative;
+
+}
+
+/*==================================
+IMAGE
+==================================*/
+
+.stackly-project-image{
+
+position:relative;
+
+height:290px;
+
+overflow:hidden;
+
+}
+
+.stackly-project-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.7s;
+
+}
+
+/*==================================
+IMAGE OVERLAY
+==================================*/
+
+.stackly-project-image::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+
+to top,
+
+rgba(0,0,0,.45),
+
+rgba(0,0,0,.05)
+
+);
+
+z-index:1;
+
+}
+
+/*==================================
+CATEGORY
+==================================*/
+
+.stackly-project-category{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+padding:10px 24px;
+
+border-radius:40px;
+
+background:#1d2436;
+
+color:#fff;
+
+font-size:14px;
+
+font-weight:700;
+
+z-index:3;
+
+}
+
+/*==================================
+CONTENT
+==================================*/
+
+.stackly-project-content{
+
+padding:30px;
+
+display:flex;
+
+flex-direction:column;
+
+flex:1;
+
+}
+
+/*==================================
+ICON
+==================================*/
+
+.stackly-project-icon{
+
+width:75px;
+
+height:75px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+color:#fff;
+
+font-size:30px;
+
+margin-bottom:22px;
+
+}
+
+/*==================================
+TITLE
+==================================*/
+
+.stackly-project-content h3{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#1d2436;
+
+line-height:1.35;
+
+margin-bottom:18px;
+
+min-height:82px;
+
+}
+
+/*==================================
+DESCRIPTION
+==================================*/
+
+.stackly-project-content p{
+
+color:#6c7282;
+
+font-size:16px;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+flex:1;
+
+}
+
+/*==================================
+TAGS
+==================================*/
+
+.stackly-project-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:28px;
+
+}
+
+.stackly-project-tags span{
+
+padding:8px 16px;
+
+border-radius:30px;
+
+background:#eef3ff;
+
+color:#596ccb;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+/*==================================
+BUTTON
+==================================*/
+
+.stackly-project-content a{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+text-decoration:none;
+
+height:58px;
+
+border-radius:14px;
+
+background:#1d2436;
+
+color:#fff;
+
+font-weight:700;
+
+font-size:16px;
+
+margin-top:auto;
+
+transition:.4s;
+
+}
+
+.stackly-project-content a i{
+
+transition:.35s;
+
+}
+
+/*==================================
+HOVER
+==================================*/
+
+.stackly-project-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+}
+
+.stackly-project-card:hover
+.stackly-project-image img{
+
+transform:scale(1.12);
+
+}
+
+.stackly-project-card:hover
+.stackly-project-content a{
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+}
+
+.stackly-project-card:hover
+.stackly-project-content a i{
+
+transform:translateX(8px);
+
+}
+
+/*==================================
+SCROLL ANIMATION
+==================================*/
+
+.stackly-project-top{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:1s;
+
+}
+
+.stackly-project-up{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.stackly-project-show{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/*==================================================
+STACKLY PROJECTS
+PREMIUM HOVER EFFECTS
+==================================================*/
+
+
+/*=========================================
+CARD
+=========================================*/
+
+.stackly-project-card{
+
+isolation:isolate;
+
+}
+
+.stackly-project-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+padding:2px;
+
+border-radius:24px;
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:0;
+
+transition:.45s;
+
+z-index:20;
+
+}
+
+.stackly-project-card:hover::before{
+
+opacity:1;
+
+}
+
+
+
+/*=========================================
+GLASS SHINE
+=========================================*/
+
+.stackly-project-card::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-150%;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+z-index:25;
+
+}
+
+.stackly-project-card:hover::after{
+
+left:170%;
+
+}
+
+
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.stackly-project-image img{
+
+transition:
+transform .8s,
+filter .8s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-image img{
+
+transform:scale(1.15) rotate(2deg);
+
+filter:brightness(.78);
+
+}
+
+
+
+/*=========================================
+IMAGE OVERLAY
+=========================================*/
+
+.stackly-project-image::before{
+
+transition:.5s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-image::before{
+
+background:linear-gradient(
+to top,
+rgba(12,16,32,.75),
+rgba(12,16,32,.12));
+
+}
+
+
+
+/*=========================================
+CATEGORY
+=========================================*/
+
+.stackly-project-category{
+
+transition:.4s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-category{
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+transform:translateY(-8px);
+
+box-shadow:0 12px 25px rgba(89,108,203,.35);
+
+}
+
+
+
+/*=========================================
+ICON
+=========================================*/
+
+.stackly-project-icon{
+
+transition:.5s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-icon{
+
+transform:rotate(360deg) scale(1.08);
+
+border-radius:50%;
+
+}
+
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.stackly-project-content h3{
+
+transition:.4s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-content h3{
+
+color:#596ccb;
+
+letter-spacing:.4px;
+
+}
+
+
+
+/*=========================================
+TAGS
+=========================================*/
+
+.stackly-project-tags span{
+
+transition:.35s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-tags span{
+
+background:#596ccb;
+
+color:#ffffff;
+
+}
+
+
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.stackly-project-content a{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.stackly-project-content a::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(255,255,255,.18);
+
+transform:skewX(-25deg);
+
+transition:.7s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-content a::before{
+
+left:130%;
+
+}
+
+.stackly-project-content a i{
+
+transition:.35s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-content a i{
+
+transform:translateX(8px);
+
+}
+
+
+
+/*=========================================
+UNDERLINE
+=========================================*/
+
+.stackly-project-content a::after{
+
+content:"";
+
+position:absolute;
+
+left:18%;
+
+bottom:12px;
+
+width:0;
+
+height:2px;
+
+background:#ffffff;
+
+transition:.35s;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-content a::after{
+
+width:64%;
+
+}
+
+
+
+/*=========================================
+FLOATING CARDS
+=========================================*/
+
+.stackly-project-card{
+
+animation:stacklyProjectFloat 5s ease-in-out infinite;
+
+}
+
+.stackly-project-card:nth-child(2){
+
+animation-delay:.25s;
+
+}
+
+.stackly-project-card:nth-child(3){
+
+animation-delay:.5s;
+
+}
+
+.stackly-project-card:nth-child(4){
+
+animation-delay:.75s;
+
+}
+
+.stackly-project-card:nth-child(5){
+
+animation-delay:1s;
+
+}
+
+.stackly-project-card:nth-child(6){
+
+animation-delay:1.25s;
+
+}
+
+@keyframes stacklyProjectFloat{
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-8px);
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/*=========================================
+HEADING
+=========================================*/
+
+.stackly-project-heading h2 span{
+
+background-size:220%;
+
+animation:stacklyProjectGradient 6s linear infinite;
+
+}
+
+@keyframes stacklyProjectGradient{
+
+from{
+
+    background-position:0%;
+
+}
+
+to{
+
+    background-position:220%;
+
+}
+
+}
+
+
+
+/*=========================================
+SUBTITLE
+=========================================*/
+
+.stackly-project-subtitle{
+
+animation:stacklyProjectGlow 3s infinite alternate;
+
+}
+
+@keyframes stacklyProjectGlow{
+
+from{
+
+    box-shadow:0 0 0 rgba(89,108,203,0);
+
+}
+
+to{
+
+    box-shadow:0 0 20px rgba(89,108,203,.28);
+
+}
+
+}
+
+
+
+/*=========================================
+PREMIUM SHADOW
+=========================================*/
+
+.stackly-project-card:hover{
+
+box-shadow:
+0 28px 70px rgba(89,108,203,.22),
+0 18px 45px rgba(0,0,0,.15);
+
+}
+
+
+
+/*=========================================
+SMOOTH TRANSITIONS
+=========================================*/
+
+.stackly-project-card,
+.stackly-project-image img,
+.stackly-project-category,
+.stackly-project-icon,
+.stackly-project-content h3,
+.stackly-project-tags span,
+.stackly-project-content a,
+.stackly-project-content a i{
+
+transition:all .4s ease;
+
+}
+
+/*==================================================
+STACKLY PROJECT SECTION
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-project-container{
+
+    max-width:1600px;
+
+}
+
+.stackly-project-grid{
+
+    gap:40px;
+
+}
+
+.stackly-project-heading h2{
+
+    font-size:64px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:34px;
+
+}
+
+.stackly-project-image{
+
+    height:340px;
+
+}
+
+}
+
+
+
+/*=========================================
+LAPTOP
+=========================================*/
+
+@media (max-width:1400px){
+
+.stackly-project-section{
+
+    padding:100px 5%;
+
+}
+
+.stackly-project-grid{
+
+    gap:28px;
+
+}
+
+.stackly-project-card{
+
+    min-height:660px;
+
+}
+
+.stackly-project-image{
+
+    height:270px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:28px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-project-heading h2{
+
+    font-size:46px;
+
+}
+
+.stackly-project-heading p{
+
+    max-width:720px;
+
+    margin:auto;
+
+}
+
+.stackly-project-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+.stackly-project-card{
+
+    min-height:640px;
+
+}
+
+.stackly-project-image{
+
+    height:260px;
+
+}
+
+.stackly-project-content{
+
+    padding:26px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:26px;
+
+    min-height:70px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:992px){
+
+.stackly-project-section{
+
+    padding:90px 5%;
+
+}
+
+.stackly-project-heading{
+
+    margin-bottom:55px;
+
+}
+
+.stackly-project-heading h2{
+
+    font-size:40px;
+
+}
+
+.stackly-project-heading p{
+
+    font-size:16px;
+
+}
+
+.stackly-project-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.stackly-project-card{
+
+    min-height:620px;
+
+}
+
+.stackly-project-image{
+
+    height:240px;
+
+}
+
+.stackly-project-content{
+
+    padding:24px;
+
+}
+
+.stackly-project-icon{
+
+    width:68px;
+
+    height:68px;
+
+    font-size:28px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:24px;
+
+    min-height:auto;
+
+}
+
+.stackly-project-content p{
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET PORTRAIT
+=========================================*/
+
+@media (max-width:768px){
+
+.stackly-project-section{
+
+    padding:80px 24px;
+
+}
+
+.stackly-project-heading{
+
+    margin-bottom:45px;
+
+}
+
+.stackly-project-heading h2{
+
+    font-size:35px;
+
+}
+
+.stackly-project-heading p{
+
+    font-size:15px;
+
+}
+
+.stackly-project-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.stackly-project-card{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:auto;
+
+    min-height:unset;
+
+}
+
+.stackly-project-image{
+
+    height:300px;
+
+}
+
+}
+
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-project-section{
+
+    padding:70px 18px;
+
+}
+
+.stackly-project-heading{
+
+    margin-bottom:40px;
+
+}
+
+.stackly-project-subtitle{
+
+    font-size:13px;
+
+    padding:9px 18px;
+
+}
+
+.stackly-project-heading h2{
+
+    font-size:30px;
+
+    line-height:1.3;
+
+}
+
+.stackly-project-heading p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.stackly-project-card{
+
+    border-radius:20px;
+
+}
+
+.stackly-project-image{
+
+    height:230px;
+
+}
+
+.stackly-project-category{
+
+    top:15px;
+
+    left:15px;
+
+    padding:8px 18px;
+
+    font-size:13px;
+
+}
+
+.stackly-project-content{
+
+    padding:20px;
+
+}
+
+.stackly-project-icon{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+.stackly-project-content p{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+.stackly-project-tags{
+
+    gap:8px;
+
+    margin-bottom:22px;
+
+}
+
+.stackly-project-tags span{
+
+    font-size:12px;
+
+    padding:7px 14px;
+
+}
+
+.stackly-project-content a{
+
+    height:52px;
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-project-section{
+
+    padding:60px 15px;
+
+}
+
+.stackly-project-heading h2{
+
+    font-size:26px;
+
+}
+
+.stackly-project-heading p{
+
+    font-size:13px;
+
+}
+
+.stackly-project-image{
+
+    height:210px;
+
+}
+
+.stackly-project-content{
+
+    padding:18px;
+
+}
+
+.stackly-project-icon{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:22px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:20px;
+
+}
+
+.stackly-project-content p{
+
+    font-size:13px;
+
+}
+
+.stackly-project-tags span{
+
+    font-size:11px;
+
+    padding:6px 12px;
+
+}
+
+.stackly-project-content a{
+
+    height:48px;
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+/*=========================================
+EXTRA SMALL DEVICES
+=========================================*/
+
+@media (max-width:340px){
+
+.stackly-project-heading h2{
+
+    font-size:22px;
+
+}
+
+.stackly-project-content h3{
+
+    font-size:18px;
+
+}
+
+.stackly-project-image{
+
+    height:190px;
+
+}
+
+}
+
+
+
+/*=========================================
+TOUCH DEVICES
+=========================================*/
+
+@media (hover:none){
+
+.stackly-project-card:hover{
+
+    transform:none;
+
+}
+
+.stackly-project-card:hover
+.stackly-project-image img{
+
+    transform:none;
+
+}
+
+}
+</style>
+
+<script>
+    /*==================================================
+STACKLY PROJECT SECTION
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+/*=========================================
+ELEMENTS
+=========================================*/
+
+const stacklyProjectCards =
+    document.querySelectorAll(".stackly-project-card");
+
+const stacklyProjectReveal =
+    document.querySelectorAll(".stackly-project-top, .stackly-project-up");
+
+
+
+/*=========================================
+SCROLL REVEAL
+=========================================*/
+
+const stacklyProjectObserver = new IntersectionObserver(
+
+    (entries)=>{
+
+        entries.forEach((entry)=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("stackly-project-show");
+
+                stacklyProjectObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold:0.18
+
+    }
+
+);
+
+
+
+stacklyProjectReveal.forEach((item,index)=>{
+
+    item.style.transitionDelay=(index*0.15)+"s";
+
+    stacklyProjectObserver.observe(item);
+
+});
+
+
+
+
+/*=========================================
+CARD HOVER LIFT
+=========================================*/
+
+stacklyProjectCards.forEach((card)=>{
+
+    card.addEventListener("mouseenter",()=>{
+
+        card.style.transform="translateY(-15px)";
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+IMAGE PARALLAX
+=========================================*/
+
+stacklyProjectCards.forEach((card)=>{
+
+    const image = card.querySelector(".stackly-project-image img");
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        const moveX = (x - rect.width/2)/35;
+
+        const moveY = (y - rect.height/2)/35;
+
+        image.style.transform =
+        `scale(1.12) translate(${moveX}px,${moveY}px)`;
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        image.style.transform="scale(1)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+FLOATING ICON
+=========================================*/
+
+document.querySelectorAll(".stackly-project-icon")
+
+.forEach((icon,index)=>{
+
+    icon.animate(
+
+        [
+
+            {
+
+                transform:"translateY(0px)"
+
+            },
+
+            {
+
+                transform:"translateY(-8px)"
+
+            },
+
+            {
+
+                transform:"translateY(0px)"
+
+            }
+
+        ],
+
+        {
+
+            duration:2300+(index*180),
+
+            iterations:Infinity,
+
+            easing:"ease-in-out"
+
+        }
+
+    );
+
+});
+
+
+
+
+/*=========================================
+BUTTON ARROW
+=========================================*/
+
+document.querySelectorAll(".stackly-project-content a")
+
+.forEach((button)=>{
+
+    const arrow = button.querySelector("i");
+
+
+
+    button.addEventListener("mouseenter",()=>{
+
+        arrow.style.transform="translateX(8px)";
+
+    });
+
+
+
+    button.addEventListener("mouseleave",()=>{
+
+        arrow.style.transform="translateX(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+KEYBOARD ACCESSIBILITY
+=========================================*/
+
+stacklyProjectCards.forEach((card)=>{
+
+    card.setAttribute("tabindex","0");
+
+
+
+    card.addEventListener("focus",()=>{
+
+        card.style.transform="translateY(-15px)";
+
+    });
+
+
+
+    card.addEventListener("blur",()=>{
+
+        card.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+RIPPLE EFFECT
+=========================================*/
+
+document.querySelectorAll(".stackly-project-content a")
+
+.forEach((button)=>{
+
+    button.style.position="relative";
+
+    button.style.overflow="hidden";
+
+
+
+    button.addEventListener("click",function(e){
+
+        const ripple=document.createElement("span");
+
+        ripple.className="stackly-project-ripple";
+
+
+
+        const rect=this.getBoundingClientRect();
+
+        const size=Math.max(rect.width,rect.height);
+
+
+
+        ripple.style.width=size+"px";
+
+        ripple.style.height=size+"px";
+
+
+
+        ripple.style.left=(e.clientX-rect.left-size/2)+"px";
+
+        ripple.style.top=(e.clientY-rect.top-size/2)+"px";
+
+
+
+        this.appendChild(ripple);
+
+
+
+        setTimeout(()=>{
+
+            ripple.remove();
+
+        },600);
+
+        /* Navigation to 404.html will continue normally */
+
+    });
+
+});
+
+});
+    </script>
+
+<footer class="stkx-footer">
+
+    <!-- ===========================
+         CTA SECTION
+    ============================ -->
+
+    <section class="stkx-footer-cta">
+
+        <div class="stkx-footer-overlay"></div>
+
+        <div class="stkx-footer-container">
+
+            <div class="stkx-footer-cta-wrapper">
+
+                <!-- Left -->
+
+                <div class="stkx-footer-cta-content stkx-reveal-left">
+
+                    <h2>
+                        Ready to Transform
+                        <br>
+                        your Business ?
+                    </h2>
+
+                    <p>
+                        Lets work together to create solutions that drive
+                        growth, improve efficiency and deliver impact.
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="stkx-footer-cta-btn-wrap stkx-reveal-right">
+
+                    <a href="404.html" class="stkx-footer-btn">
+
+                        <span>Get in touch today</span>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+
+                            <polyline points="12 5 19 12 12 19"></polyline>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         MAIN FOOTER
+    ============================ -->
+
+    <section class="stkx-footer-main">
+
+        <div class="stkx-footer-container">
+
+            <div class="stkx-footer-grid">
+
+                <!-- ======================
+                     COMPANY
+                ======================= -->
+
+                <div class="stkx-footer-company">
+
+                    <a href="index.html" class="stkx-footer-logo">
+
+                        <img
+                            src="./logo.webp"
+                            alt="Stackly Logo">
+
+                    </a>
+
+                    <p class="stkx-footer-desc">
+                        We help businesses grow with smart
+                        digital solutions and innovative
+                        strategies.
+                    </p>
+
+                    <h3 class="stkx-footer-social-title">
+                        Follow Us :
+                    </h3>
+
+                    <div class="stkx-footer-social">
+
+                        <a href="404.html">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="404.html">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="404.html">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a href="404.html">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                                <!-- ======================
+                     QUICK LINKS
+                ======================= -->
+
+                <div class="stkx-footer-column">
+
+                    <h3 class="stkx-footer-title">
+                        Quick Links
+                    </h3>
+
+                    <ul class="stkx-footer-links">
+
+                        <li>
+                            <a href="./index.html">
+                                <span class="stkx-dot"></span>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./about.html">
+                                <span class="stkx-dot"></span>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./services.html">
+                                <span class="stkx-dot"></span>
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./blog.html">
+                                <span class="stkx-dot"></span>
+                              Blog
+                            </a>
+                        </li>
+
+                        
+
+                        <li>
+                            <a href="./contact.html">
+                                <span class="stkx-dot"></span>
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ======================
+                     OUR SERVICES
+                ======================= -->
+
+                <div class="stkx-footer-column">
+
+                    <h3 class="stkx-footer-title">
+                        Our Services
+                    </h3>
+
+                    <ul class="stkx-footer-links">
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Business Consulting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Digital Marketing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                UI/UX Design
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Medical billing consulting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Electronic consulting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                IT Solutions
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ======================
+                     CONTACT
+                ======================= -->
+
+                <div class="stkx-footer-column">
+
+                    <h3 class="stkx-footer-title">
+                        Contact Us
+                    </h3>
+
+                    <div class="stkx-footer-contact">
+
+                        <div class="stkx-contact-item">
+
+                            <h4>Address :</h4>
+
+                            <p>
+                                Tamilnadu
+                                <br>
+                                Salem - 636008
+                            </p>
+
+                        </div>
+
+                        <div class="stkx-contact-item">
+
+                            <h4>Phone:</h4>
+
+                            <p>
+                                +91 7010792745
+                            </p>
+
+                        </div>
+
+                        <div class="stkx-contact-item">
+
+                            <h4>Email:</h4>
+
+                            <p>
+                                info@thestackly.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ==========================================
+         FOOTER BOTTOM
+    =========================================== -->
+
+    <div class="stkx-footer-bottom">
+
+        <div class="stkx-footer-container">
+
+            <div class="stkx-footer-bottom-wrapper">
+
+                <!-- Left -->
+
+                <div class="stkx-footer-copy">
+
+                    <p>
+                        © 2026 Stackly. All Rights Reserved.
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="stkx-footer-bottom-links">
+
+                    <a href="404.html">
+                        Privacy Policy
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="404.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="404.html">
+                        Sitemap
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     FONT AWESOME
+=========================================== -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- ==========================================
+     FOOTER JAVASCRIPT
+=========================================== -->
+
+
+
+<style>
+
+    /*=========================================================
+  STACKLY FOOTER
+  OPTIMIZED CSS - PART 1
+=========================================================*/
+
+/*==========================
+    RESET
+==========================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.stkx-footer{
+    width:100%;
+    background:#450969;
+    color:#ffffff;
+    overflow:hidden;
+    position:relative;
+    font-family:"Poppins",sans-serif;
+}
+
+.stkx-footer-container{
+    width:100%;
+    max-width:1320px;
+    margin:auto;
+    padding:0 40px;
+}
+
+/*=========================================================
+                CTA SECTION
+=========================================================*/
+
+.stkx-footer-cta{
+
+    position:relative;
+
+    width:100%;
+
+    padding:50px 0;
+
+    overflow:hidden;
+
+    background:url("./image 5.webp") center center/cover no-repeat;
+
+}
+
+/* Overlay */
+
+.stkx-footer-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#9f8aab;
+
+    z-index:1;
+
+}
+
+/* CTA Container */
+
+.stkx-footer-cta .stkx-footer-container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* CTA Wrapper */
+
+.stkx-footer-cta-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+/*==========================
+      CTA CONTENT
+==========================*/
+
+.stkx-footer-cta-content{
+
+    flex:1;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    color:#ffffff;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin:0;
+
+}
+
+.stkx-footer-cta-content p{
+
+    margin-top:14px;
+
+    color:#f4f4f4;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    max-width:620px;
+
+}
+
+/*==========================
+        CTA BUTTON
+==========================*/
+
+.stkx-footer-cta-btn-wrap{
+
+    flex-shrink:0;
+
+}
+
+.stkx-footer-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    min-width:280px;
+
+    padding:18px 30px;
+
+    background:goldenrod;
+
+    color:#06121b;
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.stkx-footer-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(22,212,203,.25);
+
+}
+
+/*=========================================================
+                MAIN FOOTER
+=========================================================*/
+
+.stkx-footer-main{
+
+    background:#450969;
+
+    padding:55px 0 40px;
+
+}
+
+/*==========================
+        GRID
+==========================*/
+
+.stkx-footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap:35px;
+
+}
+
+/*=========================================================
+            COMPANY SECTION
+=========================================================*/
+
+.stkx-footer-company img{
+
+    width:220px;
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+.stkx-footer-desc{
+
+    margin-top:18px;
+
+    color:#d9d9d9;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    max-width:330px;
+
+}
+
+/*==========================
+      SOCIAL TITLE
+==========================*/
+
+.stkx-footer-social-title{
+
+    margin-top:30px;
+
+    margin-bottom:16px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+/*==========================
+      SOCIAL ICONS
+==========================*/
+
+.stkx-footer-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.stkx-footer-social a{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffffff;
+
+    font-size:19px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+}
+
+.stkx-footer-social a:nth-child(1){
+
+    background:#3b5998;
+
+}
+
+.stkx-footer-social a:nth-child(2){
+
+    background:#0a66c2;
+
+}
+
+.stkx-footer-social a:nth-child(3){
+
+    background:#1da1f2;
+
+}
+
+.stkx-footer-social a:nth-child(4){
+
+    background:linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+
+}
+
+.stkx-footer-social a:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+}
+
+/*=========================================================
+            FOOTER COLUMNS
+=========================================================*/
+
+.stkx-footer-column{
+    width:100%;
+}
+
+.stkx-footer-title{
+
+    margin:0 0 18px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    position:relative;
+
+    line-height:1.3;
+
+}
+
+.stkx-footer-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:55px;
+
+    height:3px;
+
+    background:#ab09e1;
+
+    margin-top:10px;
+
+    border-radius:20px;
+
+}
+
+/*=========================================================
+                FOOTER LINKS
+=========================================================*/
+
+.stkx-footer-links{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.stkx-footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.stkx-footer-links li:last-child{
+
+    margin-bottom:0;
+
+}
+
+.stkx-footer-links a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#d8d8d8;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.35s ease;
+
+}
+
+.stkx-dot{
+
+    width:7px;
+
+    height:7px;
+
+    background:#ab09e1;
+
+    border-radius:50%;
+
+    transition:.35s ease;
+
+    flex-shrink:0;
+
+}
+
+.stkx-footer-links a:hover{
+
+    color:#ab09e1;
+
+    transform:translateX(6px);
+
+}
+
+.stkx-footer-links a:hover .stkx-dot{
+
+    transform:scale(1.4);
+
+}
+
+/*=========================================================
+                CONTACT SECTION
+=========================================================*/
+
+.stkx-footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.stkx-contact-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.stkx-contact-item h4{
+
+    margin:0 0 6px;
+
+    font-size:18px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+.stkx-contact-item p{
+
+    margin:0;
+
+    color:#d8d8d8;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================================
+                FOOTER BOTTOM
+=========================================================*/
+
+.stkx-footer-bottom{
+
+    background:#03050a;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:14px 0;
+
+}
+
+.stkx-footer-bottom-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.stkx-footer-copy p{
+
+    margin:0;
+
+    color:#cfcfcf;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.stkx-footer-bottom-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.stkx-footer-bottom-links span{
+
+    color:#666666;
+
+}
+
+.stkx-footer-bottom-links a{
+
+    color:#d4d4d4;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s ease;
+
+}
+
+.stkx-footer-bottom-links a:hover{
+
+    color:#ab09e1;
+
+}
+
+/*=========================================================
+            SCROLL REVEAL
+=========================================================*/
+
+.stkx-reveal-left,
+.stkx-reveal-right{
+
+    transition:all .8s ease;
+
+}
+
+.stkx-reveal-left{
+
+    transform:translateX(-50px);
+
+}
+
+.stkx-reveal-right{
+
+    transform:translateX(50px);
+
+}
+
+.stkx-reveal-active{
+
+    opacity:1 !important;
+
+    transform:translate(0,0) !important;
+
+}
+
+
+/*=========================================================
+            LAPTOP (1200px)
+=========================================================*/
+
+@media (max-width:1200px){
+
+.stkx-footer-container{
+    padding:0 30px;
+}
+
+.stkx-footer-grid{
+    gap:30px;
+}
+
+.stkx-footer-cta{
+    padding:45px 0;
+}
+
+.stkx-footer-cta-wrapper{
+    gap:40px;
+}
+
+.stkx-footer-cta-content h2{
+    font-size:40px;
+}
+
+.stkx-footer-cta-content p{
+    font-size:17px;
+}
+
+.stkx-footer-btn{
+    min-width:250px;
+    padding:16px 26px;
+    font-size:17px;
+}
+
+.stkx-footer-company img{
+    width:200px;
+}
+
+.stkx-footer-desc{
+    font-size:16px;
+}
+
+}
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media (max-width:992px){
+
+.stkx-footer-container{
+    padding:0 25px;
+}
+
+.stkx-footer-cta{
+
+    padding:40px 0;
+
+}
+
+.stkx-footer-cta-wrapper{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:30px;
+
+}
+
+.stkx-footer-cta-content{
+
+    max-width:100%;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    font-size:34px;
+
+}
+
+.stkx-footer-cta-content p{
+
+    font-size:16px;
+
+    margin-top:12px;
+
+    max-width:650px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.stkx-footer-btn{
+
+    min-width:240px;
+
+    padding:15px 25px;
+
+    font-size:16px;
+
+}
+
+.stkx-footer-main{
+
+    padding:45px 0 35px;
+
+}
+
+.stkx-footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.stkx-footer-company{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+}
+
+.stkx-footer-company img{
+
+    margin:auto;
+
+}
+
+.stkx-footer-desc{
+
+    max-width:600px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.stkx-footer-social{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media (max-width:768px){
+
+.stkx-footer-container{
+
+    padding:0 20px;
+
+}
+
+.stkx-footer-cta{
+
+    padding:35px 0;
+
+}
+
+.stkx-footer-cta-wrapper{
+
+    gap:25px;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    font-size:28px;
+
+    line-height:1.3;
+
+}
+
+.stkx-footer-cta-content p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.stkx-footer-btn{
+
+    width:100%;
+
+    min-width:100%;
+
+    padding:15px;
+
+    font-size:16px;
+
+    justify-content:center;
+
+}
+
+.stkx-footer-main{
+
+    padding:40px 0 30px;
+
+}
+
+.stkx-footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.stkx-footer-company{
+
+    text-align:center;
+
+}
+
+.stkx-footer-company img{
+
+    width:180px;
+
+    margin:auto;
+
+}
+
+.stkx-footer-desc{
+
+    font-size:15px;
+
+    max-width:100%;
+
+}
+
+.stkx-footer-social-title{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+}
+
+.stkx-footer-social{
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.stkx-footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:17px;
+
+}
+
+.stkx-footer-title{
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+.stkx-footer-links li{
+
+    margin-bottom:10px;
+
+}
+
+.stkx-footer-links a{
+
+    font-size:15px;
+
+}
+
+.stkx-contact-item h4{
+
+    font-size:16px;
+
+}
+
+.stkx-contact-item p{
+
+    font-size:14px;
+
+}
+
+.stkx-footer-bottom{
+
+    padding:12px 0;
+
+}
+
+.stkx-footer-bottom-wrapper{
+
+    flex-direction:column;
+
+    gap:10px;
+
+    text-align:center;
+
+}
+
+.stkx-footer-bottom-links{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                SMALL MOBILE
+=========================================================*/
+
+@media (max-width:480px){
+
+.stkx-footer-container{
+
+    padding:0 15px;
+
+}
+
+.stkx-footer-cta{
+
+    padding:30px 0;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    font-size:24px;
+
+}
+
+.stkx-footer-cta-content p{
+
+    font-size:14px;
+
+}
+
+.stkx-footer-btn{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.stkx-footer-company img{
+
+    width:160px;
+
+}
+
+.stkx-footer-desc{
+
+    font-size:14px;
+
+}
+
+.stkx-footer-social-title{
+
+    font-size:18px;
+
+}
+
+.stkx-footer-social a{
+
+    width:40px;
+
+    height:40px;
+
+    font-size:16px;
+
+}
+
+.stkx-footer-title{
+
+    font-size:18px;
+
+}
+
+.stkx-footer-links a{
+
+    font-size:14px;
+
+}
+
+.stkx-contact-item h4{
+
+    font-size:15px;
+
+}
+
+.stkx-contact-item p{
+
+    font-size:13px;
+
+}
+
+.stkx-footer-copy p,
+
+.stkx-footer-bottom-links a{
+
+    font-size:13px;
+
+}
+
+}
+
+
+/*=========================================================
+        STACKLY FOOTER
+        PART 4
+        ANIMATIONS & EFFECTS
+=========================================================*/
+
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+.stkx-reveal-left,
+.stkx-reveal-right{
+
+    opacity:0;
+
+    transition:
+        transform .8s ease,
+        opacity .8s ease;
+
+    will-change:transform,opacity;
+
+}
+
+.stkx-reveal-left{
+
+    transform:translateX(-50px);
+
+}
+
+.stkx-reveal-right{
+
+    transform:translateX(50px);
+
+}
+
+.stkx-reveal-active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*=========================================
+        BUTTON
+=========================================*/
+
+.stkx-footer-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* Shine Effect */
+
+.stkx-footer-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:left .7s ease;
+
+}
+
+.stkx-footer-btn:hover::before{
+
+    left:120%;
+
+}
+
+.stkx-footer-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 14px 30px rgba(24,215,207,.30);
+
+}
+
+/*=========================================
+        RIPPLE
+=========================================*/
+
+.stkx-ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    background:rgba(255,255,255,.35);
+
+    animation:stkxRipple .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes stkxRipple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+
+/*=========================================
+        SOCIAL ICON
+=========================================*/
+
+.stkx-footer-social a{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.stkx-footer-social a:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:0 10px 22px rgba(0,0,0,.30);
+
+}
+
+/*=========================================
+        FOOTER LINKS
+=========================================*/
+
+.stkx-footer-links a{
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+.stkx-footer-links a:hover{
+
+    color:#ab09e1;
+
+    transform:translateX(6px);
+
+}
+
+.stkx-footer-links a:hover .stkx-dot{
+
+    transform:scale(1.5);
+
+}
+
+/*=========================================
+        TITLES
+=========================================*/
+
+.stkx-footer-title{
+
+    transition:color .3s ease;
+
+}
+
+.stkx-footer-column:hover .stkx-footer-title{
+
+    color:#ab09e1;
+
+}
+
+/*=========================================
+        COMPANY LOGO
+=========================================*/
+
+.stkx-footer-company img{
+
+    transition:transform .35s ease;
+
+}
+
+.stkx-footer-company img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*=========================================
+        CONTACT ITEMS
+=========================================*/
+
+.stkx-contact-item{
+
+    transition:transform .3s ease;
+
+}
+
+.stkx-contact-item:hover{
+
+    transform:translateX(4px);
+
+}
+
+/*=========================================
+        FOOTER APPEAR
+=========================================*/
+
+.stkx-footer{
+
+    animation:stkxFooterFade .8s ease;
+
+}
+
+@keyframes stkxFooterFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/*=========================================
+        FOCUS ACCESSIBILITY
+=========================================*/
+
+.stkx-footer a:focus-visible{
+
+    outline:2px solid #ab09e1;
+
+    outline-offset:4px;
+
+    border-radius:6px;
+
+}
+
+/*=========================================
+        SMOOTH TRANSITIONS
+=========================================*/
+
+.stkx-footer *{
+
+    transition-property:
+        color,
+        background,
+        transform,
+        box-shadow,
+        opacity;
+
+    transition-duration:.3s;
+
+    transition-timing-function:ease;
+
+}
+
+/*=========================================
+        REDUCE MOTION
+=========================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
+    </style>
+
+<script>
+    /*==========================================================
+ STACKLY FOOTER
+ NON-CONFLICTING JAVASCRIPT
+==========================================================*/
+
+(function () {
+    "use strict";
+
+    // ==============================
+    // SCROLL REVEAL ANIMATION
+    // ==============================
+
+    const stkxRevealItems = document.querySelectorAll(
+        ".stkx-reveal-left, .stkx-reveal-right"
+    );
+
+    if (stkxRevealItems.length > 0) {
+
+        const stkxObserver = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("stkx-reveal-active");
+
+                    stkxObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        stkxRevealItems.forEach(function (item) {
+            stkxObserver.observe(item);
+        });
+
+    }
+
+    // ==============================
+    // FOOTER BUTTON RIPPLE EFFECT
+    // ==============================
+
+    const stkxButtons = document.querySelectorAll(".stkx-footer-btn");
+
+    stkxButtons.forEach(function (button) {
+
+        button.addEventListener("click", function (e) {
+
+            const ripple = document.createElement("span");
+
+            const rect = this.getBoundingClientRect();
+
+            const size = Math.max(rect.width, rect.height);
+
+            ripple.style.width = size + "px";
+            ripple.style.height = size + "px";
+
+            ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+            ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+            ripple.className = "stkx-ripple";
+
+            this.appendChild(ripple);
+
+            setTimeout(function () {
+                ripple.remove();
+            }, 600);
+
+        });
+
+    });
+
+})();
+</script>
+  
+</body>
+
+</html>

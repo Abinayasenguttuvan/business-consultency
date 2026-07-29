@@ -1,0 +1,10470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Business Consulting</title>
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!--==================================================
+STACKLY PRELOADER START
+===================================================-->
+
+<div class="stackly-preloader" id="stacklyPreloader">
+
+    <div class="stackly-preloader-wrapper">
+
+        <!-- Animated Rings -->
+
+        <div class="stackly-preloader-ring stackly-ring-one"></div>
+
+        <div class="stackly-preloader-ring stackly-ring-two"></div>
+
+        <div class="stackly-preloader-ring stackly-ring-three"></div>
+
+        <!-- Logo -->
+
+        <div class="stackly-preloader-logo">
+
+            <img src="./logo.webp"
+                 alt="Stackly Logo">
+
+        </div>
+
+    </div>
+
+    <!-- Company Name -->
+
+    <h2 class="stackly-preloader-title">
+
+        STACKLY
+
+    </h2>
+
+    <!-- Subtitle -->
+
+    <p class="stackly-preloader-subtitle">
+
+        Business Consulting Solutions
+
+    </p>
+
+    <!-- Loading Animation -->
+
+    <div class="stackly-preloader-loading">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+    <!-- Loading Text -->
+
+    <p class="stackly-preloader-text">
+
+        Loading Your Experience...
+
+    </p>
+
+</div>
+
+<style>
+    /*==================================================
+STACKLY PRELOADER
+==================================================*/
+
+.stackly-preloader{
+
+position:fixed;
+
+inset:0;
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+z-index:999999;
+
+background:
+linear-gradient(
+135deg,
+rgba(89,108,203,.95),
+rgba(125,100,169,.92),
+rgba(0,188,212,.88));
+
+transition:opacity .8s ease,
+           visibility .8s ease;
+
+}
+
+
+
+/*==================================
+HIDE
+==================================*/
+
+.stackly-preloader.hide{
+
+opacity:0;
+
+visibility:hidden;
+
+pointer-events:none;
+
+}
+
+
+
+/*==================================
+BACKGROUND GLOW
+==================================*/
+
+.stackly-preloader::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+filter:blur(90px);
+
+top:-180px;
+
+left:-150px;
+
+}
+
+.stackly-preloader::after{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.10);
+
+filter:blur(100px);
+
+right:-150px;
+
+bottom:-170px;
+
+}
+
+
+
+/*==================================
+WRAPPER
+==================================*/
+
+.stackly-preloader-wrapper{
+
+position:relative;
+
+width:220px;
+
+height:220px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+/*==================================
+LOGO
+==================================*/
+
+.stackly-preloader-logo{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#ffffff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.20),
+
+0 0 30px rgba(255,255,255,.35);
+
+z-index:10;
+
+}
+
+.stackly-preloader-logo img{
+
+width:70%;
+
+height:auto;
+
+object-fit:contain;
+
+}
+
+
+
+/*==================================
+RINGS
+==================================*/
+
+.stackly-preloader-ring{
+
+position:absolute;
+
+border-radius:50%;
+
+border-style:solid;
+
+border-color:transparent;
+
+}
+
+.stackly-ring-one{
+
+width:150px;
+
+height:150px;
+
+border-width:4px;
+
+border-top-color:#ffffff;
+
+border-right-color:#ffffff;
+
+}
+
+.stackly-ring-two{
+
+width:185px;
+
+height:185px;
+
+border-width:4px;
+
+border-left-color:#00e5ff;
+
+border-bottom-color:#ffffff;
+
+}
+
+.stackly-ring-three{
+
+width:220px;
+
+height:220px;
+
+border-width:3px;
+
+border-top-color:#ffffff;
+
+border-left-color:#7d64a9;
+
+}
+
+
+
+/*==================================
+TITLE
+==================================*/
+
+.stackly-preloader-title{
+
+margin-top:35px;
+
+font-size:42px;
+
+font-weight:800;
+
+letter-spacing:4px;
+
+color:#ffffff;
+
+text-transform:uppercase;
+
+}
+
+
+
+/*==================================
+SUBTITLE
+==================================*/
+
+.stackly-preloader-subtitle{
+
+margin-top:10px;
+
+font-size:18px;
+
+color:rgba(255,255,255,.92);
+
+text-align:center;
+
+max-width:500px;
+
+}
+
+
+
+/*==================================
+LOADING DOTS
+==================================*/
+
+.stackly-preloader-loading{
+
+display:flex;
+
+gap:12px;
+
+margin-top:35px;
+
+}
+
+.stackly-preloader-loading span{
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:#ffffff;
+
+}
+
+
+
+/*==================================
+TEXT
+==================================*/
+
+.stackly-preloader-text{
+
+margin-top:18px;
+
+font-size:16px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+color:#ffffff;
+
+}
+
+/*==================================================
+STACKLY PRELOADER
+PREMIUM ANIMATIONS
+==================================================*/
+
+
+/*=========================================
+MAIN BACKGROUND
+=========================================*/
+
+.stackly-preloader{
+
+animation:stacklyBackgroundMove 10s linear infinite;
+
+background-size:300% 300%;
+
+}
+
+@keyframes stacklyBackgroundMove{
+
+0%{
+
+    background-position:0% 50%;
+
+}
+
+50%{
+
+    background-position:100% 50%;
+
+}
+
+100%{
+
+    background-position:0% 50%;
+
+}
+
+}
+
+
+
+/*=========================================
+LOGO FLOAT
+=========================================*/
+
+.stackly-preloader-logo{
+
+animation:
+stacklyLogoFloat 3.5s ease-in-out infinite,
+stacklyLogoGlow 2.8s infinite alternate;
+
+}
+
+@keyframes stacklyLogoFloat{
+
+0%{
+
+    transform:translateY(0px);
+
+}
+
+50%{
+
+    transform:translateY(-10px);
+
+}
+
+100%{
+
+    transform:translateY(0px);
+
+}
+
+}
+
+@keyframes stacklyLogoGlow{
+
+from{
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.18),
+
+    0 0 20px rgba(255,255,255,.20);
+
+}
+
+to{
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.25),
+
+    0 0 45px rgba(255,255,255,.55);
+
+}
+
+}
+
+
+
+/*=========================================
+LOGO IMAGE
+=========================================*/
+
+.stackly-preloader-logo img{
+
+animation:stacklyLogoZoom 4s ease-in-out infinite;
+
+}
+
+@keyframes stacklyLogoZoom{
+
+0%{
+
+    transform:scale(1);
+
+}
+
+50%{
+
+    transform:scale(1.08);
+
+}
+
+100%{
+
+    transform:scale(1);
+
+}
+
+}
+
+
+
+/*=========================================
+ROTATING RINGS
+=========================================*/
+
+.stackly-ring-one{
+
+animation:stacklyRotateClockwise 2.5s linear infinite;
+
+}
+
+.stackly-ring-two{
+
+animation:stacklyRotateAnti 4s linear infinite;
+
+}
+
+.stackly-ring-three{
+
+animation:stacklyRotateClockwise 6s linear infinite;
+
+}
+
+@keyframes stacklyRotateClockwise{
+
+from{
+
+    transform:rotate(0deg);
+
+}
+
+to{
+
+    transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes stacklyRotateAnti{
+
+from{
+
+    transform:rotate(360deg);
+
+}
+
+to{
+
+    transform:rotate(0deg);
+
+}
+
+}
+
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.stackly-preloader-title{
+
+animation:stacklyTitleFade 1.4s ease forwards;
+
+}
+
+@keyframes stacklyTitleFade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/*=========================================
+SUBTITLE
+=========================================*/
+
+.stackly-preloader-subtitle{
+
+animation:stacklySubtitleFade 1.8s ease forwards;
+
+}
+
+@keyframes stacklySubtitleFade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/*=========================================
+LOADING DOTS
+=========================================*/
+
+.stackly-preloader-loading span:nth-child(1){
+
+animation:stacklyDot 1s infinite;
+
+}
+
+.stackly-preloader-loading span:nth-child(2){
+
+animation:stacklyDot 1s .2s infinite;
+
+}
+
+.stackly-preloader-loading span:nth-child(3){
+
+animation:stacklyDot 1s .4s infinite;
+
+}
+
+@keyframes stacklyDot{
+
+0%{
+
+    transform:translateY(0);
+
+    opacity:.5;
+
+}
+
+50%{
+
+    transform:translateY(-14px);
+
+    opacity:1;
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+    opacity:.5;
+
+}
+
+}
+
+
+
+/*=========================================
+LOADING TEXT
+=========================================*/
+
+.stackly-preloader-text{
+
+animation:stacklyLoadingText 2s infinite;
+
+}
+
+@keyframes stacklyLoadingText{
+
+0%{
+
+    letter-spacing:1px;
+
+    opacity:.6;
+
+}
+
+50%{
+
+    letter-spacing:3px;
+
+    opacity:1;
+
+}
+
+100%{
+
+    letter-spacing:1px;
+
+    opacity:.6;
+
+}
+
+}
+
+
+
+/*=========================================
+WRAPPER PULSE
+=========================================*/
+
+.stackly-preloader-wrapper{
+
+animation:stacklyWrapperPulse 4s ease-in-out infinite;
+
+}
+
+@keyframes stacklyWrapperPulse{
+
+0%{
+
+    transform:scale(1);
+
+}
+
+50%{
+
+    transform:scale(1.05);
+
+}
+
+100%{
+
+    transform:scale(1);
+
+}
+
+}
+
+
+
+/*=========================================
+SOFT PULSE CIRCLE
+=========================================*/
+
+.stackly-preloader-wrapper::before{
+
+content:"";
+
+position:absolute;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+border:2px solid rgba(255,255,255,.15);
+
+animation:stacklyPulseCircle 3s linear infinite;
+
+}
+
+@keyframes stacklyPulseCircle{
+
+from{
+
+    transform:scale(.85);
+
+    opacity:1;
+
+}
+
+to{
+
+    transform:scale(1.25);
+
+    opacity:0;
+
+}
+
+}
+
+
+
+/*=========================================
+SMOOTH PAGE EXIT
+=========================================*/
+
+.stackly-preloader.hide{
+
+animation:stacklyFadeOut .8s forwards;
+
+}
+
+@keyframes stacklyFadeOut{
+
+from{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+to{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+}
+
+/*==================================================
+STACKLY PRELOADER
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-preloader-wrapper{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.stackly-ring-one{
+
+    width:190px;
+
+    height:190px;
+
+}
+
+.stackly-ring-two{
+
+    width:235px;
+
+    height:235px;
+
+}
+
+.stackly-ring-three{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:58px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:22px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:19px;
+
+}
+
+}
+
+
+
+/*=========================================
+LAPTOP
+=========================================*/
+
+@media (max-width:1400px){
+
+.stackly-preloader-wrapper{
+
+    width:210px;
+
+    height:210px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:115px;
+
+    height:115px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:40px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-preloader-wrapper{
+
+    width:200px;
+
+    height:200px;
+
+}
+
+.stackly-ring-one{
+
+    width:145px;
+
+    height:145px;
+
+}
+
+.stackly-ring-two{
+
+    width:175px;
+
+    height:175px;
+
+}
+
+.stackly-ring-three{
+
+    width:200px;
+
+    height:200px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:38px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:17px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:992px){
+
+.stackly-preloader-wrapper{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+.stackly-ring-one{
+
+    width:130px;
+
+    height:130px;
+
+}
+
+.stackly-ring-two{
+
+    width:160px;
+
+    height:160px;
+
+}
+
+.stackly-ring-three{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:34px;
+
+    letter-spacing:3px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:16px;
+
+    padding:0 20px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET PORTRAIT
+=========================================*/
+
+@media (max-width:768px){
+
+.stackly-preloader{
+
+    padding:20px;
+
+}
+
+.stackly-preloader-wrapper{
+
+    width:170px;
+
+    height:170px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.stackly-ring-one{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.stackly-ring-two{
+
+    width:145px;
+
+    height:145px;
+
+}
+
+.stackly-ring-three{
+
+    width:170px;
+
+    height:170px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    max-width:320px;
+
+}
+
+}
+
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-preloader-wrapper{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:82px;
+
+    height:82px;
+
+}
+
+.stackly-preloader-logo img{
+
+    width:65%;
+
+}
+
+.stackly-ring-one{
+
+    width:105px;
+
+    height:105px;
+
+    border-width:3px;
+
+}
+
+.stackly-ring-two{
+
+    width:128px;
+
+    height:128px;
+
+    border-width:3px;
+
+}
+
+.stackly-ring-three{
+
+    width:150px;
+
+    height:150px;
+
+    border-width:2px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:26px;
+
+    margin-top:28px;
+
+    letter-spacing:2px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:14px;
+
+    padding:0 18px;
+
+}
+
+.stackly-preloader-loading{
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.stackly-preloader-loading span{
+
+    width:12px;
+
+    height:12px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:14px;
+
+    text-align:center;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-preloader-wrapper{
+
+    width:135px;
+
+    height:135px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:74px;
+
+    height:74px;
+
+}
+
+.stackly-ring-one{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.stackly-ring-two{
+
+    width:115px;
+
+    height:115px;
+
+}
+
+.stackly-ring-three{
+
+    width:135px;
+
+    height:135px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:23px;
+
+    letter-spacing:1.5px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:13px;
+
+}
+
+.stackly-preloader-text{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+/*=========================================
+EXTRA SMALL DEVICES
+=========================================*/
+
+@media (max-width:340px){
+
+.stackly-preloader-wrapper{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+.stackly-ring-one{
+
+    width:85px;
+
+    height:85px;
+
+}
+
+.stackly-ring-two{
+
+    width:102px;
+
+    height:102px;
+
+}
+
+.stackly-ring-three{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.stackly-preloader-title{
+
+    font-size:20px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    font-size:12px;
+
+}
+
+}
+
+
+
+/*=========================================
+LANDSCAPE MOBILE
+=========================================*/
+
+@media (max-height:500px){
+
+.stackly-preloader{
+
+    padding:15px;
+
+}
+
+.stackly-preloader-wrapper{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.stackly-preloader-logo{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.stackly-ring-one{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+.stackly-ring-two{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.stackly-ring-three{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.stackly-preloader-title{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+}
+
+.stackly-preloader-subtitle{
+
+    margin-top:5px;
+
+    font-size:12px;
+
+}
+
+.stackly-preloader-loading{
+
+    margin-top:15px;
+
+}
+
+.stackly-preloader-text{
+
+    margin-top:10px;
+
+    font-size:12px;
+
+}
+
+}
+</style>
+
+<script>
+    /*==================================================
+STACKLY PRELOADER
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /*=========================================
+    ELEMENTS
+    =========================================*/
+
+    const stacklyPreloader =
+        document.getElementById("stacklyPreloader");
+
+
+
+    if(!stacklyPreloader){
+
+        return;
+
+    }
+
+
+
+    /*=========================================
+    DISABLE SCROLL
+    =========================================*/
+
+    document.body.style.overflow = "hidden";
+
+
+
+    /*=========================================
+    MINIMUM DISPLAY TIME
+    =========================================*/
+
+    const minimumTime = 1800;
+
+    const startTime = Date.now();
+
+
+
+    /*=========================================
+    HIDE PRELOADER
+    =========================================*/
+
+    function stacklyHidePreloader(){
+
+        const elapsedTime = Date.now() - startTime;
+
+        const remainingTime = Math.max(0, minimumTime - elapsedTime);
+
+
+
+        setTimeout(()=>{
+
+            stacklyPreloader.classList.add("hide");
+
+
+
+            document.body.style.overflow = "";
+
+
+
+            setTimeout(()=>{
+
+                stacklyPreloader.remove();
+
+            },800);
+
+
+
+        },remainingTime);
+
+    }
+
+
+
+    /*=========================================
+    WAIT FOR PAGE LOAD
+    =========================================*/
+
+    window.addEventListener("load",()=>{
+
+        stacklyHidePreloader();
+
+    });
+
+
+
+    /*=========================================
+    SAFETY FALLBACK
+    =========================================*/
+
+    setTimeout(()=>{
+
+        if(document.body.contains(stacklyPreloader)){
+
+            stacklyHidePreloader();
+
+        }
+
+    },5000);
+
+
+
+
+
+    /*=========================================
+    LOGO TILT EFFECT
+    =========================================*/
+
+    const logo =
+        document.querySelector(".stackly-preloader-logo");
+
+
+
+    if(logo){
+
+        document.addEventListener("mousemove",(e)=>{
+
+            const x =
+            (window.innerWidth/2-e.clientX)/60;
+
+            const y =
+            (window.innerHeight/2-e.clientY)/60;
+
+            logo.style.transform =
+            `rotateY(${x}deg) rotateX(${-y}deg)`;
+
+        });
+
+
+
+        document.addEventListener("mouseleave",()=>{
+
+            logo.style.transform =
+            "rotateY(0deg) rotateX(0deg)";
+
+        });
+
+    }
+
+
+
+
+
+    /*=========================================
+    LOADING TEXT
+    =========================================*/
+
+    const loadingText =
+        document.querySelector(".stackly-preloader-text");
+
+
+
+    if(loadingText){
+
+        const messages = [
+
+            "Loading Your Experience...",
+
+            "Preparing Business Solutions...",
+
+            "Almost Ready...",
+
+            "Launching Stackly..."
+
+        ];
+
+
+
+        let current = 0;
+
+
+
+        setInterval(()=>{
+
+            current++;
+
+            if(current >= messages.length){
+
+                current = 0;
+
+            }
+
+            loadingText.textContent = messages[current];
+
+        },1200);
+
+    }
+
+
+
+
+
+    /*=========================================
+    TITLE LETTER ANIMATION
+    =========================================*/
+
+    const title =
+        document.querySelector(".stackly-preloader-title");
+
+
+
+    if(title){
+
+        title.innerHTML = title.textContent
+
+        .split("")
+
+        .map(letter=>{
+
+            return `<span>${letter}</span>`;
+
+        })
+
+        .join("");
+
+
+
+        const letters =
+        title.querySelectorAll("span");
+
+
+
+        letters.forEach((letter,index)=>{
+
+            letter.style.display="inline-block";
+
+            letter.style.animation=
+            `stacklyLetterBounce .8s ease ${index*0.08}s infinite alternate`;
+
+        });
+
+    }
+
+});
+    </script>
+
+<!--==================================================
+STACKLY PRELOADER END
+===================================================-->
+
+
+<!--================ HEADER START ================-->
+
+<header class="site-header">
+
+    <div class="site-header-container">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="site-logo">
+
+            <img src="./logo.webp" alt="Logo">
+
+        </a>
+
+        <!-- Desktop Menu -->
+
+        <nav class="site-nav" id="siteNav">
+
+            <!-- Close Button -->
+
+            <button class="site-close-btn" id="closeMenu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <ul>
+
+                <li><a href="./index.html" >Home</a></li>
+
+                <li><a href="./about.html">About Us</a></li>
+
+                <li><a href="./services.html" class="active">Services</a></li>
+
+                <li><a href="./blog.html">Blog</a></li>
+
+                <li><a href="./contact.html" >Contact Us</a></li>
+
+            </ul>
+
+            <a href="login.html" class="site-login-btn">
+
+                Login
+
+            </a>
+
+        </nav>
+
+        <!-- Hamburger -->
+
+        <button class="site-menu-btn" id="openMenu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+</section>
+
+<style>
+    .site-nav ul li a.active{
+
+color: white;
+
+font-weight: 600;
+
+}
+
+.site-nav ul li a.active::after{
+
+content: "";
+
+position: absolute;
+
+left: 0;
+
+bottom: -6px;
+
+width: 100%;
+
+height: 3px;
+
+background: #ab09e1;
+
+border-radius: 20px;
+
+}
+    /*=============================
+HEADER RESET
+=============================*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+
+}
+
+/*=============================
+HEADER
+=============================*/
+
+.site-header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:90px;
+
+background:#450969;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+z-index:99999;
+
+}
+
+.site-header-container{
+
+max-width:1400px;
+
+height:90px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+ 
+}
+
+/*=============================
+LOGO
+=============================*/
+
+.site-logo{
+
+display:flex;
+
+align-items:center;
+
+text-decoration:none;
+
+}
+
+.site-logo img{
+
+width:180px;
+
+height:auto;
+
+display:block;
+
+}
+
+/*=============================
+NAVIGATION
+=============================*/
+
+.site-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+.site-nav ul{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+.site-nav ul li a{
+
+text-decoration:none;
+
+font-size:16px;
+
+font-weight:600;
+
+color: white;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+.site-nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-6px;
+
+left:0;
+
+width:0;
+
+height:3px;
+
+background:#ab09e1;
+
+transition:.4s;
+
+border-radius:20px;
+
+}
+
+.site-nav ul li a:hover{
+
+color:#ab09e1;
+
+}
+
+.site-nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+/*=============================
+LOGIN BUTTON
+=============================*/
+
+.site-login-btn{
+
+text-decoration:none;
+
+padding:13px 34px;
+
+background:#ab09e1;
+
+color:#fff;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.site-login-btn:hover{
+
+background:#af70c4;
+
+transform:translateY(-2px);
+
+}
+
+/*=============================
+MENU BUTTON
+=============================*/
+
+.site-menu-btn{
+
+display:none;
+
+border:none;
+
+background:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+/*=============================
+CLOSE BUTTON
+=============================*/
+
+.site-close-btn{
+
+display:none;
+
+background:none;
+color:white;
+
+border:none;
+
+font-size:32px;
+
+position:absolute;
+
+right:25px;
+
+top:25px;
+
+cursor:pointer;
+
+}
+
+/*=============================
+HEADER SPACE
+=============================*/
+
+.site-header-space{
+
+height:90px;
+
+}
+
+/*=============================
+TABLET
+=============================*/
+
+@media(max-width:992px){
+
+.site-header-container{
+
+padding:0 25px;
+
+}
+
+.site-logo img{
+
+width:160px;
+
+}
+
+.site-menu-btn{
+
+display:block;
+
+}
+
+.site-nav{
+
+position:fixed;
+
+right:-100%;
+
+top:0;
+
+width:320px;
+
+height:100vh;
+
+background: black;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+transition:.4s;
+
+box-shadow:-5px 0 20px rgba(0,0,0,.15);
+
+z-index:999999;
+
+}
+
+.site-nav.active{
+
+right:0;
+
+}
+
+.site-close-btn{
+
+display:block;
+
+}
+
+.site-nav ul{
+
+flex-direction:column;
+
+gap:28px;
+
+}
+
+.site-nav ul li a{
+
+font-size:20px;
+
+}
+
+.site-login-btn{
+
+margin-top:25px;
+
+}
+
+}
+
+
+/*=============================
+MOBILE
+=============================*/
+
+@media(max-width:576px){
+
+.site-header{
+
+height:75px;
+
+}
+
+.site-header-space{
+
+height:75px;
+
+}
+
+.site-header-container{
+
+height:75px;
+
+padding:0 20px;
+
+}
+
+.site-logo img{
+
+width:145px;
+
+}
+
+.site-nav{
+
+width:100%;
+
+}
+
+.site-menu-btn{
+
+font-size:28px;
+
+}
+
+.site-nav ul li a{
+
+font-size:18px;
+
+}
+
+.site-login-btn{
+
+width:180px;
+
+text-align:center;
+
+padding:14px;
+
+}
+
+}
+
+/*=============================
+LARGE DESKTOP
+=============================*/
+
+@media(min-width:1400px){
+
+.site-header-container{
+
+max-width:1500px;
+
+}
+
+.site-logo img{
+
+width:190px;
+
+}
+
+.site-nav ul{
+
+gap:42px;
+
+}
+
+}
+
+</style>
+
+<script>
+    const openMenu = document.getElementById("openMenu");
+
+const closeMenu = document.getElementById("closeMenu");
+
+const nav = document.getElementById("siteNav");
+
+openMenu.addEventListener("click", () => {
+
+    nav.classList.add("active");
+
+});
+
+closeMenu.addEventListener("click", () => {
+
+    nav.classList.remove("active");
+
+});
+
+// Close menu after clicking a link
+
+document.querySelectorAll(".site-nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("active");
+
+    });
+
+});
+
+// Close menu when clicking outside
+
+document.addEventListener("click", function(e){
+
+    if(
+        !nav.contains(e.target) &&
+        !openMenu.contains(e.target)
+    ){
+
+        nav.classList.remove("active");
+
+    }
+
+});
+    </script>
+
+
+
+<!--======================================================
+            STACKLY PREMIUM SERVICES
+=======================================================-->
+
+<section class="stackly-service-gallery">
+
+    <div class="stackly-service-gallery-container">
+
+        <!--==============================
+                Heading
+        ===============================-->
+
+        <div class="stackly-service-gallery-heading">
+
+            <span class="stackly-service-gallery-tag">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Popular Services
+
+            </span>
+
+            <h2>
+
+                Innovative Business Solutions
+
+            </h2>
+
+            <p>
+
+                We provide innovative consulting, technology and
+                enterprise solutions that help organizations achieve
+                sustainable growth and long-term business success.
+
+            </p>
+
+        </div>
+
+        <!--==============================
+                Cards
+        ===============================-->
+
+        <div class="stackly-service-gallery-grid">
+
+            <!-- Card 1 -->
+
+            <div class="stackly-service-gallery-card stackly-gallery-left">
+
+                <img src="./bus 6.webp"
+                    alt="Business Planning">
+
+                <div class="stackly-service-gallery-overlay">
+
+                </div>
+
+                <div class="stackly-service-gallery-content">
+
+                    <div class="stackly-service-gallery-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div class="stackly-service-gallery-info">
+
+                        <h3>
+
+                            Business Planning
+
+                        </h3>
+
+                        <p>
+
+                            Strategic planning, business consulting,
+                            market research and enterprise growth
+                            solutions for modern organizations.
+
+                        </p>
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="stackly-service-gallery-card stackly-gallery-up">
+
+                <img src="./bus 5.webp"
+                    alt="Digital Innovation">
+
+                <div class="stackly-service-gallery-overlay">
+
+                </div>
+
+                <div class="stackly-service-gallery-content">
+
+                    <div class="stackly-service-gallery-icon">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                    </div>
+
+                    <div class="stackly-service-gallery-info">
+
+                        <h3>
+
+                            Digital Innovation
+
+                        </h3>
+
+                        <p>
+
+                            Intelligent digital transformation,
+                            automation and cloud-based enterprise
+                            solutions.
+
+                        </p>
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="stackly-service-gallery-card stackly-gallery-right">
+
+                <img src="./bus 4.webp"
+                    alt="Market Analysis">
+
+                <div class="stackly-service-gallery-overlay">
+
+                </div>
+
+                <div class="stackly-service-gallery-content">
+
+                    <div class="stackly-service-gallery-icon">
+
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                    </div>
+
+                    <div class="stackly-service-gallery-info">
+
+                        <h3>
+
+                            Market Analysis
+
+                        </h3>
+
+                        <p>
+
+                            Data-driven insights, financial planning,
+                            customer research and business performance
+                            optimization.
+
+                        </p>
+
+                        <a href="404.html">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+    /*=========================================================
+            STACKLY SERVICE GALLERY
+=========================================================*/
+
+.stackly-service-gallery{
+
+position:relative;
+
+padding:120px 0;
+
+overflow:hidden;
+
+background:linear-gradient( 135deg, rgba(89, 108, 203, 0.88), rgba(125, 100, 169, 0.78), rgba(0,188,212,.60));
+
+}
+
+
+/*=========================================================
+            CONTAINER
+=========================================================*/
+
+.stackly-service-gallery-container{
+
+width:min(1320px,92%);
+
+margin:auto;
+
+}
+
+
+/*=========================================================
+            HEADING
+=========================================================*/
+
+.stackly-service-gallery-heading{
+
+text-align:center;
+
+max-width:760px;
+
+margin:0 auto 70px;
+
+}
+
+
+/*=========================================================
+            CAPSULE BUTTON
+=========================================================*/
+
+.stackly-service-gallery-tag{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 26px;
+
+border-radius:50px;
+
+background:rgba(2, 6, 27, 0.08);
+
+color:black;
+
+font-size:15px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.stackly-service-gallery-tag i{
+
+color:#00bcd4;
+
+}
+
+
+/*=========================================================
+            TITLE
+=========================================================*/
+
+.stackly-service-gallery-heading h2{
+
+font-size:54px;
+
+font-weight:800;
+
+color:#172033;
+
+margin-bottom:20px;
+
+line-height:1.15;
+
+}
+
+
+/*=========================================================
+            PARAGRAPH
+=========================================================*/
+
+.stackly-service-gallery-heading p{
+
+font-size:17px;
+
+line-height:30px;
+
+color:black;
+
+}
+
+
+/*=========================================================
+            GRID
+=========================================================*/
+
+.stackly-service-gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+
+/*=========================================================
+            CARD
+=========================================================*/
+
+.stackly-service-gallery-card{
+
+position:relative;
+
+height:520px;
+
+border-radius:24px;
+
+overflow:hidden;
+
+cursor:pointer;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+
+/*=========================================================
+            IMAGE
+=========================================================*/
+
+.stackly-service-gallery-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:1s;
+
+}
+
+
+/*=========================================================
+            OVERLAY
+=========================================================*/
+
+.stackly-service-gallery-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+to top,
+
+rgba(0,0,0,.78),
+
+rgba(0,0,0,.15),
+
+transparent);
+
+}
+
+
+/*=========================================================
+            CONTENT BOX
+=========================================================*/
+
+.stackly-service-gallery-content{
+
+position:absolute;
+
+left:30px;
+
+right:30px;
+
+bottom:30px;
+
+display:flex;
+
+align-items:center;
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:#ffffff;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.18);
+
+}
+
+
+/*=========================================================
+            ICON
+=========================================================*/
+
+.stackly-service-gallery-icon{
+
+width:90px;
+
+min-width:90px;
+
+height:90px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#ef3d3d;
+
+color:#ffffff;
+
+font-size:34px;
+
+}
+
+
+/*=========================================================
+            INFO
+=========================================================*/
+
+.stackly-service-gallery-info{
+
+flex:1;
+
+padding:28px;
+
+}
+
+
+.stackly-service-gallery-info h3{
+
+font-size:30px;
+
+color:#172033;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+
+.stackly-service-gallery-info p{
+
+font-size:15px;
+
+color:#666;
+
+line-height:28px;
+
+margin-bottom:20px;
+
+}
+
+
+.stackly-service-gallery-info a{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+text-decoration:none;
+
+color:#172033;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+
+/*=========================================================
+            LARGE DESKTOP
+=========================================================*/
+
+@media(min-width:1400px){
+
+.stackly-service-gallery-card{
+
+height:560px;
+
+}
+
+}
+
+
+/*=========================================================
+            LAPTOP
+=========================================================*/
+
+@media(max-width:1200px){
+
+.stackly-service-gallery-grid{
+
+gap:25px;
+
+}
+
+.stackly-service-gallery-heading h2{
+
+font-size:46px;
+
+}
+
+.stackly-service-gallery-info h3{
+
+font-size:26px;
+
+}
+
+}
+
+
+/*=========================================================
+            TABLET
+=========================================================*/
+
+@media(max-width:991px){
+
+.stackly-service-gallery{
+
+padding:90px 0;
+
+}
+
+.stackly-service-gallery-grid{
+
+grid-template-columns:1fr;
+
+gap:30px;
+
+}
+
+.stackly-service-gallery-card{
+
+height:500px;
+
+}
+
+.stackly-service-gallery-heading h2{
+
+font-size:40px;
+
+}
+
+}
+
+
+/*=========================================================
+            MOBILE
+=========================================================*/
+
+@media(max-width:767px){
+
+.stackly-service-gallery{
+
+padding:70px 0;
+
+}
+
+.stackly-service-gallery-card{
+
+height:430px;
+
+}
+
+.stackly-service-gallery-content{
+
+left:15px;
+
+right:15px;
+
+bottom:15px;
+
+}
+
+.stackly-service-gallery-icon{
+
+width:75px;
+
+min-width:75px;
+
+height:75px;
+
+font-size:28px;
+
+}
+
+.stackly-service-gallery-info{
+
+padding:20px;
+
+}
+
+.stackly-service-gallery-heading h2{
+
+font-size:32px;
+
+}
+
+.stackly-service-gallery-info h3{
+
+font-size:22px;
+
+}
+
+.stackly-service-gallery-info p{
+
+font-size:14px;
+
+line-height:24px;
+
+}
+
+}
+
+
+/*=========================================================
+            SMALL MOBILE
+=========================================================*/
+
+@media(max-width:480px){
+
+.stackly-service-gallery-card{
+
+height:380px;
+
+}
+
+.stackly-service-gallery-content{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.stackly-service-gallery-icon{
+
+width:100%;
+
+height:65px;
+
+}
+
+.stackly-service-gallery-info{
+
+padding:18px;
+
+}
+
+}
+
+/*=========================================================
+            STACKLY SERVICE GALLERY HOVER
+=========================================================*/
+
+/* Card Hover */
+
+.stackly-service-gallery-card:hover{
+
+transform:translateY(-15px);
+
+box-shadow:
+0 35px 70px rgba(0,0,0,.22);
+
+}
+
+
+/*=========================================================
+            IMAGE
+=========================================================*/
+
+.stackly-service-gallery-card:hover img{
+
+transform:scale(1.12);
+
+}
+
+
+/*=========================================================
+            GRADIENT OVERLAY
+=========================================================*/
+
+.stackly-service-gallery-overlay{
+
+transition:.55s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-overlay{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(89,108,203,.88),
+
+rgba(125,100,169,.78),
+
+rgba(0,188,212,.60)
+
+);
+
+}
+
+
+/*=========================================================
+            CONTENT PANEL
+=========================================================*/
+
+.stackly-service-gallery-content{
+
+transition:.45s;
+
+min-height:120px;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-content{
+
+bottom:30px;
+
+min-height:250px;
+
+}
+
+
+/*=========================================================
+            ICON
+=========================================================*/
+
+.stackly-service-gallery-icon{
+
+transition:.45s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-icon{
+
+background:#ffffff;
+
+color:#596ccb;
+
+transform:
+rotate(-15deg)
+scale(1.08);
+
+}
+
+
+/*=========================================================
+            TITLE
+=========================================================*/
+
+.stackly-service-gallery-info h3{
+
+transition:.4s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info h3{
+
+color:#ffffff;
+
+}
+
+
+/*=========================================================
+            DESCRIPTION
+=========================================================*/
+
+.stackly-service-gallery-info p{
+
+opacity:0;
+
+max-height:0;
+
+overflow:hidden;
+
+transform:translateY(20px);
+
+transition:
+.45s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info p{
+
+opacity:1;
+
+max-height:200px;
+
+transform:translateY(0);
+
+color:#ffffff;
+
+margin-top:18px;
+
+margin-bottom:22px;
+
+}
+
+
+/*=========================================================
+            BUTTON
+=========================================================*/
+
+.stackly-service-gallery-info a{
+
+color:#172033;
+
+transition:.35s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info a{
+
+color:#ffffff;
+
+}
+
+.stackly-service-gallery-info a i{
+
+transition:.35s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info a i{
+
+transform:translateX(8px);
+
+}
+
+
+/*=========================================================
+            SHINE EFFECT
+=========================================================*/
+
+.stackly-service-gallery-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-100%;
+
+width:70%;
+
+height:220%;
+
+background:
+
+rgba(255,255,255,.18);
+
+transform:rotate(25deg);
+
+transition:.7s;
+
+z-index:5;
+
+}
+
+.stackly-service-gallery-card:hover::before{
+
+left:160%;
+
+}
+
+
+/*=========================================================
+            GLOW
+=========================================================*/
+
+.stackly-service-gallery-card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:24px;
+
+border:2px solid transparent;
+
+transition:.4s;
+
+}
+
+.stackly-service-gallery-card:hover::after{
+
+border-color:
+
+rgba(255,255,255,.25);
+
+}
+
+
+/*=========================================================
+            CONTENT BACKGROUND
+=========================================================*/
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-content{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(89,108,203,.96),
+
+rgba(125,100,169,.90),
+
+rgba(0,188,212,.82)
+
+);
+
+}
+
+
+/*=========================================================
+            BUTTON UNDERLINE
+=========================================================*/
+
+.stackly-service-gallery-info a{
+
+position:relative;
+
+}
+
+.stackly-service-gallery-info a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-5px;
+
+width:0;
+
+height:2px;
+
+background:#ffffff;
+
+transition:.4s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info a::after{
+
+width:100%;
+
+}
+
+
+/*=========================================================
+            RESPONSIVE
+=========================================================*/
+
+@media(max-width:991px){
+
+.stackly-service-gallery-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+
+@media(max-width:767px){
+
+.stackly-service-gallery-card:hover{
+
+transform:none;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-content{
+
+min-height:230px;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-content{
+
+min-height:260px;
+
+}
+
+}
+
+/*=========================================================
+        STACKLY SERVICE GALLERY SCROLL ANIMATION
+=========================================================*/
+
+/* Initial State */
+
+.stackly-gallery-left,
+.stackly-gallery-up,
+.stackly-gallery-right{
+
+    opacity:0;
+
+    transition:
+    transform .9s cubic-bezier(.22,.61,.36,1),
+    opacity .9s ease;
+
+    will-change:transform,opacity;
+
+}
+
+/* Left */
+
+.stackly-gallery-left{
+
+    transform:translateX(-120px);
+
+}
+
+/* Bottom */
+
+.stackly-gallery-up{
+
+    transform:translateY(120px);
+
+}
+
+/* Right */
+
+.stackly-gallery-right{
+
+    transform:translateX(120px);
+
+}
+
+
+/*=========================================
+            SHOW
+=========================================*/
+
+.stackly-gallery-left.stackly-show,
+.stackly-gallery-up.stackly-show,
+.stackly-gallery-right.stackly-show{
+
+    opacity:1;
+
+    transform:translate(0);
+
+}
+
+
+/*=========================================
+            STAGGER DELAY
+=========================================*/
+
+.stackly-gallery-left{
+
+    transition-delay:.10s;
+
+}
+
+.stackly-gallery-up{
+
+    transition-delay:.35s;
+
+}
+
+.stackly-gallery-right{
+
+    transition-delay:.60s;
+
+}
+
+
+/*=========================================
+            IMAGE PARALLAX
+=========================================*/
+
+.stackly-service-gallery-card img{
+
+    transition:
+    transform 1s ease,
+    filter .5s ease;
+
+}
+
+.stackly-service-gallery-card:hover img{
+
+    transform:scale(1.12);
+
+    filter:brightness(.95);
+
+}
+
+
+/*=========================================
+            CONTENT ANIMATION
+=========================================*/
+
+.stackly-service-gallery-info h3{
+
+    transition:
+    transform .4s,
+    color .4s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info h3{
+
+    transform:translateY(-4px);
+
+}
+
+
+.stackly-service-gallery-info p{
+
+    transition:
+    opacity .45s,
+    transform .45s;
+
+}
+
+
+.stackly-service-gallery-info a{
+
+    transition:
+    .35s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-info a{
+
+    letter-spacing:.5px;
+
+}
+
+
+/*=========================================
+            ICON ANIMATION
+=========================================*/
+
+.stackly-service-gallery-icon{
+
+    transition:
+    transform .45s,
+    background .45s,
+    color .45s;
+
+}
+
+.stackly-service-gallery-card:hover
+.stackly-service-gallery-icon{
+
+    transform:
+
+    rotate(-12deg)
+
+    scale(1.12);
+
+}
+
+
+/*=========================================
+            CARD SHADOW
+=========================================*/
+
+.stackly-service-gallery-card{
+
+    transition:
+
+    transform .45s,
+
+    box-shadow .45s;
+
+}
+
+.stackly-service-gallery-card:hover{
+
+    box-shadow:
+
+    0 35px 80px
+
+    rgba(0,0,0,.22);
+
+}
+
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:991px){
+
+.stackly-gallery-left{
+
+transform:translateX(-80px);
+
+}
+
+.stackly-gallery-up{
+
+transform:translateY(80px);
+
+}
+
+.stackly-gallery-right{
+
+transform:translateX(80px);
+
+}
+
+}
+
+
+@media(max-width:767px){
+
+.stackly-gallery-left,
+.stackly-gallery-up,
+.stackly-gallery-right{
+
+transform:translateY(60px);
+
+}
+
+.stackly-gallery-left.stackly-show,
+.stackly-gallery-up.stackly-show,
+.stackly-gallery-right.stackly-show{
+
+transform:translateY(0);
+
+}
+
+.stackly-gallery-left{
+
+transition-delay:.1s;
+
+}
+
+.stackly-gallery-up{
+
+transition-delay:.3s;
+
+}
+
+.stackly-gallery-right{
+
+transition-delay:.5s;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.stackly-gallery-left,
+.stackly-gallery-up,
+.stackly-gallery-right{
+
+transform:translateY(40px);
+
+}
+
+}
+</style>
+
+<script>
+    /*=========================================================
+        STACKLY SERVICE GALLERY ANIMATION
+=========================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+"use strict";
+
+/*==========================================
+        SELECT CARDS
+==========================================*/
+
+const galleryCards = document.querySelectorAll(
+    ".stackly-gallery-left, .stackly-gallery-up, .stackly-gallery-right"
+);
+
+if (!galleryCards.length) return;
+
+/*==========================================
+        OBSERVER
+==========================================*/
+
+const galleryObserver = new IntersectionObserver(
+
+    (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+            if (!entry.isIntersecting) return;
+
+            const card = entry.target;
+
+            const delay = Number(card.dataset.delay);
+
+            setTimeout(() => {
+
+                card.classList.add("stackly-show");
+
+            }, delay);
+
+            observer.unobserve(card);
+
+        });
+
+    },
+
+    {
+
+        threshold:0.25,
+
+        rootMargin:"0px 0px -80px 0px"
+
+    }
+
+);
+
+
+
+/*==========================================
+        DELAY
+==========================================*/
+
+galleryCards.forEach((card,index)=>{
+
+    card.dataset.delay=index*250;
+
+    galleryObserver.observe(card);
+
+});
+
+});
+</script>
+
+
+<!--=========================================
+ STACKLY SERVICE HIGHLIGHT SECTION
+==========================================-->
+
+<section class="stackly-service-highlight-section">
+
+    <div class="stackly-service-highlight-container">
+
+        <!-- Card 1 -->
+
+        <div class="stackly-service-highlight-card stackly-service-highlight-dark stackly-service-left">
+
+            <div class="stackly-service-highlight-icon">
+
+                <i class="fa-solid fa-box-open"></i>
+
+            </div>
+
+            <div class="stackly-service-highlight-content">
+
+                <h3>Business<br>Strategy</h3>
+
+                <a href="404.html">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    Read More
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Card 2 (Active) -->
+
+        <div class="stackly-service-highlight-card stackly-service-highlight-active stackly-service-up">
+
+            <div class="stackly-service-highlight-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+            <div class="stackly-service-highlight-content">
+
+                <h3>Effective<br>Performance</h3>
+
+                <a href="404.html">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    Read More
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Card 3 -->
+
+        <div class="stackly-service-highlight-card stackly-service-highlight-dark stackly-service-right">
+
+            <div class="stackly-service-highlight-icon">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+            </div>
+
+            <div class="stackly-service-highlight-content">
+
+                <h3>Increase<br>Productivity</h3>
+
+                <a href="404.html">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    Read More
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+    /*==================================================
+STACKLY SERVICE HIGHLIGHT
+MAIN CSS
+==================================================*/
+
+.stackly-service-highlight-section{
+
+width:100%;
+
+position:relative;
+
+overflow:hidden;
+
+padding:90px 6%;
+
+background:#161d28;
+}
+
+/*=============================
+CONTAINER
+=============================*/
+
+.stackly-service-highlight-container{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+align-items:center;
+}
+
+/*=============================
+CARD
+=============================*/
+
+.stackly-service-highlight-card{
+
+position:relative;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+min-height:240px;
+
+padding:45px 40px;
+
+cursor:pointer;
+
+transition:.45s;
+
+z-index:2;
+}
+
+/*=============================
+BACKGROUND PATTERN
+=============================*/
+
+.stackly-service-highlight-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(135deg,
+rgba(255,255,255,.05) 25%,
+transparent 25%),
+linear-gradient(225deg,
+rgba(255,255,255,.05) 25%,
+transparent 25%),
+linear-gradient(315deg,
+rgba(255,255,255,.05) 25%,
+transparent 25%),
+linear-gradient(45deg,
+rgba(255,255,255,.05) 25%,
+transparent 25%);
+
+background-size:90px 90px;
+
+opacity:.45;
+
+pointer-events:none;
+}
+
+/*=============================
+LEFT & RIGHT CARD
+=============================*/
+
+.stackly-service-highlight-dark{
+
+background:#364052;
+}
+
+/*=============================
+CENTER CARD
+=============================*/
+
+.stackly-service-highlight-active{
+
+background:#ffbe3d;
+}
+
+/*=============================
+ICON
+=============================*/
+
+.stackly-service-highlight-icon{
+
+width:85px;
+
+min-width:85px;
+
+height:85px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:52px;
+
+transition:.45s;
+}
+
+/* Dark Cards */
+
+.stackly-service-highlight-dark
+.stackly-service-highlight-icon{
+
+color:#ffbe3d;
+}
+
+/* Active Card */
+
+.stackly-service-highlight-active
+.stackly-service-highlight-icon{
+
+color:#161d28;
+}
+
+/*=============================
+CONTENT
+=============================*/
+
+.stackly-service-highlight-content{
+
+flex:1;
+}
+
+.stackly-service-highlight-content h3{
+
+font-size:24px;
+
+line-height:1.15;
+
+font-weight:800;
+
+margin-bottom:25px;
+
+transition:.4s;
+}
+
+/* Dark */
+
+.stackly-service-highlight-dark h3{
+
+color:#ffffff;
+}
+
+/* Yellow */
+
+.stackly-service-highlight-active h3{
+
+color:#161d28;
+}
+
+/*=============================
+READ MORE
+=============================*/
+
+.stackly-service-highlight-content a{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:18px;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+}
+
+/* Dark */
+
+.stackly-service-highlight-dark a{
+
+color:#cfcfcf;
+}
+
+/* Yellow */
+
+.stackly-service-highlight-active a{
+
+color:#161d28;
+}
+
+.stackly-service-highlight-content a i{
+
+transition:.35s;
+}
+
+.stackly-service-highlight-content a:hover i{
+
+transform:translateX(8px);
+}
+
+/*=============================
+BOX SHADOW
+=============================*/
+
+.stackly-service-highlight-card{
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.20);
+}
+
+/*=============================
+BORDER
+=============================*/
+
+.stackly-service-highlight-card{
+
+border:1px solid rgba(255,255,255,.05);
+}
+
+/*=============================
+TRANSITIONS
+=============================*/
+
+.stackly-service-highlight-card,
+.stackly-service-highlight-content h3,
+.stackly-service-highlight-icon,
+.stackly-service-highlight-content a{
+
+transition:all .45s ease;
+}
+
+/*==================================================
+STACKLY SERVICE HIGHLIGHT
+ANIMATIONS
+==================================================*/
+
+
+/*=====================================
+INITIAL SCROLL ANIMATION
+=====================================*/
+
+.stackly-service-left,
+.stackly-service-up,
+.stackly-service-right{
+
+    opacity:0;
+
+    transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.22,.61,.36,1);
+
+    will-change:transform,opacity;
+}
+
+.stackly-service-left{
+
+    transform:translateX(-100px);
+}
+
+.stackly-service-up{
+
+    transform:translateY(80px);
+}
+
+.stackly-service-right{
+
+    transform:translateX(100px);
+}
+
+.stackly-service-active{
+
+    opacity:1 !important;
+
+    transform:none !important;
+}
+
+
+/*=====================================
+CARD HOVER
+=====================================*/
+
+.stackly-service-highlight-card:hover{
+
+    transform:translateY(-18px);
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.35);
+}
+
+
+/*=====================================
+CHANGE ENTIRE CARD COLOR
+=====================================*/
+
+.stackly-service-highlight-dark:hover{
+
+    background:#ffbe3d;
+}
+
+.stackly-service-highlight-active:hover{
+
+    background:#596ccb;
+}
+
+
+/*=====================================
+HEADING COLOR
+=====================================*/
+
+.stackly-service-highlight-dark:hover h3{
+
+    color:#161d28;
+}
+
+.stackly-service-highlight-active:hover h3{
+
+    color:#ffffff;
+}
+
+
+/*=====================================
+ICON COLOR
+=====================================*/
+
+.stackly-service-highlight-dark:hover
+.stackly-service-highlight-icon{
+
+    color:#161d28;
+}
+
+.stackly-service-highlight-active:hover
+.stackly-service-highlight-icon{
+
+    color:#ffffff;
+}
+
+
+/*=====================================
+READ MORE
+=====================================*/
+
+.stackly-service-highlight-dark:hover a{
+
+    color:#161d28;
+}
+
+.stackly-service-highlight-active:hover a{
+
+    color:#ffffff;
+}
+
+
+/*=====================================
+ICON ANIMATION
+=====================================*/
+
+.stackly-service-highlight-card:hover
+.stackly-service-highlight-icon{
+
+    transform:
+    rotate(-10deg)
+    scale(1.15);
+}
+
+
+/*=====================================
+ARROW
+=====================================*/
+
+.stackly-service-highlight-content a:hover i{
+
+    transform:translateX(10px);
+}
+
+
+/*=====================================
+SHINE EFFECT
+=====================================*/
+
+.stackly-service-highlight-card{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.stackly-service-highlight-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.9s;
+}
+
+.stackly-service-highlight-card:hover::after{
+
+    left:150%;
+}
+
+
+/*=====================================
+BACKGROUND PATTERN ROTATION
+=====================================*/
+
+.stackly-service-highlight-card::before{
+
+    transition:.8s;
+}
+
+.stackly-service-highlight-card:hover::before{
+
+    transform:rotate(8deg) scale(1.05);
+}
+
+
+/*=====================================
+READ MORE UNDERLINE
+=====================================*/
+
+.stackly-service-highlight-content a{
+
+    position:relative;
+}
+
+.stackly-service-highlight-content a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:currentColor;
+
+    transition:.35s;
+}
+
+.stackly-service-highlight-content a:hover::after{
+
+    width:100%;
+}
+
+
+/*=====================================
+HEADING ANIMATION
+=====================================*/
+
+.stackly-service-highlight-content h3{
+
+    transition:.35s;
+}
+
+.stackly-service-highlight-card:hover h3{
+
+    transform:translateX(8px);
+}
+
+
+/*=====================================
+FLOATING ANIMATION
+=====================================*/
+
+.stackly-service-highlight-card{
+
+    animation:stacklyServiceFloat 6s ease-in-out infinite;
+}
+
+.stackly-service-highlight-card:nth-child(2){
+
+    animation-delay:.5s;
+}
+
+.stackly-service-highlight-card:nth-child(3){
+
+    animation-delay:1s;
+}
+
+@keyframes stacklyServiceFloat{
+
+    0%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+    }
+
+    100%{
+
+        transform:translateY(0px);
+    }
+}
+
+
+/*=====================================
+ICON GLOW
+=====================================*/
+
+.stackly-service-highlight-icon{
+
+    transition:.4s;
+}
+
+.stackly-service-highlight-card:hover
+.stackly-service-highlight-icon{
+
+    filter:drop-shadow(0 0 12px rgba(255,255,255,.45));
+}
+
+
+/*=====================================
+SMOOTH TRANSITIONS
+=====================================*/
+
+.stackly-service-highlight-card,
+.stackly-service-highlight-icon,
+.stackly-service-highlight-content h3,
+.stackly-service-highlight-content a{
+
+    transition:all .4s ease;
+}
+
+/*==================================================
+STACKLY SERVICE HIGHLIGHT
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-service-highlight-section{
+
+    padding:80px 5%;
+}
+
+.stackly-service-highlight-container{
+
+    gap:22px;
+}
+
+.stackly-service-highlight-card{
+
+    padding:35px 25px;
+
+    min-height:220px;
+}
+
+.stackly-service-highlight-icon{
+
+    width:75px;
+    height:75px;
+    min-width:75px;
+
+    font-size:44px;
+}
+
+.stackly-service-highlight-content h3{
+
+    font-size:34px;
+}
+
+}
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:991px){
+
+.stackly-service-highlight-section{
+
+    padding:70px 5%;
+}
+
+.stackly-service-highlight-container{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+}
+
+.stackly-service-highlight-card{
+
+    min-height:190px;
+
+    padding:35px;
+}
+
+.stackly-service-highlight-icon{
+
+    width:70px;
+    height:70px;
+    min-width:70px;
+
+    font-size:42px;
+}
+
+.stackly-service-highlight-content h3{
+
+    font-size:32px;
+}
+
+}
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:767px){
+
+.stackly-service-highlight-section{
+
+    padding:60px 20px;
+}
+
+.stackly-service-highlight-container{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+}
+
+.stackly-service-highlight-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    text-align:left;
+
+    padding:30px 25px;
+
+    min-height:auto;
+}
+
+.stackly-service-highlight-icon{
+
+    width:65px;
+    height:65px;
+    min-width:65px;
+
+    font-size:38px;
+
+    margin-bottom:8px;
+}
+
+.stackly-service-highlight-content h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+}
+
+.stackly-service-highlight-content a{
+
+    font-size:16px;
+}
+
+}
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-service-highlight-section{
+
+    padding:55px 16px;
+}
+
+.stackly-service-highlight-card{
+
+    padding:25px 20px;
+
+    border-radius:16px;
+}
+
+.stackly-service-highlight-icon{
+
+    width:60px;
+    height:60px;
+    min-width:60px;
+
+    font-size:34px;
+}
+
+.stackly-service-highlight-content h3{
+
+    font-size:24px;
+
+    line-height:1.25;
+}
+
+.stackly-service-highlight-content a{
+
+    font-size:15px;
+}
+
+}
+
+
+/*=========================================
+EXTRA SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-service-highlight-section{
+
+    padding:50px 15px;
+}
+
+.stackly-service-highlight-card{
+
+    padding:22px 18px;
+}
+
+.stackly-service-highlight-icon{
+
+    width:55px;
+    height:55px;
+    min-width:55px;
+
+    font-size:30px;
+}
+
+.stackly-service-highlight-content h3{
+
+    font-size:22px;
+}
+
+.stackly-service-highlight-content a{
+
+    font-size:14px;
+}
+
+}
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-service-highlight-container{
+
+    max-width:1600px;
+
+    gap:35px;
+}
+
+.stackly-service-highlight-card{
+
+    min-height:270px;
+
+    padding:50px;
+}
+
+.stackly-service-highlight-icon{
+
+    width:95px;
+    height:95px;
+    min-width:95px;
+
+    font-size:58px;
+}
+
+.stackly-service-highlight-content h3{
+
+    font-size:46px;
+}
+
+.stackly-service-highlight-content a{
+
+    font-size:20px;
+}
+
+}
+    </style>
+
+    <script>
+        /*==================================================
+STACKLY SERVICE HIGHLIGHT
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*=========================================
+SCROLL REVEAL
+=========================================*/
+
+const stacklyServiceCards = document.querySelectorAll(
+    ".stackly-service-left, .stackly-service-up, .stackly-service-right"
+);
+
+const stacklyServiceObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("stackly-service-active");
+
+            stacklyServiceObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+
+    threshold:0.18
+
+});
+
+stacklyServiceCards.forEach((card)=>{
+
+    stacklyServiceObserver.observe(card);
+
+});
+
+
+
+
+
+/*=========================================
+HOVER EFFECT
+=========================================*/
+
+const serviceBoxes = document.querySelectorAll(
+    ".stackly-service-highlight-card"
+);
+
+serviceBoxes.forEach((box)=>{
+
+    box.addEventListener("mouseenter",()=>{
+
+        box.style.transform="translateY(-18px)";
+
+    });
+
+    box.addEventListener("mouseleave",()=>{
+
+        box.style.transform="translateY(0)";
+
+    });
+
+});
+
+
+
+
+
+/*=========================================
+PARALLAX EFFECT
+=========================================*/
+
+const section=document.querySelector(
+    ".stackly-service-highlight-section"
+);
+
+if(section){
+
+    section.addEventListener("mousemove",(e)=>{
+
+        serviceBoxes.forEach((box,index)=>{
+
+            const speed=(index+1)*0.6;
+
+            const x=(window.innerWidth/2-e.clientX)/(60/speed);
+
+            const y=(window.innerHeight/2-e.clientY)/(60/speed);
+
+            box.style.transform=
+            `translate(${x}px,${y}px)`;
+
+        });
+
+    });
+
+    section.addEventListener("mouseleave",()=>{
+
+        serviceBoxes.forEach((box)=>{
+
+            box.style.transform="translate(0,0)";
+
+        });
+
+    });
+
+}
+
+
+
+
+
+/*=========================================
+ICON ROTATION
+=========================================*/
+
+const icons=document.querySelectorAll(
+    ".stackly-service-highlight-icon"
+);
+
+serviceBoxes.forEach((box,index)=>{
+
+    box.addEventListener("mouseenter",()=>{
+
+        icons[index].style.transform=
+        "rotate(-15deg) scale(1.12)";
+
+    });
+
+    box.addEventListener("mouseleave",()=>{
+
+        icons[index].style.transform=
+        "rotate(0deg) scale(1)";
+
+    });
+
+});
+
+
+
+
+
+/*=========================================
+KEYBOARD ACCESSIBILITY
+=========================================*/
+
+serviceBoxes.forEach((box)=>{
+
+    box.setAttribute("tabindex","0");
+
+    box.addEventListener("focus",()=>{
+
+        box.style.transform="translateY(-18px)";
+
+    });
+
+    box.addEventListener("blur",()=>{
+
+        box.style.transform="translateY(0)";
+
+    });
+
+});
+
+});
+        </script>
+
+
+
+
+<!--==================================================
+STACKLY SERVICES SECTION
+==================================================-->
+
+<section class="stackly-services-section">
+
+    <div class="stackly-services-heading stackly-services-top">
+
+        <span class="stackly-services-subtitle">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            WHAT WE OFFER
+
+        </span>
+
+        <h2>
+
+            Innovative Business
+
+            <span>Solutions</span>
+
+        </h2>
+
+        <p>
+
+            We deliver strategic consulting and cutting-edge digital solutions
+            that help businesses innovate, scale, and stay ahead in a rapidly
+            evolving market.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="stackly-services-grid">
+
+        <!--=========================
+        CARD 1
+        ==========================-->
+
+        <article class="stackly-services-card stackly-services-up">
+
+            <div class="stackly-services-image">
+
+                <img src="./bus 4.webp"
+                    alt="Business Planning">
+
+            </div>
+
+            <div class="stackly-services-content">
+
+                <div class="stackly-services-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div class="stackly-services-info">
+
+                    <h3>Business Planning</h3>
+
+                    <a href="404.html">
+
+                        Read More
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!--=========================
+        CARD 2
+        ==========================-->
+
+        <article class="stackly-services-card stackly-services-up">
+
+            <div class="stackly-services-image">
+
+                <img src="./bus 5.webp"
+                    alt="Human Resource">
+
+            </div>
+
+            <div class="stackly-services-content">
+
+                <div class="stackly-services-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div class="stackly-services-info">
+
+                    <h3>Human Resource</h3>
+
+                    <a href="404.html">
+
+                        Read More
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!--=========================
+        CARD 3
+        ==========================-->
+
+        <article class="stackly-services-card stackly-services-up">
+
+            <div class="stackly-services-image">
+
+                <img src="./bus 6.webp"
+                    alt="Market Analysis">
+
+            </div>
+
+            <div class="stackly-services-content">
+
+                <div class="stackly-services-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div class="stackly-services-info">
+
+                    <h3>Market Analysis</h3>
+
+                    <a href="404.html">
+
+                        Read More
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!--=========================
+        CARD 4
+        ==========================-->
+
+        <article class="stackly-services-card stackly-services-up">
+
+            <div class="stackly-services-image">
+
+                <img src="./bus 7.webp"
+                    alt="Financial Consulting">
+
+            </div>
+
+            <div class="stackly-services-content">
+
+                <div class="stackly-services-icon">
+
+                    <i class="fa-solid fa-coins"></i>
+
+                </div>
+
+                <div class="stackly-services-info">
+
+                    <h3>Financial Consulting</h3>
+
+                    <a href="404.html">
+
+                        Read More
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!--=========================
+        CARD 5
+        ==========================-->
+
+        <article class="stackly-services-card stackly-services-up">
+
+            <div class="stackly-services-image">
+
+                <img src="./corp1.webp"
+                    alt="Digital Marketing">
+
+            </div>
+
+            <div class="stackly-services-content">
+
+                <div class="stackly-services-icon">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div class="stackly-services-info">
+
+                    <h3>Digital Marketing</h3>
+
+                    <a href="404.html">
+
+                        Read More
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!--=========================
+        CARD 6
+        ==========================-->
+
+        <article class="stackly-services-card stackly-services-up">
+
+            <div class="stackly-services-image">
+
+                <img src="./h2.webp"
+                    alt="IT Solutions">
+
+            </div>
+
+            <div class="stackly-services-content">
+
+                <div class="stackly-services-icon">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                </div>
+
+                <div class="stackly-services-info">
+
+                    <h3>IT Solutions</h3>
+
+                    <a href="404.html">
+
+                        Read More
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<style>
+    /*==================================================
+STACKLY SERVICES SECTION
+MAIN CSS
+==================================================*/
+
+.stackly-services-section{
+
+padding:110px 6%;
+background:#f8fbff;
+position:relative;
+overflow:hidden;
+
+}
+
+/*==================================
+BACKGROUND
+==================================*/
+
+.stackly-services-section::before{
+
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+background:rgba(89,108,203,.08);
+border-radius:50%;
+top:-180px;
+left:-180px;
+filter:blur(60px);
+
+}
+
+.stackly-services-section::after{
+
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+background:rgba(0,188,212,.08);
+border-radius:50%;
+right:-180px;
+bottom:-180px;
+filter:blur(60px);
+
+}
+
+/*==================================
+HEADING
+==================================*/
+
+.stackly-services-heading{
+
+max-width:760px;
+margin:0 auto 70px;
+text-align:center;
+position:relative;
+z-index:2;
+
+}
+
+.stackly-services-subtitle{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+padding:10px 24px;
+
+border-radius:50px;
+
+background:rgba(89,108,203,.10);
+
+color:#596ccb;
+
+font-size:15px;
+
+font-weight:700;
+
+letter-spacing:.5px;
+
+}
+
+.stackly-services-subtitle i{
+
+color:#00bcd4;
+
+}
+
+.stackly-services-heading h2{
+
+font-size:54px;
+font-weight:800;
+margin:22px 0 18px;
+color:#1d2436;
+line-height:1.2;
+
+}
+
+.stackly-services-heading h2 span{
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.stackly-services-heading p{
+
+font-size:17px;
+color:#6d7285;
+line-height:1.9;
+
+}
+
+/*==================================
+GRID
+==================================*/
+
+.stackly-services-grid{
+
+max-width:1450px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/*==================================
+CARD
+==================================*/
+
+.stackly-services-card{
+
+position:relative;
+
+border-radius:24px;
+
+overflow:hidden;
+
+background:#fff;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+transition:.45s;
+
+}
+
+/*==================================
+IMAGE
+==================================*/
+
+.stackly-services-image{
+
+height:430px;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.stackly-services-image img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+transition:.7s;
+
+}
+
+/*==================================
+IMAGE OVERLAY
+==================================*/
+
+.stackly-services-image::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+
+to top,
+
+rgba(0,0,0,.55),
+
+rgba(0,0,0,.08)
+
+);
+
+z-index:1;
+
+}
+
+/*==================================
+BOTTOM CONTENT
+==================================*/
+
+.stackly-services-content{
+
+position:absolute;
+
+left:28px;
+
+right:28px;
+
+bottom:28px;
+
+display:flex;
+
+align-items:center;
+
+background:#151b2c;
+
+border-radius:18px;
+
+overflow:hidden;
+
+z-index:2;
+
+}
+
+/*==================================
+ICON
+==================================*/
+
+.stackly-services-icon{
+
+width:92px;
+height:92px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#ef3b4f;
+
+color:#fff;
+
+font-size:34px;
+
+flex-shrink:0;
+
+}
+
+/*==================================
+TEXT
+==================================*/
+
+.stackly-services-info{
+
+flex:1;
+
+padding:22px 28px;
+
+}
+
+.stackly-services-info h3{
+
+color:#fff;
+
+font-size:28px;
+
+margin-bottom:12px;
+
+font-weight:700;
+
+}
+
+.stackly-services-info a{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+color:#ffffff;
+
+text-decoration:none;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.stackly-services-info a i{
+
+font-size:14px;
+
+}
+
+/*==================================
+HOVER
+==================================*/
+
+.stackly-services-card:hover{
+
+transform:translateY(-14px);
+
+box-shadow:0 30px 70px rgba(0,0,0,.18);
+
+}
+
+.stackly-services-card:hover
+.stackly-services-image img{
+
+transform:scale(1.12);
+
+}
+
+.stackly-services-card:hover
+.stackly-services-content{
+
+background:linear-gradient(
+
+135deg,
+
+rgba(89,108,203,.92),
+
+rgba(125,100,169,.82),
+
+rgba(0,188,212,.70)
+
+);
+
+}
+
+.stackly-services-card:hover
+.stackly-services-icon{
+
+background:#ffffff;
+
+color:#596ccb;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-info a{
+
+color:#ffffff;
+
+}
+
+/*==================================
+SCROLL REVEAL
+==================================*/
+
+.stackly-services-top{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.stackly-services-up{
+
+opacity:0;
+
+transform:translateY(90px);
+
+transition:1s;
+
+}
+
+.stackly-services-show{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/*==================================================
+STACKLY SERVICES
+PREMIUM HOVER EFFECTS
+==================================================*/
+
+
+/*=========================================
+CARD
+=========================================*/
+
+.stackly-services-card{
+
+isolation:isolate;
+
+}
+
+.stackly-services-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:24px;
+
+padding:2px;
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9,
+#00bcd4);
+
+-webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:0;
+
+transition:.45s;
+
+}
+
+.stackly-services-card:hover::before{
+
+opacity:1;
+
+}
+
+
+/*=========================================
+SHINE EFFECT
+=========================================*/
+
+.stackly-services-card::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-140%;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+transform:skewX(-25deg);
+
+z-index:4;
+
+transition:1s;
+
+}
+
+.stackly-services-card:hover::after{
+
+left:170%;
+
+}
+
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.stackly-services-image img{
+
+transition:transform .8s ease, filter .8s ease;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-image img{
+
+transform:scale(1.14) rotate(2deg);
+
+filter:brightness(.82);
+
+}
+
+
+/*=========================================
+IMAGE OVERLAY
+=========================================*/
+
+.stackly-services-image::before{
+
+transition:.5s;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-image::before{
+
+background:linear-gradient(
+to top,
+rgba(17,20,40,.78),
+rgba(17,20,40,.12));
+
+}
+
+
+/*=========================================
+BOTTOM CONTENT
+=========================================*/
+
+.stackly-services-content{
+
+transition:.45s;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-content{
+
+transform:translateY(-6px);
+
+}
+
+
+/*=========================================
+ICON
+=========================================*/
+
+.stackly-services-icon{
+
+transition:.5s;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-icon{
+
+transform:rotate(360deg) scale(1.08);
+
+}
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.stackly-services-info h3{
+
+transition:.35s;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-info h3{
+
+letter-spacing:.4px;
+
+}
+
+
+/*=========================================
+READ MORE
+=========================================*/
+
+.stackly-services-info a{
+
+position:relative;
+
+}
+
+.stackly-services-info a i{
+
+transition:.35s;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-info a i{
+
+transform:translateX(8px);
+
+}
+
+
+/*=========================================
+UNDERLINE
+=========================================*/
+
+.stackly-services-info a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-5px;
+
+width:0;
+
+height:2px;
+
+background:#ffffff;
+
+transition:.35s;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-info a::after{
+
+width:100%;
+
+}
+
+
+/*=========================================
+FLOATING ANIMATION
+=========================================*/
+
+.stackly-services-card{
+
+animation:stacklyServiceFloat 5s ease-in-out infinite;
+
+}
+
+.stackly-services-card:nth-child(2){
+
+animation-delay:.3s;
+
+}
+
+.stackly-services-card:nth-child(3){
+
+animation-delay:.6s;
+
+}
+
+.stackly-services-card:nth-child(4){
+
+animation-delay:.9s;
+
+}
+
+.stackly-services-card:nth-child(5){
+
+animation-delay:1.2s;
+
+}
+
+.stackly-services-card:nth-child(6){
+
+animation-delay:1.5s;
+
+}
+
+@keyframes stacklyServiceFloat{
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-8px);
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+/*=========================================
+HEADING
+=========================================*/
+
+.stackly-services-heading h2 span{
+
+background-size:200%;
+
+animation:stacklyGradientMove 6s linear infinite;
+
+}
+
+@keyframes stacklyGradientMove{
+
+from{
+
+    background-position:0%;
+
+}
+
+to{
+
+    background-position:200%;
+
+}
+
+}
+
+
+/*=========================================
+SUBTITLE
+=========================================*/
+
+.stackly-services-subtitle{
+
+animation:stacklyBadgeGlow 2.8s infinite alternate;
+
+}
+
+@keyframes stacklyBadgeGlow{
+
+from{
+
+    box-shadow:0 0 0 rgba(89,108,203,0);
+
+}
+
+to{
+
+    box-shadow:0 0 22px rgba(89,108,203,.25);
+
+}
+
+}
+
+
+/*=========================================
+CARD SHADOW
+=========================================*/
+
+.stackly-services-card:hover{
+
+box-shadow:
+0 25px 60px rgba(89,108,203,.22),
+0 15px 40px rgba(0,0,0,.12);
+
+}
+
+
+/*=========================================
+SMOOTH
+=========================================*/
+
+.stackly-services-card,
+.stackly-services-image img,
+.stackly-services-content,
+.stackly-services-icon,
+.stackly-services-info h3,
+.stackly-services-info a,
+.stackly-services-info a i{
+
+transition:all .4s ease;
+
+}
+
+/*==================================================
+STACKLY SERVICES
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE LAPTOP
+=========================================*/
+
+@media (max-width:1400px){
+
+.stackly-services-section{
+
+    padding:100px 5%;
+
+}
+
+.stackly-services-grid{
+
+    gap:28px;
+
+}
+
+.stackly-services-image{
+
+    height:390px;
+
+}
+
+.stackly-services-info h3{
+
+    font-size:24px;
+
+}
+
+}
+
+
+
+/*=========================================
+LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-services-heading h2{
+
+    font-size:46px;
+
+}
+
+.stackly-services-heading p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.stackly-services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.stackly-services-image{
+
+    height:360px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:992px){
+
+.stackly-services-section{
+
+    padding:90px 5%;
+
+}
+
+.stackly-services-heading{
+
+    margin-bottom:55px;
+
+}
+
+.stackly-services-heading h2{
+
+    font-size:42px;
+
+}
+
+.stackly-services-heading p{
+
+    font-size:16px;
+
+}
+
+.stackly-services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.stackly-services-image{
+
+    height:330px;
+
+}
+
+.stackly-services-content{
+
+    left:18px;
+
+    right:18px;
+
+    bottom:18px;
+
+}
+
+.stackly-services-icon{
+
+    width:80px;
+
+    height:80px;
+
+    font-size:30px;
+
+}
+
+.stackly-services-info{
+
+    padding:18px 20px;
+
+}
+
+.stackly-services-info h3{
+
+    font-size:22px;
+
+}
+
+}
+
+
+
+/*=========================================
+TABLET PORTRAIT
+=========================================*/
+
+@media (max-width:768px){
+
+.stackly-services-section{
+
+    padding:80px 25px;
+
+}
+
+.stackly-services-heading{
+
+    margin-bottom:45px;
+
+}
+
+.stackly-services-heading h2{
+
+    font-size:36px;
+
+}
+
+.stackly-services-heading p{
+
+    font-size:15px;
+
+}
+
+.stackly-services-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.stackly-services-image{
+
+    height:340px;
+
+}
+
+.stackly-services-content{
+
+    left:20px;
+
+    right:20px;
+
+    bottom:20px;
+
+}
+
+}
+
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-services-section{
+
+    padding:70px 18px;
+
+}
+
+.stackly-services-heading{
+
+    margin-bottom:40px;
+
+}
+
+.stackly-services-subtitle{
+
+    font-size:13px;
+
+    padding:9px 18px;
+
+}
+
+.stackly-services-heading h2{
+
+    font-size:30px;
+
+    line-height:1.3;
+
+}
+
+.stackly-services-heading p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.stackly-services-image{
+
+    height:280px;
+
+}
+
+.stackly-services-content{
+
+    left:15px;
+
+    right:15px;
+
+    bottom:15px;
+
+    border-radius:15px;
+
+}
+
+.stackly-services-icon{
+
+    width:68px;
+
+    height:68px;
+
+    font-size:24px;
+
+}
+
+.stackly-services-info{
+
+    padding:16px;
+
+}
+
+.stackly-services-info h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.stackly-services-info a{
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-services-section{
+
+    padding:60px 15px;
+
+}
+
+.stackly-services-heading h2{
+
+    font-size:26px;
+
+}
+
+.stackly-services-heading p{
+
+    font-size:13px;
+
+}
+
+.stackly-services-image{
+
+    height:240px;
+
+}
+
+.stackly-services-content{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.stackly-services-icon{
+
+    width:100%;
+
+    height:60px;
+
+    font-size:22px;
+
+}
+
+.stackly-services-info{
+
+    width:100%;
+
+    padding:16px;
+
+}
+
+.stackly-services-info h3{
+
+    font-size:18px;
+
+}
+
+.stackly-services-info a{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-services-grid{
+
+    max-width:1600px;
+
+    gap:40px;
+
+}
+
+.stackly-services-image{
+
+    height:470px;
+
+}
+
+.stackly-services-heading h2{
+
+    font-size:64px;
+
+}
+
+.stackly-services-heading p{
+
+    font-size:19px;
+
+}
+
+.stackly-services-info h3{
+
+    font-size:30px;
+
+}
+
+}
+
+
+
+/*=========================================
+TOUCH DEVICES
+=========================================*/
+
+@media (hover:none){
+
+.stackly-services-card:hover{
+
+    transform:none;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-image img{
+
+    transform:none;
+
+}
+
+.stackly-services-card:hover
+.stackly-services-content{
+
+    transform:none;
+
+}
+
+}
+</style>
+
+<script>
+    /*==================================================
+STACKLY SERVICES SECTION
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*=========================================
+ELEMENTS
+=========================================*/
+
+const stacklyServiceCards = document.querySelectorAll(
+    ".stackly-services-card"
+);
+
+const stacklyServiceReveal = document.querySelectorAll(
+    ".stackly-services-top, .stackly-services-up"
+);
+
+
+
+/*=========================================
+SCROLL REVEAL
+=========================================*/
+
+const stacklyServiceObserver = new IntersectionObserver(
+
+    (entries)=>{
+
+        entries.forEach((entry)=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add(
+                    "stackly-services-show"
+                );
+
+                stacklyServiceObserver.unobserve(
+                    entry.target
+                );
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold:0.18
+
+    }
+
+);
+
+
+
+stacklyServiceReveal.forEach((item,index)=>{
+
+    item.style.transitionDelay=(index*0.15)+"s";
+
+    stacklyServiceObserver.observe(item);
+
+});
+
+
+
+/*=========================================
+CARD HOVER EFFECT
+=========================================*/
+
+stacklyServiceCards.forEach((card)=>{
+
+    card.addEventListener("mouseenter",()=>{
+
+        card.style.transform="translateY(-18px)";
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+PARALLAX IMAGE EFFECT
+=========================================*/
+
+stacklyServiceCards.forEach((card)=>{
+
+    const image=card.querySelector(
+        ".stackly-services-image img"
+    );
+
+
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect=card.getBoundingClientRect();
+
+        const x=e.clientX-rect.left;
+
+        const y=e.clientY-rect.top;
+
+        const moveX=(x-rect.width/2)/35;
+
+        const moveY=(y-rect.height/2)/35;
+
+        image.style.transform=
+        `scale(1.12) translate(${moveX}px,${moveY}px)`;
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        image.style.transform="scale(1)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+ICON FLOAT
+=========================================*/
+
+document.querySelectorAll(
+    ".stackly-services-icon"
+).forEach((icon,index)=>{
+
+    icon.animate(
+
+        [
+
+            {
+
+                transform:"translateY(0px)"
+
+            },
+
+            {
+
+                transform:"translateY(-8px)"
+
+            },
+
+            {
+
+                transform:"translateY(0px)"
+
+            }
+
+        ],
+
+        {
+
+            duration:2200+(index*180),
+
+            iterations:Infinity,
+
+            easing:"ease-in-out"
+
+        }
+
+    );
+
+});
+
+
+
+
+/*=========================================
+KEYBOARD ACCESSIBILITY
+=========================================*/
+
+stacklyServiceCards.forEach((card)=>{
+
+    card.setAttribute("tabindex","0");
+
+
+
+    card.addEventListener("focus",()=>{
+
+        card.style.transform="translateY(-18px)";
+
+    });
+
+
+
+    card.addEventListener("blur",()=>{
+
+        card.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+READ MORE ANIMATION
+=========================================*/
+
+document.querySelectorAll(
+
+    ".stackly-services-info a"
+
+).forEach((link)=>{
+
+    link.addEventListener("mouseenter",()=>{
+
+        const icon=link.querySelector("i");
+
+        icon.style.transform="translateX(8px)";
+
+    });
+
+
+
+    link.addEventListener("mouseleave",()=>{
+
+        const icon=link.querySelector("i");
+
+        icon.style.transform="translateX(0px)";
+
+    });
+
+});
+
+
+
+
+/*=========================================
+RIPPLE EFFECT
+=========================================*/
+
+document.querySelectorAll(
+
+    ".stackly-services-info a"
+
+).forEach((button)=>{
+
+    button.style.position="relative";
+
+    button.style.overflow="hidden";
+
+
+
+    button.addEventListener("click",(e)=>{
+
+        const ripple=document.createElement("span");
+
+        const rect=button.getBoundingClientRect();
+
+        const size=Math.max(rect.width,rect.height);
+
+        ripple.className="stackly-services-ripple";
+
+
+
+        ripple.style.width=size+"px";
+
+        ripple.style.height=size+"px";
+
+        ripple.style.left=(e.clientX-rect.left-size/2)+"px";
+
+        ripple.style.top=(e.clientY-rect.top-size/2)+"px";
+
+
+
+        button.appendChild(ripple);
+
+
+
+        setTimeout(()=>{
+
+            ripple.remove();
+
+        },700);
+
+    });
+
+});
+
+});
+</script>
+<!--=========================================
+STACKLY FREE ESTIMATE SECTION
+==========================================-->
+
+<section class="stackly-estimate-section">
+
+    <div class="stackly-estimate-container">
+
+        <!--============================
+        TOP ESTIMATE BAR
+        =============================-->
+
+        <div class="stackly-estimate-banner stackly-estimate-reveal-up">
+
+            <div class="stackly-estimate-left">
+
+                <span class="stackly-estimate-small-title">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Free Estimate
+
+                </span>
+
+                <h2>Let's Discuss Your Next Project</h2>
+
+                <p>
+                    Get a free consultation from our experts and discover
+                    the perfect solution for your business growth.
+                </p>
+
+            </div>
+
+
+
+            <div class="stackly-estimate-right">
+
+                <form id="stacklyEstimateForm" novalidate>
+
+                    <div class="stackly-estimate-field">
+
+                        <input
+                            type="text"
+                            id="stacklyEstimateName"
+                            placeholder="Full Name">
+
+                        <small id="stacklyEstimateNameError"></small>
+
+                    </div>
+
+
+                    <div class="stackly-estimate-field">
+
+                        <input
+                            type="email"
+                            id="stacklyEstimateEmail"
+                            placeholder="Email Address">
+
+                        <small id="stacklyEstimateEmailError"></small>
+
+                    </div>
+
+
+                    <button type="submit">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Get Estimate
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+        <!--============================
+        LOWER SECTION
+        =============================-->
+
+        <div class="stackly-estimate-content-wrapper">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="stackly-estimate-content stackly-estimate-reveal-up">
+
+                <span class="stackly-estimate-tag">
+
+                    <i class="fa-solid fa-wave-square"></i>
+
+               working with stackly 
+
+                </span>
+
+                <h2>
+
+                    Maximizing Profitability
+
+                    <span>Through Smart Solutions</span>
+
+                </h2>
+
+                <p style="color:black;">
+
+                    At Stackly, we help businesses transform ideas into
+                    successful digital solutions through strategic planning,
+                    modern technology, and continuous support.
+
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="stackly-estimate-feature-list">
+
+                    <div class="stackly-estimate-feature stackly-estimate-reveal-up">
+
+                        <div class="stackly-estimate-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Experienced Team</h4>
+
+                            <p>
+                                Certified experts delivering reliable
+                                business solutions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-estimate-feature stackly-estimate-reveal-up">
+
+                        <div class="stackly-estimate-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Business Growth</h4>
+
+                            <p>
+                                Helping companies scale faster with
+                                innovative digital strategies.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-estimate-feature stackly-estimate-reveal-up">
+
+                        <div class="stackly-estimate-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>24/7 Support</h4>
+
+                            <p>
+                                Dedicated support whenever your business
+                                needs assistance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT IMAGE -->
+
+            <div class="stackly-estimate-image-wrapper stackly-estimate-reveal-right">
+
+                <img
+                    src="./h2.webp"
+                    alt="Business Team">
+
+
+
+
+                <!-- EXPERIENCE CARD -->
+
+                <div class="stackly-estimate-experience">
+
+                    <h3>25+</h3>
+
+                    <div>
+
+                        <span>Years of</span>
+
+                        <strong>Work Experience</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!--=========================================
+SUCCESS POPUP
+==========================================-->
+
+<div class="stackly-estimate-popup" id="stacklyEstimatePopup">
+
+    <div class="stackly-estimate-popup-box">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <h3>Message Sent Successfully!</h3>
+
+        <p>
+
+            Thank you for contacting Stackly.
+            Our experts will contact you soon.
+
+        </p>
+
+    </div>
+
+</div>
+
+<style>
+    /*==================================================
+STACKLY FREE ESTIMATE SECTION
+MAIN CSS
+==================================================*/
+
+.stackly-estimate-section{
+
+width:100%;
+
+position:relative;
+
+overflow:hidden;
+
+padding:140px 6% 100px;
+
+background:linear-gradient(
+135deg,
+rgba(89, 108, 203, 0.88),
+rgba(125, 100, 169, 0.78),
+rgba(0,188,212,.60));
+
+overflow-x:hidden;
+}
+
+
+
+/*=========================================
+CONTAINER
+=========================================*/
+
+.stackly-estimate-container{
+
+max-width:1400px;
+
+margin:auto;
+
+position:relative;
+}
+
+
+/*=========================================
+TOP BANNER
+=========================================*/
+
+.stackly-estimate-banner{
+
+position:relative;
+
+z-index:10;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:45px;
+
+padding:55px;
+
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+#ffb13b,
+#f7a129,
+#ef9416);
+
+box-shadow:0 30px 70px rgba(0,0,0,.18);
+
+overflow:hidden;
+}
+
+
+/* Decorative Shape */
+
+.stackly-estimate-banner::before{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+
+height:450px;
+
+top:-220px;
+
+right:-120px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.10);
+}
+
+.stackly-estimate-banner::after{
+
+content:"";
+
+position:absolute;
+
+width:250px;
+
+height:250px;
+
+bottom:-120px;
+
+left:-90px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+}
+
+
+/*=========================================
+LEFT CONTENT
+=========================================*/
+
+.stackly-estimate-left{
+
+flex:1;
+
+position:relative;
+
+z-index:2;
+}
+
+.stackly-estimate-small-title{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+background:rgba(255,255,255,.15);
+
+border-radius:50px;
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:700;
+
+margin-bottom:18px;
+}
+
+.stackly-estimate-small-title i{
+
+color:#fff;
+}
+
+.stackly-estimate-left h2{
+
+font-size:54px;
+
+color:#111827;
+
+line-height:1.1;
+
+margin-bottom:18px;
+
+font-weight:800;
+}
+
+.stackly-estimate-left p{
+
+color: black;
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:620px;
+}
+
+
+/*=========================================
+FORM
+=========================================*/
+
+.stackly-estimate-right{
+
+flex:1;
+}
+
+#stacklyEstimateForm{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:18px;
+}
+
+.stackly-estimate-field{
+
+flex:1;
+
+position:relative;
+}
+
+.stackly-estimate-field input{
+
+width:100%;
+
+height:68px;
+
+border:none;
+
+outline:none;
+
+padding:0 22px;
+
+border-radius:10px;
+
+background:#fff;
+
+font-size:16px;
+
+color: black;
+
+transition:.35s;
+}
+
+.stackly-estimate-field input:focus{
+
+box-shadow:0 0 0 3px rgba(89,108,203,.25);
+}
+
+.stackly-estimate-field small{
+
+display:block;
+
+margin-top:8px;
+
+color:#c1121f;
+
+font-size:13px;
+
+font-weight:600;
+
+min-height:18px;
+}
+
+#stacklyEstimateForm button{
+
+height:68px;
+
+border:none;
+
+cursor:pointer;
+
+padding:0 34px;
+
+border-radius:10px;
+
+background:#151b2d;
+
+color:#fff;
+
+font-size:16px;
+
+font-weight:700;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+transition:.35s;
+}
+
+#stacklyEstimateForm button:hover{
+
+background:#596ccb;
+}
+
+
+/*=========================================
+LOWER AREA
+=========================================*/
+
+.stackly-estimate-content-wrapper{
+
+margin-top:100px;
+
+display:grid;
+
+grid-template-columns:1.05fr .95fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+
+/*=========================================
+TEXT CONTENT
+=========================================*/
+
+.stackly-estimate-tag{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+color:#596ccb;
+
+font-size:18px;
+
+font-weight:700;
+
+margin-bottom:20px;
+}
+
+.stackly-estimate-tag i{
+
+color:#ff9f1c;
+}
+
+.stackly-estimate-content h2{
+
+font-size:56px;
+
+line-height:1.15;
+
+color:#111827;
+
+margin-bottom:25px;
+
+font-weight:800;
+}
+
+.stackly-estimate-content h2 span{
+
+display:block;
+
+color:#596ccb;
+}
+
+.stackly-estimate-content>p{
+
+color:#666;
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:45px;
+}
+
+
+/*=========================================
+FEATURE LIST
+=========================================*/
+
+.stackly-estimate-feature-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+}
+
+.stackly-estimate-feature{
+
+display:flex;
+
+gap:20px;
+
+align-items:flex-start;
+
+padding:25px;
+
+background:#fff;
+
+border-radius:16px;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+transition:.35s;
+}
+
+.stackly-estimate-icon{
+
+width:72px;
+
+height:72px;
+
+min-width:72px;
+
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+#596ccb,
+#7d64a9);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:#fff;
+}
+
+.stackly-estimate-feature h4{
+
+font-size:24px;
+
+margin-bottom:10px;
+
+color:#111827;
+}
+
+.stackly-estimate-feature p{
+
+color:#666;
+
+line-height:1.8;
+}
+
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.stackly-estimate-image-wrapper{
+
+position:relative;
+}
+
+.stackly-estimate-image-wrapper img{
+
+width:100%;
+
+display:block;
+
+border-radius:24px;
+
+box-shadow:0 35px 70px rgba(0,0,0,.18);
+}
+
+
+/*=========================================
+EXPERIENCE CARD
+=========================================*/
+
+.stackly-estimate-experience{
+
+position:absolute;
+
+left:-40px;
+
+bottom:45px;
+
+background:#ef3030;
+
+color:#fff;
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+
+padding:28px 38px;
+
+clip-path:polygon(
+0 0,
+92% 0,
+100% 50%,
+92% 100%,
+0 100%);
+
+box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+
+.stackly-estimate-experience h3{
+
+font-size:60px;
+
+font-weight:800;
+
+line-height:1;
+}
+
+.stackly-estimate-experience span{
+
+display:block;
+
+font-size:18px;
+}
+
+.stackly-estimate-experience strong{
+
+display:block;
+
+font-size:28px;
+
+margin-top:8px;
+}
+
+
+/*=========================================
+SUCCESS POPUP
+=========================================*/
+
+.stackly-estimate-popup{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.4s;
+
+z-index:9999;
+}
+
+.stackly-estimate-popup.stackly-popup-show{
+
+opacity:1;
+
+visibility:visible;
+}
+
+.stackly-estimate-popup-box{
+
+width:380px;
+
+background:#fff;
+
+padding:40px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+.stackly-estimate-popup-box i{
+
+font-size:60px;
+
+color:#22c55e;
+
+margin-bottom:20px;
+}
+
+.stackly-estimate-popup-box h3{
+
+font-size:28px;
+
+margin-bottom:12px;
+
+color:#111827;
+}
+
+.stackly-estimate-popup-box p{
+
+color:#666;
+
+line-height:1.8;
+}
+
+/*==================================================
+STACKLY ESTIMATE
+ANIMATION & HOVER EFFECTS
+==================================================*/
+
+
+/*=========================================
+SCROLL ANIMATION
+=========================================*/
+
+.stackly-estimate-reveal-up,
+.stackly-estimate-reveal-right{
+
+    opacity:0;
+
+    transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.22,.61,.36,1);
+
+    will-change:transform,opacity;
+}
+
+.stackly-estimate-reveal-up{
+
+    transform:translateY(80px);
+}
+
+.stackly-estimate-reveal-right{
+
+    transform:translateX(100px);
+}
+
+.stackly-estimate-show{
+
+    opacity:1 !important;
+
+    transform:none !important;
+}
+
+
+/*=========================================
+STAGGER EFFECT
+=========================================*/
+
+.stackly-estimate-feature:nth-child(1){
+
+    transition-delay:.15s;
+}
+
+.stackly-estimate-feature:nth-child(2){
+
+    transition-delay:.35s;
+}
+
+.stackly-estimate-feature:nth-child(3){
+
+    transition-delay:.55s;
+}
+
+
+/*=========================================
+FEATURE CARD HOVER
+=========================================*/
+
+.stackly-estimate-feature:hover{
+
+    transform:translateY(-12px);
+
+    background:#596ccb;
+
+    box-shadow:0 28px 60px rgba(89,108,203,.28);
+}
+
+.stackly-estimate-feature:hover h4,
+
+.stackly-estimate-feature:hover p{
+
+    color:#ffffff;
+}
+
+.stackly-estimate-feature:hover .stackly-estimate-icon{
+
+    background:#ffffff;
+
+    color:#596ccb;
+
+    transform:rotate(-10deg) scale(1.12);
+}
+
+
+/*=========================================
+IMAGE HOVER
+=========================================*/
+
+.stackly-estimate-image-wrapper{
+
+    overflow:hidden;
+
+    border-radius:24px;
+}
+
+.stackly-estimate-image-wrapper img{
+
+    transition:
+    transform .8s ease,
+    filter .6s ease;
+}
+
+.stackly-estimate-image-wrapper:hover img{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.08);
+}
+
+
+/*=========================================
+EXPERIENCE BADGE
+=========================================*/
+
+.stackly-estimate-experience{
+
+    animation:stacklyExperienceFloat 4s ease-in-out infinite;
+}
+
+@keyframes stacklyExperienceFloat{
+
+    0%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+    }
+
+    100%{
+
+        transform:translateY(0px);
+    }
+
+}
+
+
+/*=========================================
+FORM INPUT
+=========================================*/
+
+.stackly-estimate-field input{
+
+    transition:
+    .35s,
+    box-shadow .35s;
+}
+
+.stackly-estimate-field input:hover{
+
+    transform:translateY(-2px);
+}
+
+.stackly-estimate-field input:focus{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 0 4px rgba(89,108,203,.20),
+    0 12px 30px rgba(89,108,203,.20);
+}
+
+
+/*=========================================
+BUTTON HOVER
+=========================================*/
+
+#stacklyEstimateForm button{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+#stacklyEstimateForm button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+}
+
+#stacklyEstimateForm button:hover::before{
+
+    left:160%;
+}
+
+#stacklyEstimateForm button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+
+#stacklyEstimateForm button i{
+
+    transition:.35s;
+}
+
+#stacklyEstimateForm button:hover i{
+
+    transform:translateX(8px);
+}
+
+
+/*=========================================
+TOP BANNER
+=========================================*/
+
+.stackly-estimate-banner{
+
+    transition:.45s;
+}
+
+.stackly-estimate-banner:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 80px rgba(0,0,0,.22);
+}
+
+
+/*=========================================
+HEADING
+=========================================*/
+
+.stackly-estimate-content h2 span{
+
+    background:linear-gradient(
+    90deg,
+    #596ccb,
+    #7d64a9,
+    #00bcd4);
+
+    background-size:200%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:stacklyHeadingGradient 5s linear infinite;
+}
+
+@keyframes stacklyHeadingGradient{
+
+    from{
+
+        background-position:0%;
+    }
+
+    to{
+
+        background-position:200%;
+    }
+
+}
+
+
+/*=========================================
+FEATURE ICON
+=========================================*/
+
+.stackly-estimate-icon{
+
+    transition:.45s;
+}
+
+.stackly-estimate-feature:hover .stackly-estimate-icon{
+
+    box-shadow:0 0 25px rgba(255,255,255,.45);
+}
+
+
+/*=========================================
+SHINE EFFECT
+=========================================*/
+
+.stackly-estimate-feature{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.stackly-estimate-feature::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.30),
+
+        transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:1s;
+}
+
+.stackly-estimate-feature:hover::before{
+
+    left:170%;
+}
+
+
+/*=========================================
+POPUP
+=========================================*/
+
+.stackly-estimate-popup-box{
+
+    transform:scale(.8);
+
+    transition:.35s;
+}
+
+.stackly-popup-show .stackly-estimate-popup-box{
+
+    transform:scale(1);
+}
+
+
+/*=========================================
+SMOOTH TRANSITIONS
+=========================================*/
+
+.stackly-estimate-feature,
+.stackly-estimate-icon,
+.stackly-estimate-image-wrapper img,
+.stackly-estimate-experience,
+.stackly-estimate-banner,
+#stacklyEstimateForm button,
+.stackly-estimate-field input{
+
+    transition:all .4s ease;
+}
+
+/*==================================================
+STACKLY ESTIMATE
+RESPONSIVE CSS
+==================================================*/
+
+
+/*=========================================
+LARGE LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.stackly-estimate-section{
+
+    padding:120px 5% 90px;
+}
+
+.stackly-estimate-banner{
+
+    padding:45px;
+
+    gap:35px;
+}
+
+.stackly-estimate-left h2{
+
+    font-size:46px;
+}
+
+.stackly-estimate-content-wrapper{
+
+    gap:45px;
+}
+
+.stackly-estimate-content h2{
+
+    font-size:48px;
+}
+
+.stackly-estimate-experience{
+
+    left:-25px;
+
+    padding:22px 30px;
+}
+
+.stackly-estimate-experience h3{
+
+    font-size:48px;
+}
+
+}
+
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media (max-width:991px){
+
+.stackly-estimate-section{
+
+    padding:90px 5% 70px;
+}
+
+.stackly-estimate-banner{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:40px 35px;
+}
+
+.stackly-estimate-left{
+
+    width:100%;
+}
+
+.stackly-estimate-right{
+
+    width:100%;
+}
+
+#stacklyEstimateForm{
+
+    flex-wrap:wrap;
+}
+
+.stackly-estimate-field{
+
+    flex:1 1 48%;
+}
+
+#stacklyEstimateForm button{
+
+    width:100%;
+
+    justify-content:center;
+}
+
+.stackly-estimate-content-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:55px;
+}
+
+.stackly-estimate-content{
+
+    order:2;
+}
+
+.stackly-estimate-image-wrapper{
+
+    order:1;
+}
+
+.stackly-estimate-left h2{
+
+    font-size:40px;
+}
+
+.stackly-estimate-content h2{
+
+    font-size:42px;
+}
+
+.stackly-estimate-feature{
+
+    padding:22px;
+}
+
+.stackly-estimate-experience{
+
+    left:20px;
+
+    bottom:20px;
+}
+
+}
+
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media (max-width:767px){
+
+.stackly-estimate-section{
+
+    padding:70px 20px;
+}
+
+.stackly-estimate-banner{
+
+    padding:30px 22px;
+
+    gap:28px;
+
+    border-radius:16px;
+}
+
+.stackly-estimate-left h2{
+
+    font-size:32px;
+
+    line-height:1.25;
+}
+
+.stackly-estimate-left p{
+
+    font-size:15px;
+}
+
+#stacklyEstimateForm{
+
+    flex-direction:column;
+
+    width:100%;
+}
+
+.stackly-estimate-field{
+
+    width:100%;
+}
+
+.stackly-estimate-field input{
+
+    height:60px;
+}
+
+#stacklyEstimateForm button{
+
+    width:100%;
+
+    height:60px;
+
+    justify-content:center;
+}
+
+.stackly-estimate-content-wrapper{
+
+    margin-top:70px;
+
+    gap:45px;
+}
+
+.stackly-estimate-content h2{
+
+    font-size:34px;
+}
+
+.stackly-estimate-content>p{
+
+    font-size:15px;
+}
+
+.stackly-estimate-feature{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    align-items:center;
+
+    padding:25px;
+}
+
+.stackly-estimate-icon{
+
+    margin-bottom:10px;
+}
+
+.stackly-estimate-feature h4{
+
+    font-size:22px;
+}
+
+.stackly-estimate-feature p{
+
+    font-size:15px;
+}
+
+.stackly-estimate-image-wrapper img{
+
+    border-radius:18px;
+}
+
+.stackly-estimate-experience{
+
+    position:relative;
+
+    left:auto;
+
+    bottom:auto;
+
+    margin-top:20px;
+
+    clip-path:none;
+
+    border-radius:15px;
+
+    justify-content:center;
+}
+
+}
+
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media (max-width:576px){
+
+.stackly-estimate-section{
+
+    padding:60px 15px;
+}
+
+.stackly-estimate-banner{
+
+    padding:25px 18px;
+}
+
+.stackly-estimate-small-title{
+
+    font-size:13px;
+}
+
+.stackly-estimate-left h2{
+
+    font-size:28px;
+}
+
+.stackly-estimate-left p{
+
+    font-size:14px;
+}
+
+.stackly-estimate-tag{
+
+    font-size:15px;
+}
+
+.stackly-estimate-content h2{
+
+    font-size:28px;
+}
+
+.stackly-estimate-feature{
+
+    padding:20px;
+}
+
+.stackly-estimate-icon{
+
+    width:60px;
+    height:60px;
+    min-width:60px;
+
+    font-size:24px;
+}
+
+.stackly-estimate-feature h4{
+
+    font-size:20px;
+}
+
+.stackly-estimate-feature p{
+
+    font-size:14px;
+}
+
+.stackly-estimate-experience{
+
+    flex-direction:column;
+
+    gap:10px;
+
+    text-align:center;
+
+    padding:18px;
+}
+
+.stackly-estimate-experience h3{
+
+    font-size:40px;
+}
+
+.stackly-estimate-experience strong{
+
+    font-size:22px;
+}
+
+.stackly-estimate-popup-box{
+
+    width:95%;
+
+    padding:30px 20px;
+}
+
+}
+
+
+/*=========================================
+EXTRA SMALL MOBILE
+=========================================*/
+
+@media (max-width:420px){
+
+.stackly-estimate-section{
+
+    padding:50px 12px;
+}
+
+.stackly-estimate-left h2{
+
+    font-size:24px;
+}
+
+.stackly-estimate-content h2{
+
+    font-size:24px;
+}
+
+.stackly-estimate-feature{
+
+    padding:18px;
+}
+
+.stackly-estimate-icon{
+
+    width:55px;
+    height:55px;
+    min-width:55px;
+
+    font-size:22px;
+}
+
+.stackly-estimate-feature h4{
+
+    font-size:18px;
+}
+
+.stackly-estimate-feature p{
+
+    font-size:13px;
+}
+
+.stackly-estimate-field input{
+
+    font-size:14px;
+}
+
+#stacklyEstimateForm button{
+
+    font-size:15px;
+}
+
+}
+
+
+/*=========================================
+LARGE DESKTOP
+=========================================*/
+
+@media (min-width:1600px){
+
+.stackly-estimate-container{
+
+    max-width:1550px;
+}
+
+.stackly-estimate-banner{
+
+    padding:65px;
+}
+
+.stackly-estimate-left h2{
+
+    font-size:64px;
+}
+
+.stackly-estimate-left p{
+
+    font-size:20px;
+}
+
+.stackly-estimate-content h2{
+
+    font-size:64px;
+}
+
+.stackly-estimate-content>p{
+
+    font-size:20px;
+}
+
+.stackly-estimate-feature{
+
+    padding:30px;
+}
+
+.stackly-estimate-icon{
+
+    width:85px;
+    height:85px;
+    min-width:85px;
+
+    font-size:34px;
+}
+
+.stackly-estimate-feature h4{
+
+    font-size:28px;
+}
+
+.stackly-estimate-feature p{
+
+    font-size:18px;
+}
+
+.stackly-estimate-experience{
+
+    padding:35px 45px;
+}
+
+.stackly-estimate-experience h3{
+
+    font-size:70px;
+}
+
+}
+    </style>
+
+    <script>
+        /*==================================================
+STACKLY ESTIMATE SECTION
+NON-CONFLICTING JAVASCRIPT
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*=========================================
+FORM ELEMENTS
+=========================================*/
+
+const estimateForm = document.getElementById("stacklyEstimateForm");
+
+const nameInput = document.getElementById("stacklyEstimateName");
+
+const emailInput = document.getElementById("stacklyEstimateEmail");
+
+const nameError = document.getElementById("stacklyEstimateNameError");
+
+const emailError = document.getElementById("stacklyEstimateEmailError");
+
+const popup = document.getElementById("stacklyEstimatePopup");
+
+
+
+/*=========================================
+VALIDATION
+=========================================*/
+
+const emailPattern =
+/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+
+estimateForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let valid = true;
+
+    nameError.textContent = "";
+
+    emailError.textContent = "";
+
+
+
+    /*------------------------
+    NAME
+    ------------------------*/
+
+    if(nameInput.value.trim()===""){
+
+        nameError.textContent="Please fill details correctly";
+
+        valid=false;
+
+    }
+
+
+
+    /*------------------------
+    EMAIL
+    ------------------------*/
+
+    if(emailInput.value.trim()===""){
+
+        emailError.textContent="Please fill details correctly";
+
+        valid=false;
+
+    }
+
+    else if(!emailPattern.test(emailInput.value.trim())){
+
+        emailError.textContent="Please enter a valid email address";
+
+        valid=false;
+
+    }
+
+
+
+    /*------------------------
+    SUCCESS
+    ------------------------*/
+
+    if(valid){
+
+        popup.classList.add("stackly-popup-show");
+
+        document.body.style.overflow="hidden";
+
+        setTimeout(()=>{
+
+            window.location.href="404.html";
+
+        },2200);
+
+    }
+
+});
+
+
+
+
+
+/*=========================================
+REMOVE ERROR WHEN TYPING
+=========================================*/
+
+nameInput.addEventListener("input",()=>{
+
+    nameError.textContent="";
+
+});
+
+emailInput.addEventListener("input",()=>{
+
+    emailError.textContent="";
+
+});
+
+
+
+
+
+/*=========================================
+SCROLL REVEAL
+=========================================*/
+
+const revealItems = document.querySelectorAll(
+
+    ".stackly-estimate-reveal-up," +
+
+    ".stackly-estimate-reveal-right," +
+
+    ".stackly-estimate-feature"
+
+);
+
+
+
+const revealObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("stackly-estimate-show");
+
+            revealObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+
+    threshold:0.15
+
+});
+
+
+
+revealItems.forEach((item,index)=>{
+
+    item.style.transitionDelay=(index*0.15)+"s";
+
+    revealObserver.observe(item);
+
+});
+
+
+
+
+
+/*=========================================
+IMAGE PARALLAX
+=========================================*/
+
+const imageWrapper = document.querySelector(
+    ".stackly-estimate-image-wrapper"
+);
+
+
+
+if(imageWrapper){
+
+    imageWrapper.addEventListener("mousemove",(e)=>{
+
+        const rect=imageWrapper.getBoundingClientRect();
+
+        const x=e.clientX-rect.left;
+
+        const y=e.clientY-rect.top;
+
+        const rotateY=(x-rect.width/2)/35;
+
+        const rotateX=-(y-rect.height/2)/35;
+
+        imageWrapper.style.transform=
+        `perspective(1000px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)
+         scale(1.02)`;
+
+    });
+
+
+
+    imageWrapper.addEventListener("mouseleave",()=>{
+
+        imageWrapper.style.transform=
+        "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
+
+    });
+
+}
+
+
+
+
+
+/*=========================================
+FEATURE CARD HOVER
+=========================================*/
+
+const featureCards=document.querySelectorAll(
+    ".stackly-estimate-feature"
+);
+
+
+
+featureCards.forEach(card=>{
+
+    card.addEventListener("mouseenter",()=>{
+
+        card.style.transform="translateY(-12px)";
+
+    });
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform="translateY(0)";
+
+    });
+
+});
+
+
+
+
+
+/*=========================================
+KEYBOARD ACCESSIBILITY
+=========================================*/
+
+featureCards.forEach(card=>{
+
+    card.setAttribute("tabindex","0");
+
+    card.addEventListener("focus",()=>{
+
+        card.style.transform="translateY(-12px)";
+
+    });
+
+    card.addEventListener("blur",()=>{
+
+        card.style.transform="translateY(0)";
+
+    });
+
+});
+
+
+
+
+
+/*=========================================
+INPUT FOCUS EFFECT
+=========================================*/
+
+[nameInput,emailInput].forEach(input=>{
+
+    input.addEventListener("focus",()=>{
+
+        input.parentElement.style.transform="translateY(-3px)";
+
+    });
+
+    input.addEventListener("blur",()=>{
+
+        input.parentElement.style.transform="translateY(0)";
+
+    });
+
+});
+
+});
+        </script>
+
+
+
+
+<footer class="stkx-footer">
+
+    <!-- ===========================
+         CTA SECTION
+    ============================ -->
+
+    <section class="stkx-footer-cta">
+
+        <div class="stkx-footer-overlay"></div>
+
+        <div class="stkx-footer-container">
+
+            <div class="stkx-footer-cta-wrapper">
+
+                <!-- Left -->
+
+                <div class="stkx-footer-cta-content stkx-reveal-left">
+
+                    <h2>
+                        Ready to Transform
+                        <br>
+                        your Business ?
+                    </h2>
+
+                    <p>
+                        Lets work together to create solutions that drive
+                        growth, improve efficiency and deliver impact.
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="stkx-footer-cta-btn-wrap stkx-reveal-right">
+
+                    <a href="404.html" class="stkx-footer-btn">
+
+                        <span>Get in touch today</span>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+
+                            <polyline points="12 5 19 12 12 19"></polyline>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         MAIN FOOTER
+    ============================ -->
+
+    <section class="stkx-footer-main">
+
+        <div class="stkx-footer-container">
+
+            <div class="stkx-footer-grid">
+
+                <!-- ======================
+                     COMPANY
+                ======================= -->
+
+                <div class="stkx-footer-company">
+
+                    <a href="index.html" class="stkx-footer-logo">
+
+                        <img
+                            src="./logo.webp"
+                            alt="Stackly Logo">
+
+                    </a>
+
+                    <p class="stkx-footer-desc">
+                        We help businesses grow with smart
+                        digital solutions and innovative
+                        strategies.
+                    </p>
+
+                    <h3 class="stkx-footer-social-title">
+                        Follow Us :
+                    </h3>
+
+                    <div class="stkx-footer-social">
+
+                        <a href="404.html">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="404.html">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="404.html">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a href="404.html">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                                <!-- ======================
+                     QUICK LINKS
+                ======================= -->
+
+                <div class="stkx-footer-column">
+
+                    <h3 class="stkx-footer-title">
+                        Quick Links
+                    </h3>
+
+                    <ul class="stkx-footer-links">
+
+                        <li>
+                            <a href="./index.html">
+                                <span class="stkx-dot"></span>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./about.html">
+                                <span class="stkx-dot"></span>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./services.html">
+                                <span class="stkx-dot"></span>
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./blog.html">
+                                <span class="stkx-dot"></span>
+                              Blog
+                            </a>
+                        </li>
+
+                        
+
+                        <li>
+                            <a href="./contact.html">
+                                <span class="stkx-dot"></span>
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ======================
+                     OUR SERVICES
+                ======================= -->
+
+                <div class="stkx-footer-column">
+
+                    <h3 class="stkx-footer-title">
+                        Our Services
+                    </h3>
+
+                    <ul class="stkx-footer-links">
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Business Consulting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Digital Marketing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                UI/UX Design
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Medical billing consulting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                Electronic consulting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="404.html">
+                                <span class="stkx-dot"></span>
+                                IT Solutions
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ======================
+                     CONTACT
+                ======================= -->
+
+                <div class="stkx-footer-column">
+
+                    <h3 class="stkx-footer-title">
+                        Contact Us
+                    </h3>
+
+                    <div class="stkx-footer-contact">
+
+                        <div class="stkx-contact-item">
+
+                            <h4>Address :</h4>
+
+                            <p>
+                                Tamilnadu
+                                <br>
+                                Salem - 636008
+                            </p>
+
+                        </div>
+
+                        <div class="stkx-contact-item">
+
+                            <h4>Phone:</h4>
+
+                            <p>
+                                +91 7010792745
+                            </p>
+
+                        </div>
+
+                        <div class="stkx-contact-item">
+
+                            <h4>Email:</h4>
+
+                            <p>
+                                info@thestackly.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ==========================================
+         FOOTER BOTTOM
+    =========================================== -->
+
+    <div class="stkx-footer-bottom">
+
+        <div class="stkx-footer-container">
+
+            <div class="stkx-footer-bottom-wrapper">
+
+                <!-- Left -->
+
+                <div class="stkx-footer-copy">
+
+                    <p>
+                        © 2026 Stackly. All Rights Reserved.
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="stkx-footer-bottom-links">
+
+                    <a href="404.html">
+                        Privacy Policy
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="404.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="404.html">
+                        Sitemap
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     FONT AWESOME
+=========================================== -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- ==========================================
+     FOOTER JAVASCRIPT
+=========================================== -->
+
+
+
+<style>
+
+    /*=========================================================
+  STACKLY FOOTER
+  OPTIMIZED CSS - PART 1
+=========================================================*/
+
+/*==========================
+    RESET
+==========================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.stkx-footer{
+    width:100%;
+    background:#450969;
+    color:#ffffff;
+    overflow:hidden;
+    position:relative;
+    font-family:"Poppins",sans-serif;
+}
+
+.stkx-footer-container{
+    width:100%;
+    max-width:1320px;
+    margin:auto;
+    padding:0 40px;
+}
+
+/*=========================================================
+                CTA SECTION
+=========================================================*/
+
+.stkx-footer-cta{
+
+    position:relative;
+
+    width:100%;
+
+    padding:50px 0;
+
+    overflow:hidden;
+
+    background:url("./image 5.webp") center center/cover no-repeat;
+
+}
+
+/* Overlay */
+
+.stkx-footer-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#9f8aab;
+
+    z-index:1;
+
+}
+
+/* CTA Container */
+
+.stkx-footer-cta .stkx-footer-container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* CTA Wrapper */
+
+.stkx-footer-cta-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+/*==========================
+      CTA CONTENT
+==========================*/
+
+.stkx-footer-cta-content{
+
+    flex:1;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    color:#ffffff;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin:0;
+
+}
+
+.stkx-footer-cta-content p{
+
+    margin-top:14px;
+
+    color:#f4f4f4;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    max-width:620px;
+
+}
+
+/*==========================
+        CTA BUTTON
+==========================*/
+
+.stkx-footer-cta-btn-wrap{
+
+    flex-shrink:0;
+
+}
+
+.stkx-footer-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    min-width:280px;
+
+    padding:18px 30px;
+
+    background:goldenrod;
+
+    color:#06121b;
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.stkx-footer-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(22,212,203,.25);
+
+}
+
+/*=========================================================
+                MAIN FOOTER
+=========================================================*/
+
+.stkx-footer-main{
+
+    background:#450969;
+
+    padding:55px 0 40px;
+
+}
+
+/*==========================
+        GRID
+==========================*/
+
+.stkx-footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap:35px;
+
+}
+
+/*=========================================================
+            COMPANY SECTION
+=========================================================*/
+
+.stkx-footer-company img{
+
+    width:220px;
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+.stkx-footer-desc{
+
+    margin-top:18px;
+
+    color:#d9d9d9;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    max-width:330px;
+
+}
+
+/*==========================
+      SOCIAL TITLE
+==========================*/
+
+.stkx-footer-social-title{
+
+    margin-top:30px;
+
+    margin-bottom:16px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+/*==========================
+      SOCIAL ICONS
+==========================*/
+
+.stkx-footer-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.stkx-footer-social a{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffffff;
+
+    font-size:19px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+}
+
+.stkx-footer-social a:nth-child(1){
+
+    background:#3b5998;
+
+}
+
+.stkx-footer-social a:nth-child(2){
+
+    background:#0a66c2;
+
+}
+
+.stkx-footer-social a:nth-child(3){
+
+    background:#1da1f2;
+
+}
+
+.stkx-footer-social a:nth-child(4){
+
+    background:linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+
+}
+
+.stkx-footer-social a:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+}
+
+/*=========================================================
+            FOOTER COLUMNS
+=========================================================*/
+
+.stkx-footer-column{
+    width:100%;
+}
+
+.stkx-footer-title{
+
+    margin:0 0 18px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    position:relative;
+
+    line-height:1.3;
+
+}
+
+.stkx-footer-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:55px;
+
+    height:3px;
+
+    background:#ab09e1;
+
+    margin-top:10px;
+
+    border-radius:20px;
+
+}
+
+/*=========================================================
+                FOOTER LINKS
+=========================================================*/
+
+.stkx-footer-links{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.stkx-footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.stkx-footer-links li:last-child{
+
+    margin-bottom:0;
+
+}
+
+.stkx-footer-links a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#d8d8d8;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.35s ease;
+
+}
+
+.stkx-dot{
+
+    width:7px;
+
+    height:7px;
+
+    background:#ab09e1;
+
+    border-radius:50%;
+
+    transition:.35s ease;
+
+    flex-shrink:0;
+
+}
+
+.stkx-footer-links a:hover{
+
+    color:#ab09e1;
+
+    transform:translateX(6px);
+
+}
+
+.stkx-footer-links a:hover .stkx-dot{
+
+    transform:scale(1.4);
+
+}
+
+/*=========================================================
+                CONTACT SECTION
+=========================================================*/
+
+.stkx-footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.stkx-contact-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.stkx-contact-item h4{
+
+    margin:0 0 6px;
+
+    font-size:18px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+.stkx-contact-item p{
+
+    margin:0;
+
+    color:#d8d8d8;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================================
+                FOOTER BOTTOM
+=========================================================*/
+
+.stkx-footer-bottom{
+
+    background:#03050a;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:14px 0;
+
+}
+
+.stkx-footer-bottom-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.stkx-footer-copy p{
+
+    margin:0;
+
+    color:#cfcfcf;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.stkx-footer-bottom-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.stkx-footer-bottom-links span{
+
+    color:#666666;
+
+}
+
+.stkx-footer-bottom-links a{
+
+    color:#d4d4d4;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s ease;
+
+}
+
+.stkx-footer-bottom-links a:hover{
+
+    color:#ab09e1;
+
+}
+
+/*=========================================================
+            SCROLL REVEAL
+=========================================================*/
+
+.stkx-reveal-left,
+.stkx-reveal-right{
+
+    transition:all .8s ease;
+
+}
+
+.stkx-reveal-left{
+
+    transform:translateX(-50px);
+
+}
+
+.stkx-reveal-right{
+
+    transform:translateX(50px);
+
+}
+
+.stkx-reveal-active{
+
+    opacity:1 !important;
+
+    transform:translate(0,0) !important;
+
+}
+
+
+/*=========================================================
+            LAPTOP (1200px)
+=========================================================*/
+
+@media (max-width:1200px){
+
+.stkx-footer-container{
+    padding:0 30px;
+}
+
+.stkx-footer-grid{
+    gap:30px;
+}
+
+.stkx-footer-cta{
+    padding:45px 0;
+}
+
+.stkx-footer-cta-wrapper{
+    gap:40px;
+}
+
+.stkx-footer-cta-content h2{
+    font-size:40px;
+}
+
+.stkx-footer-cta-content p{
+    font-size:17px;
+}
+
+.stkx-footer-btn{
+    min-width:250px;
+    padding:16px 26px;
+    font-size:17px;
+}
+
+.stkx-footer-company img{
+    width:200px;
+}
+
+.stkx-footer-desc{
+    font-size:16px;
+}
+
+}
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media (max-width:992px){
+
+.stkx-footer-container{
+    padding:0 25px;
+}
+
+.stkx-footer-cta{
+
+    padding:40px 0;
+
+}
+
+.stkx-footer-cta-wrapper{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:30px;
+
+}
+
+.stkx-footer-cta-content{
+
+    max-width:100%;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    font-size:34px;
+
+}
+
+.stkx-footer-cta-content p{
+
+    font-size:16px;
+
+    margin-top:12px;
+
+    max-width:650px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.stkx-footer-btn{
+
+    min-width:240px;
+
+    padding:15px 25px;
+
+    font-size:16px;
+
+}
+
+.stkx-footer-main{
+
+    padding:45px 0 35px;
+
+}
+
+.stkx-footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.stkx-footer-company{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+}
+
+.stkx-footer-company img{
+
+    margin:auto;
+
+}
+
+.stkx-footer-desc{
+
+    max-width:600px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.stkx-footer-social{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media (max-width:768px){
+
+.stkx-footer-container{
+
+    padding:0 20px;
+
+}
+
+.stkx-footer-cta{
+
+    padding:35px 0;
+
+}
+
+.stkx-footer-cta-wrapper{
+
+    gap:25px;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    font-size:28px;
+
+    line-height:1.3;
+
+}
+
+.stkx-footer-cta-content p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.stkx-footer-btn{
+
+    width:100%;
+
+    min-width:100%;
+
+    padding:15px;
+
+    font-size:16px;
+
+    justify-content:center;
+
+}
+
+.stkx-footer-main{
+
+    padding:40px 0 30px;
+
+}
+
+.stkx-footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.stkx-footer-company{
+
+    text-align:center;
+
+}
+
+.stkx-footer-company img{
+
+    width:180px;
+
+    margin:auto;
+
+}
+
+.stkx-footer-desc{
+
+    font-size:15px;
+
+    max-width:100%;
+
+}
+
+.stkx-footer-social-title{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+}
+
+.stkx-footer-social{
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.stkx-footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:17px;
+
+}
+
+.stkx-footer-title{
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+.stkx-footer-links li{
+
+    margin-bottom:10px;
+
+}
+
+.stkx-footer-links a{
+
+    font-size:15px;
+
+}
+
+.stkx-contact-item h4{
+
+    font-size:16px;
+
+}
+
+.stkx-contact-item p{
+
+    font-size:14px;
+
+}
+
+.stkx-footer-bottom{
+
+    padding:12px 0;
+
+}
+
+.stkx-footer-bottom-wrapper{
+
+    flex-direction:column;
+
+    gap:10px;
+
+    text-align:center;
+
+}
+
+.stkx-footer-bottom-links{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                SMALL MOBILE
+=========================================================*/
+
+@media (max-width:480px){
+
+.stkx-footer-container{
+
+    padding:0 15px;
+
+}
+
+.stkx-footer-cta{
+
+    padding:30px 0;
+
+}
+
+.stkx-footer-cta-content h2{
+
+    font-size:24px;
+
+}
+
+.stkx-footer-cta-content p{
+
+    font-size:14px;
+
+}
+
+.stkx-footer-btn{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.stkx-footer-company img{
+
+    width:160px;
+
+}
+
+.stkx-footer-desc{
+
+    font-size:14px;
+
+}
+
+.stkx-footer-social-title{
+
+    font-size:18px;
+
+}
+
+.stkx-footer-social a{
+
+    width:40px;
+
+    height:40px;
+
+    font-size:16px;
+
+}
+
+.stkx-footer-title{
+
+    font-size:18px;
+
+}
+
+.stkx-footer-links a{
+
+    font-size:14px;
+
+}
+
+.stkx-contact-item h4{
+
+    font-size:15px;
+
+}
+
+.stkx-contact-item p{
+
+    font-size:13px;
+
+}
+
+.stkx-footer-copy p,
+
+.stkx-footer-bottom-links a{
+
+    font-size:13px;
+
+}
+
+}
+
+
+/*=========================================================
+        STACKLY FOOTER
+        PART 4
+        ANIMATIONS & EFFECTS
+=========================================================*/
+
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+.stkx-reveal-left,
+.stkx-reveal-right{
+
+    opacity:0;
+
+    transition:
+        transform .8s ease,
+        opacity .8s ease;
+
+    will-change:transform,opacity;
+
+}
+
+.stkx-reveal-left{
+
+    transform:translateX(-50px);
+
+}
+
+.stkx-reveal-right{
+
+    transform:translateX(50px);
+
+}
+
+.stkx-reveal-active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*=========================================
+        BUTTON
+=========================================*/
+
+.stkx-footer-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* Shine Effect */
+
+.stkx-footer-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:left .7s ease;
+
+}
+
+.stkx-footer-btn:hover::before{
+
+    left:120%;
+
+}
+
+.stkx-footer-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 14px 30px rgba(24,215,207,.30);
+
+}
+
+/*=========================================
+        RIPPLE
+=========================================*/
+
+.stkx-ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    background:rgba(255,255,255,.35);
+
+    animation:stkxRipple .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes stkxRipple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+
+/*=========================================
+        SOCIAL ICON
+=========================================*/
+
+.stkx-footer-social a{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.stkx-footer-social a:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:0 10px 22px rgba(0,0,0,.30);
+
+}
+
+/*=========================================
+        FOOTER LINKS
+=========================================*/
+
+.stkx-footer-links a{
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+.stkx-footer-links a:hover{
+
+    color:#ab09e1;
+
+    transform:translateX(6px);
+
+}
+
+.stkx-footer-links a:hover .stkx-dot{
+
+    transform:scale(1.5);
+
+}
+
+/*=========================================
+        TITLES
+=========================================*/
+
+.stkx-footer-title{
+
+    transition:color .3s ease;
+
+}
+
+.stkx-footer-column:hover .stkx-footer-title{
+
+    color:#ab09e1;
+
+}
+
+/*=========================================
+        COMPANY LOGO
+=========================================*/
+
+.stkx-footer-company img{
+
+    transition:transform .35s ease;
+
+}
+
+.stkx-footer-company img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*=========================================
+        CONTACT ITEMS
+=========================================*/
+
+.stkx-contact-item{
+
+    transition:transform .3s ease;
+
+}
+
+.stkx-contact-item:hover{
+
+    transform:translateX(4px);
+
+}
+
+/*=========================================
+        FOOTER APPEAR
+=========================================*/
+
+.stkx-footer{
+
+    animation:stkxFooterFade .8s ease;
+
+}
+
+@keyframes stkxFooterFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/*=========================================
+        FOCUS ACCESSIBILITY
+=========================================*/
+
+.stkx-footer a:focus-visible{
+
+    outline:2px solid #ab09e1;
+
+    outline-offset:4px;
+
+    border-radius:6px;
+
+}
+
+/*=========================================
+        SMOOTH TRANSITIONS
+=========================================*/
+
+.stkx-footer *{
+
+    transition-property:
+        color,
+        background,
+        transform,
+        box-shadow,
+        opacity;
+
+    transition-duration:.3s;
+
+    transition-timing-function:ease;
+
+}
+
+/*=========================================
+        REDUCE MOTION
+=========================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
+    </style>
+
+<script>
+    /*==========================================================
+ STACKLY FOOTER
+ NON-CONFLICTING JAVASCRIPT
+==========================================================*/
+
+(function () {
+    "use strict";
+
+    // ==============================
+    // SCROLL REVEAL ANIMATION
+    // ==============================
+
+    const stkxRevealItems = document.querySelectorAll(
+        ".stkx-reveal-left, .stkx-reveal-right"
+    );
+
+    if (stkxRevealItems.length > 0) {
+
+        const stkxObserver = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("stkx-reveal-active");
+
+                    stkxObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        stkxRevealItems.forEach(function (item) {
+            stkxObserver.observe(item);
+        });
+
+    }
+
+    // ==============================
+    // FOOTER BUTTON RIPPLE EFFECT
+    // ==============================
+
+    const stkxButtons = document.querySelectorAll(".stkx-footer-btn");
+
+    stkxButtons.forEach(function (button) {
+
+        button.addEventListener("click", function (e) {
+
+            const ripple = document.createElement("span");
+
+            const rect = this.getBoundingClientRect();
+
+            const size = Math.max(rect.width, rect.height);
+
+            ripple.style.width = size + "px";
+            ripple.style.height = size + "px";
+
+            ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+            ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+            ripple.className = "stkx-ripple";
+
+            this.appendChild(ripple);
+
+            setTimeout(function () {
+                ripple.remove();
+            }, 600);
+
+        });
+
+    });
+
+})();
+</script>
+  
+</body>
+
+</html>

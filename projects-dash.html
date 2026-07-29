@@ -1,0 +1,3855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- =======================================================
+        BACKGROUND
+    ======================================================== -->
+
+    <div class="stk-dashboard-bg"></div>
+    <div class="stk-dashboard-overlay"></div>
+
+    <!-- =======================================================
+        SIDEBAR
+    ======================================================== -->
+
+    <aside class="stk-sidebar" id="stkSidebar">
+
+        <!-- Logo -->
+
+        <div class="stk-logo-area">
+
+            <a href="index.html">
+
+                <img src="./logo.webp"
+                    alt="Logo">
+
+            </a>
+
+            <button class="stk-close-sidebar"
+                id="stkCloseSidebar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="stk-sidebar-nav">
+
+            <ul>
+
+                <li >
+
+                    <a href="./client-dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./analytics-dash.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>Analytics</span>
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="./projects-dash.html">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                        <span>Projects</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./cust-dash.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>Customers</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./reports-dash.html">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <span>Reports</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="404.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="404.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        <span>Support</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <button
+                        id="stkLogoutBtn"
+                        class="stk-logout-btn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>Logout</span>
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- =======================================================
+        MAIN
+    ======================================================== -->
+
+    <main class="stk-main">
+
+        <!-- ===================================================
+            TOP BAR
+        ==================================================== -->
+
+        <header class="stk-topbar">
+
+            <!-- Mobile -->
+
+            <button
+                class="stk-menu-btn"
+                id="stkMenuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <!-- Search -->
+
+            <div class="stk-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+            
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    placeholder="Search anything...">
+            
+            </div>
+
+            <!-- Right -->
+
+            <div class="stk-top-right">
+
+                <button class="stk-icon">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="stk-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <!-- User -->
+
+                <div class="stk-user-box">
+
+                    <img src="./ava1.webp"
+                        alt="User">
+
+                    <div>
+
+                        <h4 id="userName">
+                            Loading...
+                        </h4>
+
+                        <span id="userRole">
+                            Loading...
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===================================================
+            HERO
+        ==================================================== -->
+
+        <section class="stk-hero">
+
+            <div class="stk-hero-content">
+
+                <div>
+
+                    <span class="stk-tag">
+
+                        Welcome Back 👋
+
+                    </span>
+
+                    <h1>
+
+                        Dashboard Overview
+
+                    </h1>
+
+                    <p>
+
+                        Manage your projects, monitor reports,
+                        track customers and analyze performance
+                        from one beautiful dashboard.
+
+                    </p>
+
+                    <a href="404.html"
+                        class="stk-primary-btn">
+
+                        Explore More
+
+                    </a>
+
+                </div>
+
+                <!-- User Card -->
+
+                <div class="stk-profile-card">
+
+                    <img src="./ava1.webp"
+                        alt="Profile">
+
+                    <h3 id="profileName">
+
+                        Loading...
+
+                    </h3>
+
+                    <p id="profileEmail">
+
+                        Loading...
+
+                    </p>
+
+                    <span id="profileRole">
+
+                        Loading...
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--==========================================================
+PROJECT DASHBOARD
+PART 1
+==========================================================-->
+
+<section class="projectdash-wrapper">
+
+    <!--====================================
+        DASHBOARD HEADER
+    =====================================-->
+
+    <div class="projectdash-header">
+
+        <div class="projectdash-heading">
+
+            <span class="projectdash-badge">
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+                Project Dashboard
+
+            </span>
+
+            <h2>
+
+                Manage All Your Projects Efficiently
+
+            </h2>
+
+            <p>
+
+                Track active projects, monitor team performance,
+                project deadlines, budgets and progress
+                from one centralized dashboard.
+
+            </p>
+
+        </div>
+
+        <div class="projectdash-header-right">
+
+            <div class="projectdash-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search Project...">
+
+            </div>
+
+            <a
+                href="404.html"
+                class="projectdash-add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Project
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!--====================================
+        KPI CARDS
+    =====================================-->
+
+    <div class="projectdash-kpi-grid">
+
+        <!-- CARD -->
+
+        <div class="projectdash-kpi-card">
+
+            <div class="projectdash-icon projectdash-blue">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+            </div>
+
+            <div>
+
+                <span>Total Projects</span>
+
+                <h2>48</h2>
+
+                <p>
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    +12% This Month
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="projectdash-kpi-card">
+
+            <div class="projectdash-icon projectdash-green">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+            <div>
+
+                <span>Completed</span>
+
+                <h2>30</h2>
+
+                <p>
+
+                    Successfully Delivered
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="projectdash-kpi-card">
+
+            <div class="projectdash-icon projectdash-orange">
+
+                <i class="fa-solid fa-spinner"></i>
+
+            </div>
+
+            <div>
+
+                <span>Running</span>
+
+                <h2>12</h2>
+
+                <p>
+
+                    In Progress
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="projectdash-kpi-card">
+
+            <div class="projectdash-icon projectdash-red">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </div>
+
+            <div>
+
+                <span>Pending</span>
+
+                <h2>06</h2>
+
+                <p>
+
+                    Awaiting Approval
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--====================================
+        ACTIVE PROJECTS
+    =====================================-->
+
+    <div class="projectdash-title-row">
+
+        <h3>
+
+            Active Projects
+
+        </h3>
+
+        <a href="404.html">
+
+            View All
+
+        </a>
+
+    </div>
+
+
+
+    <div class="projectdash-project-grid">
+
+
+
+
+        <!--==============================-->
+
+        <div class="projectdash-card">
+
+            <div class="projectdash-card-top">
+
+                <span class="projectdash-status progress">
+
+                    Running
+
+                </span>
+
+                <i class="fa-solid fa-ellipsis"></i>
+
+            </div>
+
+            <h3>
+
+                Cloud CRM Platform
+
+            </h3>
+
+            <p>
+
+                Enterprise CRM solution with
+                cloud integration.
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <strong>Client :</strong>
+
+                    ABC Technologies
+
+                </li>
+
+                <li>
+
+                    <strong>Budget :</strong>
+
+                    ₹4,50,000
+
+                </li>
+
+                <li>
+
+                    <strong>Deadline :</strong>
+
+                    25 Aug 2026
+
+                </li>
+
+            </ul>
+
+            <div class="projectdash-team">
+
+                <img src="./ava1.webp">
+
+                <img src="./ava2.webp">
+
+                <img src="./ava3.webp">
+
+                <span>
+
+                    +4
+
+                </span>
+
+            </div>
+
+            <div class="projectdash-progress">
+
+                <div class="projectdash-progress-head">
+
+                    <span>
+
+                        Progress
+
+                    </span>
+
+                    <strong>
+
+                        78%
+
+                    </strong>
+
+                </div>
+
+                <div class="projectdash-progress-bar">
+
+                    <span style="width:78%;"></span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="404.html"
+                class="projectdash-btn">
+
+                View Details
+
+            </a>
+
+        </div>
+
+
+
+        <!--==============================-->
+
+        <div class="projectdash-card">
+
+            <div class="projectdash-card-top">
+
+                <span class="projectdash-status completed">
+
+                    Completed
+
+                </span>
+
+                <i class="fa-solid fa-ellipsis"></i>
+
+            </div>
+
+            <h3>
+
+                Ecommerce Website
+
+            </h3>
+
+            <p>
+
+                Complete online shopping
+                platform with payment gateway.
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <strong>Client :</strong>
+
+                    Sky Retail
+
+                </li>
+
+                <li>
+
+                    <strong>Budget :</strong>
+
+                    ₹6,20,000
+
+                </li>
+
+                <li>
+
+                    <strong>Deadline :</strong>
+
+                    Completed
+
+                </li>
+
+            </ul>
+
+            <div class="projectdash-team">
+
+                <img src="./ava3.webp">
+
+                <img src="./ava1.webp">
+
+                <img src="./ava2.webp">
+
+                <span>
+
+                    +3
+
+                </span>
+
+            </div>
+
+            <div class="projectdash-progress">
+
+                <div class="projectdash-progress-head">
+
+                    <span>
+
+                        Progress
+
+                    </span>
+
+                    <strong>
+
+                        100%
+
+                    </strong>
+
+                </div>
+
+                <div class="projectdash-progress-bar">
+
+                    <span style="width:100%;"></span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="404.html"
+                class="projectdash-btn">
+
+                View Details
+
+            </a>
+
+        </div>
+
+
+
+        <!--==============================-->
+
+        <div class="projectdash-card">
+
+            <div class="projectdash-card-top">
+
+                <span class="projectdash-status pending">
+
+                    Pending
+
+                </span>
+
+                <i class="fa-solid fa-ellipsis"></i>
+
+            </div>
+
+            <h3>
+
+                Mobile Banking App
+
+            </h3>
+
+            <p>
+
+                Secure banking application
+                for Android & iOS.
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <strong>Client :</strong>
+
+                    Secure Bank
+
+                </li>
+
+                <li>
+
+                    <strong>Budget :</strong>
+
+                    ₹8,80,000
+
+                </li>
+
+                <li>
+
+                    <strong>Deadline :</strong>
+
+                    10 Sept 2026
+
+                </li>
+
+            </ul>
+
+            <div class="projectdash-team">
+
+                <img src="./ava1.webp">
+
+                <img src="./ava2.webp">
+
+                <img src="./ava3.webp">
+
+                <span>
+
+                    +5
+
+                </span>
+
+            </div>
+
+            <div class="projectdash-progress">
+
+                <div class="projectdash-progress-head">
+
+                    <span>
+
+                        Progress
+
+                    </span>
+
+                    <strong>
+
+                        42%
+
+                    </strong>
+
+                </div>
+
+                <div class="projectdash-progress-bar">
+
+                    <span style="width:42%;"></span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="404.html"
+                class="projectdash-btn">
+
+                View Details
+
+            </a>
+
+        </div>
+
+
+
+        <!--==============================-->
+
+        <div class="projectdash-card">
+
+            <div class="projectdash-card-top">
+
+                <span class="projectdash-status review">
+
+                    Review
+
+                </span>
+
+                <i class="fa-solid fa-ellipsis"></i>
+
+            </div>
+
+            <h3>
+
+                HR Management System
+
+            </h3>
+
+            <p>
+
+                Employee portal with payroll,
+                attendance and reports.
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <strong>Client :</strong>
+
+                    Global HR
+
+                </li>
+
+                <li>
+
+                    <strong>Budget :</strong>
+
+                    ₹3,75,000
+
+                </li>
+
+                <li>
+
+                    <strong>Deadline :</strong>
+
+                    05 Aug 2026
+
+                </li>
+
+            </ul>
+
+            <div class="projectdash-team">
+      
+                <img src="./ava1.webp">
+
+                <img src="./ava2.webp">
+
+                <img src="./ava3.webp">
+
+                <span>
+
+                    +2
+
+                </span>
+
+            </div>
+
+            <div class="projectdash-progress">
+
+                <div class="projectdash-progress-head">
+
+                    <span>
+
+                        Progress
+
+                    </span>
+
+                    <strong>
+
+                        91%
+
+                    </strong>
+
+                </div>
+
+                <div class="projectdash-progress-bar">
+
+                    <span style="width:91%;"></span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="404.html"
+                class="projectdash-btn">
+
+                View Details
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==========================================================
+PROJECT DASHBOARD
+PART 2
+==========================================================-->
+
+<!--====================================
+    PROJECT TIMELINE + TEAM PERFORMANCE
+=====================================-->
+
+<div class="projectdash-grid-two">
+
+    <!-- Timeline -->
+
+    <div class="projectdash-box">
+
+        <div class="projectdash-box-header">
+
+            <h3>Project Timeline</h3>
+
+        </div>
+
+        <div class="projectdash-timeline">
+
+            <div class="projectdash-timeline-item">
+
+                <div class="projectdash-circle"></div>
+
+                <div>
+
+                    <h4>Project Created</h4>
+
+                    <span>02 July 2026</span>
+
+                    <p>Requirements gathered successfully.</p>
+
+                </div>
+
+            </div>
+
+            <div class="projectdash-timeline-item">
+
+                <div class="projectdash-circle active"></div>
+
+                <div>
+
+                    <h4>UI / UX Design</h4>
+
+                    <span>15 July 2026</span>
+
+                    <p>Design approved by the client.</p>
+
+                </div>
+
+            </div>
+
+            <div class="projectdash-timeline-item">
+
+                <div class="projectdash-circle active"></div>
+
+                <div>
+
+                    <h4>Frontend Development</h4>
+
+                    <span>25 July 2026</span>
+
+                    <p>Development is currently in progress.</p>
+
+                </div>
+
+            </div>
+
+            <div class="projectdash-timeline-item">
+
+                <div class="projectdash-circle"></div>
+
+                <div>
+
+                    <h4>Testing & QA</h4>
+
+                    <span>Upcoming</span>
+
+                    <p>Quality assurance testing phase.</p>
+
+                </div>
+
+            </div>
+
+            <div class="projectdash-timeline-item">
+
+                <div class="projectdash-circle"></div>
+
+                <div>
+
+                    <h4>Deployment</h4>
+
+                    <span>Pending</span>
+
+                    <p>Production deployment.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Team Performance -->
+
+    <div class="projectdash-box">
+
+        <div class="projectdash-box-header">
+
+            <h3>Team Performance</h3>
+
+        </div>
+
+        <div class="projectdash-team-performance">
+
+            <div class="projectdash-member">
+
+                <span>Frontend Team</span>
+
+                <strong>92%</strong>
+
+            </div>
+
+            <div class="projectdash-progressbar">
+
+                <span style="width:92%;"></span>
+
+            </div>
+
+            <div class="projectdash-member">
+
+                <span>Backend Team</span>
+
+                <strong>84%</strong>
+
+            </div>
+
+            <div class="projectdash-progressbar">
+
+                <span style="width:84%;"></span>
+
+            </div>
+
+            <div class="projectdash-member">
+
+                <span>UI / UX Team</span>
+
+                <strong>95%</strong>
+
+            </div>
+
+            <div class="projectdash-progressbar">
+
+                <span style="width:95%;"></span>
+
+            </div>
+
+            <div class="projectdash-member">
+
+                <span>Testing Team</span>
+
+                <strong>71%</strong>
+
+            </div>
+
+            <div class="projectdash-progressbar">
+
+                <span style="width:71%;"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--====================================
+    RECENT TASKS
+=====================================-->
+
+<div class="projectdash-box projectdash-table-box">
+
+    <div class="projectdash-box-header">
+
+        <h3>Recent Tasks</h3>
+
+    </div>
+
+    <div class="projectdash-table-responsive">
+
+        <table class="projectdash-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Task</th>
+                    <th>Assigned To</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Due Date</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Homepage UI</td>
+
+                    <td>John</td>
+
+                    <td>
+
+                        <span class="projectdash-priority high">
+
+                            High
+
+                        </span>
+
+                    </td>
+
+                    <td>Completed</td>
+
+                    <td>24 Jul</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>API Integration</td>
+
+                    <td>Smith</td>
+
+                    <td>
+
+                        <span class="projectdash-priority medium">
+
+                            Medium
+
+                        </span>
+
+                    </td>
+
+                    <td>Running</td>
+
+                    <td>28 Jul</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Authentication</td>
+
+                    <td>David</td>
+
+                    <td>
+
+                        <span class="projectdash-priority high">
+
+                            High
+
+                        </span>
+
+                    </td>
+
+                    <td>Pending</td>
+
+                    <td>31 Jul</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Testing</td>
+
+                    <td>Kevin</td>
+
+                    <td>
+
+                        <span class="projectdash-priority low">
+
+                            Low
+
+                        </span>
+
+                    </td>
+
+                    <td>Waiting</td>
+
+                    <td>05 Aug</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!--====================================
+    DEADLINES + RESOURCES
+=====================================-->
+
+<div class="projectdash-grid-two">
+
+    <div class="projectdash-box">
+
+        <div class="projectdash-box-header">
+
+            <h3>Upcoming Deadlines</h3>
+
+        </div>
+
+        <div class="projectdash-deadline">
+
+            <h4>CRM Dashboard</h4>
+
+            <span>3 Days Left</span>
+
+        </div>
+
+        <div class="projectdash-deadline">
+
+            <h4>Food Delivery App</h4>
+
+            <span>7 Days Left</span>
+
+        </div>
+
+        <div class="projectdash-deadline">
+
+            <h4>Hospital Portal</h4>
+
+            <span>10 Days Left</span>
+
+        </div>
+
+    </div>
+
+    <div class="projectdash-box">
+
+        <div class="projectdash-box-header">
+
+            <h3>Resource Usage</h3>
+
+        </div>
+
+        <div class="projectdash-resource">
+
+            <span>CPU Usage</span>
+
+            <strong>68%</strong>
+
+        </div>
+
+        <div class="projectdash-progressbar">
+
+            <span style="width:68%;"></span>
+
+        </div>
+
+        <div class="projectdash-resource">
+
+            <span>RAM Usage</span>
+
+            <strong>74%</strong>
+
+        </div>
+
+        <div class="projectdash-progressbar">
+
+            <span style="width:74%;"></span>
+
+        </div>
+
+        <div class="projectdash-resource">
+
+            <span>Cloud Storage</span>
+
+            <strong>88%</strong>
+
+        </div>
+
+        <div class="projectdash-progressbar">
+
+            <span style="width:88%;"></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--====================================
+    QUICK ACTIONS
+=====================================-->
+
+<div class="projectdash-actions">
+
+    <a href="404.html">
+
+        <i class="fa-solid fa-folder-plus"></i>
+
+        Create Project
+
+    </a>
+
+    <a href="404.html">
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        Invite Member
+
+    </a>
+
+    <a href="404.html">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+        Upload Files
+
+    </a>
+
+    <a href="404.html">
+
+        <i class="fa-solid fa-file-arrow-down"></i>
+
+        Export Report
+
+    </a>
+
+</div>
+
+</section>
+
+        <!-- =======================================================
+        ATTRACTIVE LOGOUT POPUP
+    ======================================================== -->
+
+    <div
+    class="stk-popup-overlay"
+    id="logoutPopup">
+
+    <div class="stk-popup">
+
+        <div class="stk-popup-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+        <h2>
+
+            Logout?
+
+        </h2>
+
+        <p>
+
+            Are you sure you want to logout from your dashboard?
+
+        </p>
+
+        <div class="stk-popup-buttons">
+
+            <button
+                id="cancelLogout"
+                class="stk-cancel">
+
+                Cancel
+
+            </button>
+
+            <button
+                id="confirmLogout"
+                class="stk-confirm">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    /*==========================================================
+PROJECT DASHBOARD
+PART 1 - CSS
+NON-CONFLICTING
+PREFIX : projectdash-
+==========================================================*/
+
+/*==================================================
+WRAPPER
+==================================================*/
+
+.projectdash-wrapper{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+    margin-top:35px;
+}
+
+/*==================================================
+COMMON
+==================================================*/
+
+.projectdash-wrapper *{
+    box-sizing:border-box;
+}
+
+.projectdash-wrapper a{
+    text-decoration:none;
+}
+
+.projectdash-wrapper img{
+    max-width:100%;
+    display:block;
+}
+
+.projectdash-wrapper ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.projectdash-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+}
+
+.projectdash-heading{
+
+    flex:1;
+
+}
+
+.projectdash-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:40px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+
+}
+
+.projectdash-heading h2{
+
+    margin:20px 0 15px;
+
+    color:#fff;
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+.projectdash-heading p{
+
+    color:#d9d9d9;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+}
+
+.projectdash-header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/*==================================================
+SEARCH
+==================================================*/
+
+.projectdash-search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:320px;
+
+    padding:15px 18px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.projectdash-search i{
+
+    color:#fff;
+
+}
+
+.projectdash-search input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.projectdash-search input::placeholder{
+
+    color:#d4d4d4;
+
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.projectdash-add-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 26px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+
+    transition:.35s;
+
+}
+
+.projectdash-add-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,114,255,.35);
+
+}
+
+/*==================================================
+KPI GRID
+==================================================*/
+
+.projectdash-kpi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.projectdash-kpi-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+.projectdash-kpi-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+.projectdash-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.projectdash-blue{
+
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+
+}
+
+.projectdash-green{
+
+    background:linear-gradient(135deg,#00d26a,#00b894);
+
+}
+
+.projectdash-orange{
+
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+
+}
+
+.projectdash-red{
+
+    background:linear-gradient(135deg,#ff4d4d,#ff1744);
+
+}
+
+.projectdash-kpi-card span{
+
+    display:block;
+
+    color:#d9d9d9;
+
+    margin-bottom:8px;
+
+}
+
+.projectdash-kpi-card h2{
+
+    color:#fff;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.projectdash-kpi-card p{
+
+    color:#b9ffcb;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+TITLE ROW
+==================================================*/
+
+.projectdash-title-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.projectdash-title-row h3{
+
+    color:#fff;
+
+    font-size:28px;
+
+}
+
+.projectdash-title-row a{
+
+    color:#00c6ff;
+
+    font-weight:600;
+
+}
+
+/*==================================================
+PROJECT GRID
+==================================================*/
+
+.projectdash-project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.projectdash-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+.projectdash-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.projectdash-card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.projectdash-card-top i{
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+.projectdash-status{
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.projectdash-status.progress{
+
+    background:#0072ff;
+
+}
+
+.projectdash-status.completed{
+
+    background:#00b894;
+
+}
+
+.projectdash-status.pending{
+
+    background:#ff9800;
+
+}
+
+.projectdash-status.review{
+
+    background:#8e44ad;
+
+}
+
+.projectdash-card h3{
+
+    color:#fff;
+
+    font-size:24px;
+
+}
+
+.projectdash-card p{
+
+    color:#d9d9d9;
+
+    line-height:1.7;
+
+}
+
+.projectdash-card ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.projectdash-card ul li{
+
+    color:#fff;
+
+}
+
+/*==================================================
+TEAM
+==================================================*/
+
+.projectdash-team{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.projectdash-team img{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #fff;
+
+    margin-left:-10px;
+
+}
+
+.projectdash-team img:first-child{
+
+    margin-left:0;
+
+}
+
+.projectdash-team span{
+
+    margin-left:12px;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+/*==================================================
+PROGRESS BAR
+==================================================*/
+
+.projectdash-progress{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.projectdash-progress-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#fff;
+
+}
+
+.projectdash-progress-bar{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.projectdash-progress-bar span{
+
+    display:block;
+
+    height:100%;
+
+    border-radius:30px;
+
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.projectdash-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.projectdash-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================================================
+PROJECT DASHBOARD
+PART 2 - CSS
+TIMELINE • TABLE • RESPONSIVE
+PREFIX : projectdash-
+==========================================================*/
+
+/*==================================================
+TWO COLUMN GRID
+==================================================*/
+
+.projectdash-grid-two{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:25px;
+    padding: 30px;;
+}
+
+/*==================================================
+COMMON BOX
+==================================================*/
+
+.projectdash-box{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border-radius:24px;
+    padding:30px;
+}
+
+.projectdash-box-header{
+    margin-bottom:25px;
+}
+
+.projectdash-box-header h3{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+}
+
+/*==================================================
+TIMELINE
+==================================================*/
+
+.projectdash-timeline{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.projectdash-timeline::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:rgba(255,255,255,.15);
+}
+
+.projectdash-timeline-item{
+    display:flex;
+    gap:20px;
+    position:relative;
+}
+
+.projectdash-circle{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#555;
+    border:4px solid rgba(255,255,255,.15);
+    z-index:2;
+    flex-shrink:0;
+}
+
+.projectdash-circle.active{
+    background:#00c6ff;
+    box-shadow:0 0 20px rgba(0,198,255,.7);
+}
+
+.projectdash-timeline-item h4{
+    color:#fff;
+    margin-bottom:6px;
+    font-size:18px;
+}
+
+.projectdash-timeline-item span{
+    color:#00c6ff;
+    font-size:14px;
+}
+
+.projectdash-timeline-item p{
+    margin-top:8px;
+    color:#d8d8d8;
+    line-height:1.7;
+}
+
+/*==================================================
+TEAM PERFORMANCE
+==================================================*/
+
+.projectdash-team-performance{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.projectdash-member{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+    font-weight:600;
+}
+
+.projectdash-progressbar{
+    width:100%;
+    height:10px;
+    border-radius:30px;
+    overflow:hidden;
+    background:rgba(255,255,255,.12);
+    margin-top:-10px;
+}
+
+.projectdash-progressbar span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    border-radius:30px;
+}
+
+/*==================================================
+TABLE
+==================================================*/
+
+.projectdash-table-box{
+    overflow:hidden;
+}
+
+.projectdash-table-responsive{
+    overflow-x:auto;
+}
+
+.projectdash-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
+}
+
+.projectdash-table th{
+    color:#fff;
+    text-align:left;
+    padding:18px;
+    background:rgba(255,255,255,.05);
+}
+
+.projectdash-table td{
+    color:#e8e8e8;
+    padding:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.projectdash-table tbody tr{
+    transition:.3s;
+}
+
+.projectdash-table tbody tr:hover{
+    background:rgba(255,255,255,.06);
+}
+
+/*==================================================
+PRIORITY BADGES
+==================================================*/
+
+.projectdash-priority{
+    display:inline-block;
+    padding:7px 14px;
+    border-radius:30px;
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+}
+
+.projectdash-priority.high{
+    background:#ff4d4d;
+}
+
+.projectdash-priority.medium{
+    background:#ff9800;
+}
+
+.projectdash-priority.low{
+    background:#00b894;
+}
+
+/*==================================================
+DEADLINES
+==================================================*/
+
+.projectdash-deadline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.projectdash-deadline:last-child{
+    border-bottom:none;
+}
+
+.projectdash-deadline h4{
+    color:#fff;
+}
+
+.projectdash-deadline span{
+    color:#00c6ff;
+    font-weight:600;
+}
+
+/*==================================================
+RESOURCE
+==================================================*/
+
+.projectdash-resource{
+    display:flex;
+    justify-content:space-between;
+    color:#fff;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/*==================================================
+QUICK ACTIONS
+==================================================*/
+
+.projectdash-actions{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.projectdash-actions a{
+    padding:22px;
+    text-align:center;
+    border-radius:18px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+    font-weight:600;
+    transition:.35s;
+}
+
+.projectdash-actions a i{
+    display:block;
+    font-size:30px;
+    margin-bottom:14px;
+    color:#00c6ff;
+}
+
+.projectdash-actions a:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,.18);
+}
+
+/*==================================================
+LAPTOP
+==================================================*/
+
+@media(max-width:1400px){
+
+.projectdash-kpi-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.projectdash-project-grid{
+    grid-template-columns:1fr;
+}
+
+.projectdash-grid-two{
+    grid-template-columns:1fr;
+}
+
+.projectdash-actions{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:992px){
+
+.projectdash-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.projectdash-header-right{
+    width:100%;
+    flex-direction:column;
+}
+
+.projectdash-search{
+    width:100%;
+}
+
+.projectdash-add-btn{
+    width:100%;
+}
+
+.projectdash-kpi-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.projectdash-wrapper{
+    gap:24px;
+}
+
+.projectdash-header{
+    padding:24px;
+}
+
+.projectdash-heading h2{
+    font-size:28px;
+}
+
+.projectdash-heading p{
+    font-size:14px;
+}
+
+.projectdash-kpi-grid{
+    grid-template-columns:1fr;
+}
+
+.projectdash-kpi-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.projectdash-title-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.projectdash-card{
+    padding:22px;
+}
+
+.projectdash-box{
+    padding:22px;
+}
+
+.projectdash-actions{
+    grid-template-columns:1fr;
+}
+
+.projectdash-table{
+    min-width:650px;
+}
+
+}
+
+/*==================================================
+SMALL MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+.projectdash-heading h2{
+    font-size:24px;
+}
+
+.projectdash-badge{
+    font-size:12px;
+}
+
+.projectdash-kpi-card h2{
+    font-size:28px;
+}
+
+.projectdash-card h3{
+    font-size:20px;
+}
+
+.projectdash-box-header h3{
+    font-size:20px;
+}
+
+.projectdash-team img{
+    width:36px;
+    height:36px;
+}
+
+.projectdash-btn{
+    font-size:14px;
+}
+
+}
+.projectdash-header,
+.projectdash-kpi-card,
+.projectdash-card,
+.projectdash-box,
+.projectdash-actions a{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+.projectdash-show{
+
+    opacity:1 !important;
+
+    transform:translateY(0) !important;
+
+}
+</style>
+
+<script>
+    /*==========================================================
+PROJECT DASHBOARD
+PART 3 - JAVASCRIPT
+NON-CONFLICTING
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+"use strict";
+
+/*==================================================
+  SEARCH PROJECTS
+==================================================*/
+
+const searchInput = document.querySelector(".projectdash-search input");
+const projectCards = document.querySelectorAll(".projectdash-card");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keyup", function () {
+
+        const value = this.value.toLowerCase();
+
+        projectCards.forEach(function (card) {
+
+            const text = card.innerText.toLowerCase();
+
+            if (text.indexOf(value) > -1) {
+
+                card.style.display = "flex";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+}
+
+/*==================================================
+  PROGRESS BAR ANIMATION
+==================================================*/
+
+const progressBars = document.querySelectorAll(
+    ".projectdash-progress-bar span, .projectdash-progressbar span"
+);
+
+progressBars.forEach(function (bar) {
+
+    const finalWidth = bar.style.width;
+
+    bar.style.width = "0";
+
+    setTimeout(function () {
+
+        bar.style.transition = "width 1.2s ease";
+
+        bar.style.width = finalWidth;
+
+    }, 300);
+
+});
+
+/*==================================================
+  KPI COUNTER
+==================================================*/
+
+const numbers = document.querySelectorAll(".projectdash-kpi-card h2");
+
+numbers.forEach(function (item) {
+
+    const target = parseInt(item.innerText);
+
+    if (isNaN(target)) return;
+
+    let count = 0;
+
+    const speed = Math.max(1, Math.ceil(target / 60));
+
+    const timer = setInterval(function () {
+
+        count += speed;
+
+        if (count >= target) {
+
+            count = target;
+
+            clearInterval(timer);
+
+        }
+
+        item.innerText = count;
+
+    }, 25);
+
+});
+
+/*==================================================
+  CARD HOVER EFFECT
+==================================================*/
+
+projectCards.forEach(function (card) {
+
+    card.addEventListener("mouseenter", function () {
+
+        card.style.transform = "translateY(-8px)";
+
+    });
+
+    card.addEventListener("mouseleave", function () {
+
+        card.style.transform = "";
+
+    });
+
+});
+
+/*==================================================
+  SCROLL REVEAL
+==================================================*/
+
+const revealItems = document.querySelectorAll(
+
+    ".projectdash-header," +
+    ".projectdash-kpi-card," +
+    ".projectdash-card," +
+    ".projectdash-box," +
+    ".projectdash-actions a"
+
+);
+
+function revealAnimation() {
+
+    const trigger = window.innerHeight - 100;
+
+    revealItems.forEach(function (item) {
+
+        const top = item.getBoundingClientRect().top;
+
+        if (top < trigger) {
+
+            item.classList.add("projectdash-show");
+
+        }
+
+    });
+
+}
+
+revealAnimation();
+
+window.addEventListener("scroll", revealAnimation);
+
+});
+</script>
+<style>
+   
+        /*==========================================================
+STACKLY DASHBOARD
+dashboard.css
+PART 1
+==========================================================*/
+
+/*=========================
+GOOGLE FONT
+=========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:#eef4ff;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+/*=========================
+BACKGROUND
+=========================*/
+
+.stk-dashboard-bg{
+    position:fixed;
+    inset:0;
+    background:url("./corp1.webp") center center/cover no-repeat;
+    z-index:-3;
+}
+
+.stk-dashboard-overlay{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(
+    135deg,
+    rgba(28,44,120,.88),
+    rgba(103,58,183,.78),
+    rgba(0,188,212,.60));
+    backdrop-filter:blur(2px);
+    z-index:-2;
+}
+
+/*=========================
+MAIN LAYOUT
+=========================*/
+
+.stk-main{
+    margin-left:280px;
+    padding:30px;
+    min-height:100vh;
+    transition:.35s;
+}
+
+/*=========================
+SIDEBAR
+=========================*/
+
+.stk-sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:
+    rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border-right:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.25);
+
+    overflow:auto;
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.stk-logo-area{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.15);
+
+}
+
+.stk-logo-area img{
+
+    width:170px;
+
+}
+
+.stk-close-sidebar{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#ff5f6d,#ffc371);
+
+    font-size:18px;
+
+}
+
+/*=========================
+SIDEBAR MENU
+=========================*/
+
+.stk-sidebar-nav{
+
+    padding:25px 15px;
+
+}
+
+.stk-sidebar-nav ul{
+
+    list-style:none;
+
+}
+
+.stk-sidebar-nav li{
+
+    margin-bottom:14px;
+
+}
+
+.stk-sidebar-nav a,
+.stk-logout-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.stk-sidebar-nav a:hover,
+.stk-sidebar-nav li.active a,
+.stk-logout-btn:hover{
+
+    background:
+    linear-gradient(135deg,#5d7cff,#00d4ff);
+
+    transform:translateX(6px);
+
+    box-shadow:
+    0 12px 25px rgba(0,212,255,.35);
+
+}
+
+.stk-sidebar-nav i{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+/*=========================
+TOP BAR
+=========================*/
+
+.stk-topbar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 25px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+}
+
+/*=========================
+MENU BUTTON
+=========================*/
+
+.stk-menu-btn{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:20px;
+
+    background:
+    linear-gradient(135deg,#6a11cb,#2575fc);
+
+}
+
+/*=========================
+SEARCH
+=========================*/
+
+.stk-search{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#ffffff;
+
+    border-radius:50px;
+
+    padding:0 20px;
+
+    height:52px;
+
+}
+
+.stk-search i{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+.stk-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:15px;
+
+    color:#222;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/*=========================
+RIGHT AREA
+=========================*/
+
+.stk-top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/*=========================
+ICON BUTTON
+=========================*/
+
+.stk-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:
+    linear-gradient(135deg,#ff9966,#ff5e62);
+
+    transition:.35s;
+
+}
+
+.stk-icon:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+    0 10px 20px rgba(255,94,98,.45);
+
+}
+
+/*=========================
+USER BOX
+=========================*/
+
+.stk-user-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:
+    rgba(255,255,255,.18);
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+}
+
+.stk-user-box img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #ffffff;
+
+}
+
+.stk-user-box h4{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#fff;
+
+}
+
+.stk-user-box span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#f5f5f5;
+
+}
+
+/*==========================================================
+HERO SECTION
+==========================================================*/
+
+.stk-hero{
+    margin-bottom:35px;
+}
+
+.stk-hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    padding:45px;
+    border-radius:28px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.20);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+}
+
+.stk-tag{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:#222;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.stk-hero h1{
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.stk-hero p{
+    max-width:650px;
+    line-height:1.9;
+    color:#f4f4f4;
+    margin-bottom:30px;
+}
+
+.stk-primary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    color:#fff;
+    font-weight:600;
+    transition:.4s;
+}
+
+.stk-primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,114,255,.45);
+}
+
+/*==========================================================
+PROFILE CARD
+==========================================================*/
+
+.stk-profile-card{
+    width:320px;
+    text-align:center;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.stk-profile-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #fff;
+    margin-bottom:20px;
+}
+
+.stk-profile-card h3{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.stk-profile-card p{
+    color:#eeeeee;
+    margin-bottom:15px;
+    word-break:break-word;
+}
+
+.stk-profile-card span{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#43cea2,#185a9d);
+    font-weight:600;
+}
+
+
+
+/*==========================================================
+ATTRACTIVE LOGOUT POPUP
+==========================================================*/
+
+.stk-popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    z-index:99999;
+}
+
+.stk-popup-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.stk-popup{
+    width:430px;
+    max-width:90%;
+    padding:40px 30px;
+    text-align:center;
+    border-radius:28px;
+    background:linear-gradient(135deg,#7b2ff7,#f107a3);
+    color:#fff;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    animation:stkPopupScale .35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.stk-popup::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    top:-70px;
+    right:-70px;
+}
+
+.stk-popup::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-60px;
+    left:-60px;
+}
+
+.stk-popup-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#f107a3;
+    font-size:38px;
+    margin-bottom:20px;
+    box-shadow:0 15px 30px rgba(255,255,255,.25);
+}
+
+.stk-popup h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.stk-popup p{
+    font-size:16px;
+    line-height:1.7;
+    color:#f7f7f7;
+    margin-bottom:28px;
+}
+
+.stk-popup-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.stk-cancel,
+.stk-confirm{
+    min-width:140px;
+    padding:14px 25px;
+    border:none;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.stk-cancel{
+    background:#ffffff;
+    color:#333;
+}
+
+.stk-confirm{
+    background:linear-gradient(135deg,#00e676,#00b894);
+    color:#fff;
+}
+
+.stk-cancel:hover,
+.stk-confirm:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+/*==========================================================
+ANIMATIONS
+==========================================================*/
+
+@keyframes stkPopupScale{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+@keyframes stkFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+.stk-card,
+.stk-profile-card,
+.stk-chart-box{
+    animation:stkFloat 5s ease-in-out infinite;
+}
+
+/*==========================================================
+CUSTOM SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#d7d7d7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#00c6ff,#0072ff);
+    border-radius:50px;
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:1200px){
+
+.stk-main{
+    margin-left:0;
+    padding:20px;
+}
+
+.stk-sidebar{
+    left:-100%;
+}
+
+.stk-sidebar.active{
+    left:0;
+}
+
+.stk-close-sidebar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stk-menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stk-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.stk-chart-grid{
+    grid-template-columns:1fr;
+}
+
+.stk-hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.stk-profile-card{
+    width:100%;
+    max-width:380px;
+}
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+.stk-topbar{
+    flex-wrap:wrap;
+    padding:18px;
+}
+
+.stk-search{
+    width:100%;
+    order:3;
+}
+
+.stk-top-right{
+    width:100%;
+    justify-content:space-between;
+}
+
+.stk-user-box{
+    flex:1;
+}
+
+.stk-user-box img{
+    width:48px;
+    height:48px;
+}
+
+.stk-user-box h4{
+    font-size:14px;
+}
+
+.stk-user-box span{
+    font-size:12px;
+}
+
+.stk-hero-content{
+    padding:25px;
+}
+
+.stk-hero h1{
+    font-size:34px;
+}
+
+.stk-cards{
+    grid-template-columns:1fr;
+}
+
+.stk-card{
+    padding:22px;
+}
+
+.stk-chart-box{
+    padding:20px;
+}
+
+.stk-chart-box canvas{
+    height:250px !important;
+}
+
+table{
+    min-width:650px;
+}
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+.stk-main{
+    padding:15px;
+}
+
+.stk-topbar{
+    border-radius:18px;
+}
+
+.stk-search{
+    height:48px;
+}
+
+.stk-search input{
+    font-size:14px;
+}
+
+.stk-hero h1{
+    font-size:28px;
+}
+
+.stk-hero p{
+    font-size:14px;
+}
+
+.stk-primary-btn{
+    width:100%;
+}
+
+.stk-popup{
+    padding:30px 20px;
+}
+
+.stk-popup h2{
+    font-size:26px;
+}
+
+.stk-popup p{
+    font-size:14px;
+}
+
+.stk-popup-buttons{
+    flex-direction:column;
+}
+
+.stk-confirm,
+.stk-cancel{
+    width:100%;
+}
+
+}
+
+/*==========================================================
+DESKTOP ENHANCEMENTS
+==========================================================*/
+
+@media(min-width:1400px){
+
+.stk-main{
+    padding:35px;
+}
+
+.stk-hero h1{
+    font-size:56px;
+}
+
+.stk-card h2{
+    font-size:40px;
+}
+
+}
+
+/*==========================================================
+HOVER EFFECTS
+==========================================================*/
+
+.stk-sidebar-nav a:hover i,
+.stk-logout-btn:hover i{
+    transform:rotate(-8deg) scale(1.15);
+    transition:.3s;
+}
+
+.stk-card:hover i{
+    transform:scale(1.15) rotate(10deg);
+    transition:.3s;
+}
+
+.stk-user-box img:hover,
+.stk-profile-card img:hover{
+    transform:rotate(8deg) scale(1.08);
+    transition:.4s;
+}
+
+/*==========================================================
+END OF FILE
+==========================================================*/
+    </style>
+
+    <script>
+        /*==========================================================
+STACKLY DASHBOARD
+dashboard.js
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*======================================================
+    LOCAL STORAGE USER DETAILS
+======================================================*/
+
+const userName =
+    localStorage.getItem("userName") ||
+    localStorage.getItem("name") ||
+    "Guest User";
+
+const userEmail =
+    localStorage.getItem("userEmail") ||
+    localStorage.getItem("email") ||
+    "guest@example.com";
+
+const userRole =
+    localStorage.getItem("userRole") ||
+    localStorage.getItem("role") ||
+    "User";
+
+// Topbar
+
+const topName = document.getElementById("userName");
+const topRole = document.getElementById("userRole");
+
+if (topName) topName.textContent = userName;
+if (topRole) topRole.textContent = userRole;
+
+// Hero Card
+
+const profileName = document.getElementById("profileName");
+const profileEmail = document.getElementById("profileEmail");
+const profileRole = document.getElementById("profileRole");
+
+if (profileName) profileName.textContent = userName;
+if (profileEmail) profileEmail.textContent = userEmail;
+if (profileRole) profileRole.textContent = userRole;
+
+/*======================================================
+    MOBILE SIDEBAR
+======================================================*/
+
+const menuBtn = document.getElementById("stkMenuBtn");
+const closeBtn = document.getElementById("stkCloseSidebar");
+const sidebar = document.getElementById("stkSidebar");
+
+if (menuBtn) {
+
+    menuBtn.addEventListener("click", () => {
+
+        sidebar.classList.add("active");
+
+    });
+
+}
+
+if (closeBtn) {
+
+    closeBtn.addEventListener("click", () => {
+
+        sidebar.classList.remove("active");
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (
+        window.innerWidth <= 1200 &&
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+
+        sidebar.classList.remove("active");
+
+    }
+
+});
+
+/*======================================================
+    LOGOUT POPUP
+======================================================*/
+
+const logoutBtn = document.getElementById("stkLogoutBtn");
+const popup = document.getElementById("logoutPopup");
+const cancelBtn = document.getElementById("cancelLogout");
+const confirmBtn = document.getElementById("confirmLogout");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", () => {
+
+        popup.classList.add("active");
+
+    });
+
+}
+
+if (cancelBtn) {
+
+    cancelBtn.addEventListener("click", () => {
+
+        popup.classList.remove("active");
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === popup) {
+
+        popup.classList.remove("active");
+
+    }
+
+});
+
+if (confirmBtn) {
+
+    confirmBtn.addEventListener("click", () => {
+
+        popup.classList.remove("active");
+
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userEmail");
+        localStorage.removeItem("userRole");
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 400);
+
+    });
+
+}
+
+/*======================================================
+    SCROLL ANIMATION
+======================================================*/
+
+const cards = document.querySelectorAll(
+
+    ".stk-card,.stk-chart-box,.stk-profile-card,.stk-table-card"
+
+);
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold: 0.2
+
+    }
+
+);
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+    card.style.transform = "translateY(50px)";
+    card.style.transition = ".8s ease";
+
+    observer.observe(card);
+
+});
+
+});
+
+/*======================================================
+SEARCH
+======================================================*/
+
+const searchInput = document.getElementById("dashboardSearch");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keypress", function (e) {
+
+        if (e.key === "Enter") {
+
+            const value = this.value.trim();
+
+            if (value !== "") {
+
+                window.location.href = "404.html";
+
+            }
+
+        }
+
+    });
+
+}
+    </script>
+</body>
+
+</html>

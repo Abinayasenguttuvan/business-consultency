@@ -1,0 +1,3351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- =======================================================
+        BACKGROUND
+    ======================================================== -->
+
+    <div class="stk-dashboard-bg"></div>
+    <div class="stk-dashboard-overlay"></div>
+
+    <!-- =======================================================
+        SIDEBAR
+    ======================================================== -->
+
+    <aside class="stk-sidebar" id="stkSidebar">
+
+        <!-- Logo -->
+
+        <div class="stk-logo-area">
+
+            <a href="index.html">
+
+                <img src="./logo.webp"
+                    alt="Logo">
+
+            </a>
+
+            <button class="stk-close-sidebar"
+                id="stkCloseSidebar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="stk-sidebar-nav">
+
+            <ul>
+
+                <li class="active">
+
+                    <a href="./client-dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./analytics-dash.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>Analytics</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./projects-dash.html">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                        <span>Projects</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./cust-dash.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>Customers</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./reports-dash.html">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <span>Reports</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="404.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="404.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        <span>Support</span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <button
+                        id="stkLogoutBtn"
+                        class="stk-logout-btn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>Logout</span>
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- =======================================================
+        MAIN
+    ======================================================== -->
+
+    <main class="stk-main">
+
+        <!-- ===================================================
+            TOP BAR
+        ==================================================== -->
+
+        <header class="stk-topbar">
+
+            <!-- Mobile -->
+
+            <button
+                class="stk-menu-btn"
+                id="stkMenuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <!-- Search -->
+
+            <div class="stk-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+            
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    placeholder="Search anything...">
+            
+            </div>
+
+            <!-- Right -->
+
+            <div class="stk-top-right">
+
+                <button class="stk-icon">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="stk-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <!-- User -->
+
+                <div class="stk-user-box">
+
+                    <img src="./ava1.webp"
+                        alt="User">
+
+                    <div>
+
+                        <h4 id="userName">
+                            Loading...
+                        </h4>
+
+                        <span id="userRole">
+                            Loading...
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===================================================
+            HERO
+        ==================================================== -->
+
+        <section class="stk-hero">
+
+            <div class="stk-hero-content">
+
+                <div>
+
+                    <span class="stk-tag">
+
+                        Welcome Back 👋
+
+                    </span>
+
+                    <h1>
+
+                        Dashboard Overview
+
+                    </h1>
+
+                    <p>
+
+                        Manage your projects, monitor reports,
+                        track customers and analyze performance
+                        from one beautiful dashboard.
+
+                    </p>
+
+                    <a href="404.html"
+                        class="stk-primary-btn">
+
+                        Explore More
+
+                    </a>
+
+                </div>
+
+                <!-- User Card -->
+
+                <div class="stk-profile-card">
+
+                    <img src="./ava1.webp"
+                        alt="Profile">
+
+                    <h3 id="profileName">
+
+                        Loading...
+
+                    </h3>
+
+                    <p id="profileEmail">
+
+                        Loading...
+
+                    </p>
+
+                    <span id="profileRole">
+
+                        Loading...
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================================
+            DASHBOARD CARDS
+        ==================================================== -->
+
+        <section class="stk-cards">
+
+            <div class="stk-card">
+
+                <div>
+
+                    <h4>Total Users</h4>
+
+                    <h2 id="usersCount">
+
+                        1520
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="stk-card">
+
+                <div>
+
+                    <h4>Revenue</h4>
+
+                    <h2>
+
+                        ₹ 8.5 L
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <div class="stk-card">
+
+                <div>
+
+                    <h4>Projects</h4>
+
+                    <h2>
+
+                        84
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-folder-open"></i>
+
+            </div>
+
+            <div class="stk-card">
+
+                <div>
+
+                    <h4>Tasks</h4>
+
+                    <h2>
+
+                        218
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-list-check"></i>
+
+            </div>
+
+        </section>
+
+                <!-- ===================================================
+            CHARTS
+        ==================================================== -->
+
+        <section class="stk-chart-grid">
+
+            <div class="stk-chart-box">
+
+                <h3>
+
+                    Revenue Analytics
+
+                </h3>
+
+                <canvas id="barChart"></canvas>
+
+            </div>
+
+            <div class="stk-chart-box">
+
+                <h3>
+
+                    Traffic Sources
+
+                </h3>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================================
+            RECENT ACTIVITY
+        ==================================================== -->
+
+        <section class="stk-table-section">
+
+            <div class="stk-table-card">
+
+                <div class="stk-title">
+
+                    <h2>
+
+                        Recent Activities
+
+                    </h2>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Date</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>John</td>
+                            <td>Developer</td>
+                            <td>
+                                <span class="success">
+                                    Active
+                                </span>
+                            </td>
+                            <td>25 Jul</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Emma</td>
+                            <td>Designer</td>
+                            <td>
+
+                                <span class="warning">
+
+                                    Pending
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                26 Jul
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>David</td>
+                            <td>Manager</td>
+                            <td>
+
+                                <span class="success">
+
+                                    Active
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                27 Jul
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Sophia</td>
+                            <td>HR</td>
+                            <td>
+
+                                <span class="danger">
+
+                                    Offline
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                27 Jul
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+        <!-- ==========================================================
+     CLIENT DASHBOARD CONTENT
+     PART 1 - HTML
+     NON-CONFLICTING
+=========================================================== -->
+
+<section class="scd-dashboard-content">
+
+    <!-- =====================================
+         QUICK STATS
+    ====================================== -->
+
+    <div class="scd-stats-grid">
+
+        <div class="scd-stat-card">
+
+            <div class="scd-stat-icon scd-blue">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+            </div>
+
+            <div class="scd-stat-info">
+
+                <span>Active Projects</span>
+
+                <h2>24</h2>
+
+                <p><i class="fa-solid fa-arrow-trend-up"></i> +18% This Month</p>
+
+            </div>
+
+        </div>
+
+        <div class="scd-stat-card">
+
+            <div class="scd-stat-icon scd-green">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="scd-stat-info">
+
+                <span>Total Clients</span>
+
+                <h2>312</h2>
+
+                <p><i class="fa-solid fa-arrow-trend-up"></i> +12 New Clients</p>
+
+            </div>
+
+        </div>
+
+        <div class="scd-stat-card">
+
+            <div class="scd-stat-icon scd-orange">
+
+                <i class="fa-solid fa-wallet"></i>
+
+            </div>
+
+            <div class="scd-stat-info">
+
+                <span>Monthly Revenue</span>
+
+                <h2>₹4.8L</h2>
+
+                <p><i class="fa-solid fa-arrow-trend-up"></i> +22% Growth</p>
+
+            </div>
+
+        </div>
+
+        <div class="scd-stat-card">
+
+            <div class="scd-stat-icon scd-purple">
+
+                <i class="fa-solid fa-list-check"></i>
+
+            </div>
+
+            <div class="scd-stat-info">
+
+                <span>Pending Tasks</span>
+
+                <h2>19</h2>
+
+                <p><i class="fa-solid fa-clock"></i> Due Today</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================
+         SERVICES
+    ====================================== -->
+
+    <div class="scd-service-wrapper">
+
+        <div class="scd-title-row">
+
+            <h2>Our Premium Services</h2>
+
+            <a href="404.html">View All</a>
+
+        </div>
+
+        <div class="scd-service-grid">
+
+            <div class="scd-service-card">
+
+                <div class="scd-service-icon">
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                </div>
+
+                <h3>Cloud Hosting</h3>
+
+                <p>
+
+                    Secure cloud infrastructure with
+                    high availability and automatic backups.
+
+                </p>
+
+                <!-- <a href="404.html">
+
+                    Explore
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a> -->
+
+            </div>
+
+            <div class="scd-service-card">
+
+                <div class="scd-service-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>Website Development</h3>
+
+                <p>
+
+                    Responsive websites with
+                    modern UI and optimized performance.
+
+                </p>
+
+                <!-- <a href="404.html">
+
+                    Explore
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a> -->
+
+            </div>
+
+            <div class="scd-service-card">
+
+                <div class="scd-service-icon">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+                <h3>Mobile Apps</h3>
+
+                <p>
+
+                    Android and iOS applications
+                    with scalable architecture.
+
+                </p>
+
+                <!-- <a href="404.html">
+
+                    Explore
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a> -->
+
+            </div>
+
+            <div class="scd-service-card">
+
+                <div class="scd-service-icon">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+                <h3>Digital Marketing</h3>
+
+                <p>
+
+                    SEO, social media campaigns,
+                    branding and online promotions.
+
+                </p>
+
+                <!-- <a href="404.html">
+
+                    Explore
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================
+         TWO COLUMN
+    ====================================== -->
+
+    <div class="scd-main-grid">
+
+        <!-- Timeline -->
+
+        <div class="scd-panel">
+
+            <div class="scd-panel-head">
+
+                <h2>Recent Activities</h2>
+
+            </div>
+
+            <div class="scd-timeline">
+
+                <div class="scd-time-item">
+
+                    <span></span>
+
+                    <div>
+
+                        <h4>Website Project Completed</h4>
+
+                        <p>Completed successfully today.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="scd-time-item">
+
+                    <span></span>
+
+                    <div>
+
+                        <h4>New Client Joined</h4>
+
+                        <p>Corporate business account created.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="scd-time-item">
+
+                    <span></span>
+
+                    <div>
+
+                        <h4>Invoice Generated</h4>
+
+                        <p>Monthly billing completed.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="scd-time-item">
+
+                    <span></span>
+
+                    <div>
+
+                        <h4>Security Scan Finished</h4>
+
+                        <p>No vulnerabilities detected.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Meetings -->
+
+        <div class="scd-panel">
+
+            <div class="scd-panel-head">
+
+                <h2>Upcoming Meetings</h2>
+
+            </div>
+
+            <div class="scd-meeting-list">
+
+                <div class="scd-meeting">
+
+                    <div>
+
+                        <h4>Client Discussion</h4>
+
+                        <span>10:30 AM</span>
+
+                    </div>
+
+                    <button>Join</button>
+
+                </div>
+
+                <div class="scd-meeting">
+
+                    <div>
+
+                        <h4>Development Review</h4>
+
+                        <span>12:00 PM</span>
+
+                    </div>
+
+                    <button>Join</button>
+
+                </div>
+
+                <div class="scd-meeting">
+
+                    <div>
+
+                        <h4>Marketing Strategy</h4>
+
+                        <span>3:00 PM</span>
+
+                    </div>
+
+                    <button>Join</button>
+
+                </div>
+
+                <div class="scd-meeting">
+
+                    <div>
+
+                        <h4>Weekly Team Call</h4>
+
+                        <span>5:00 PM</span>
+
+                    </div>
+
+                    <button>Join</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     PROJECT TABLE
+====================================== -->
+
+<section class="scd-table-section">
+
+    <div class="scd-table-card">
+
+        <div class="scd-title-row">
+
+            <h2>Latest Projects</h2>
+
+            <a href="404.html">See More</a>
+
+        </div>
+
+        <div class="scd-table-responsive">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Project</th>
+
+                        <th>Client</th>
+
+                        <th>Status</th>
+
+                        <th>Progress</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Corporate Website</td>
+
+                        <td>TechNova</td>
+
+                        <td><span class="scd-status done">Completed</span></td>
+
+                        <td>100%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>CRM Dashboard</td>
+
+                        <td>SkyTech</td>
+
+                        <td><span class="scd-status progress">Running</span></td>
+
+                        <td>76%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Cloud Migration</td>
+
+                        <td>Future Labs</td>
+
+                        <td><span class="scd-status hold">Pending</span></td>
+
+                        <td>42%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Android App</td>
+
+                        <td>NextGen</td>
+
+                        <td><span class="scd-status progress">Running</span></td>
+
+                        <td>61%</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- =======================================================
+        ATTRACTIVE LOGOUT POPUP
+    ======================================================== -->
+
+    <div
+        class="stk-popup-overlay"
+        id="logoutPopup">
+
+        <div class="stk-popup">
+
+            <div class="stk-popup-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+            <h2>
+
+                Logout?
+
+            </h2>
+
+            <p>
+
+                Are you sure you want to logout from your dashboard?
+
+            </p>
+
+            <div class="stk-popup-buttons">
+
+                <button
+                    id="cancelLogout"
+                    class="stk-cancel">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    id="confirmLogout"
+                    class="stk-confirm">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <style>
+        /*==========================================================
+CLIENT DASHBOARD CONTENT
+PART 2 - CSS
+NON-CONFLICTING
+PREFIX : scd-
+==========================================================*/
+
+/*==================================================
+SECTION
+==================================================*/
+
+.scd-dashboard-content{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    margin-top:35px;
+}
+
+/*==================================================
+COMMON
+==================================================*/
+
+.scd-title-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:22px;
+    gap:20px;
+}
+
+.scd-title-row h2{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.scd-title-row a{
+    text-decoration:none;
+    color:#ffffff;
+    padding:12px 24px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    transition:.35s;
+    font-weight:600;
+}
+
+.scd-title-row a:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,114,255,.45);
+}
+
+/*==================================================
+STAT GRID
+==================================================*/
+
+.scd-stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.scd-stat-card{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:28px;
+    border-radius:26px;
+    background:rgba(255,255,255,.16);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.20);
+    transition:.4s;
+}
+
+.scd-stat-card::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    top:-120px;
+    right:-100px;
+}
+
+.scd-stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 45px rgba(0,0,0,.25);
+}
+
+.scd-stat-icon{
+    width:78px;
+    height:78px;
+    border-radius:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    color:#fff;
+    flex-shrink:0;
+}
+
+.scd-blue{
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.scd-green{
+    background:linear-gradient(135deg,#00d26a,#00b894);
+}
+
+.scd-orange{
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+}
+
+.scd-purple{
+    background:linear-gradient(135deg,#7b2ff7,#9f44ff);
+}
+
+.scd-stat-info span{
+    display:block;
+    color:#e7e7e7;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.scd-stat-info h2{
+    font-size:38px;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.scd-stat-info p{
+    color:#d7f4ff;
+    font-size:14px;
+}
+
+/*==================================================
+SERVICES
+==================================================*/
+
+.scd-service-wrapper{
+    padding:35px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.20);
+}
+
+.scd-service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.scd-service-card{
+    text-align:center;
+    padding:35px 25px;
+    border-radius:22px;
+    background:rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.scd-service-card:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,.15);
+}
+
+.scd-service-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    color:#fff;
+    background:linear-gradient(135deg,#00c6ff,#6a11cb);
+}
+
+.scd-service-card h3{
+    color:#fff;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.scd-service-card p{
+    color:#eeeeee;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.scd-service-card a{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/*==================================================
+MAIN GRID
+==================================================*/
+
+.scd-main-grid{
+    display:grid;
+    grid-template-columns:1.3fr .9fr;
+    gap:30px;
+}
+
+.scd-panel{
+    background:rgba(255,255,255,.15);
+    border-radius:28px;
+    backdrop-filter:blur(20px);
+    padding:35px;
+    border:1px solid rgba(255,255,255,.18);
+}
+
+.scd-panel-head{
+    margin-bottom:30px;
+}
+
+.scd-panel-head h2{
+    color:#fff;
+    font-size:26px;
+}
+
+/*==================================================
+TIMELINE
+==================================================*/
+
+.scd-timeline{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.scd-time-item{
+    display:flex;
+    gap:22px;
+}
+
+.scd-time-item span{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#00d4ff;
+    margin-top:8px;
+    flex-shrink:0;
+    box-shadow:0 0 20px #00d4ff;
+}
+
+.scd-time-item h4{
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.scd-time-item p{
+    color:#dddddd;
+    line-height:1.8;
+}
+
+/*==================================================
+MEETINGS
+==================================================*/
+
+.scd-meeting-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.scd-meeting{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    padding:18px 22px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+}
+
+.scd-meeting h4{
+    color:#fff;
+    margin-bottom:6px;
+}
+
+.scd-meeting span{
+    color:#ddd;
+    font-size:14px;
+}
+
+.scd-meeting button{
+    border:none;
+    cursor:pointer;
+    padding:12px 24px;
+    border-radius:50px;
+    color:#fff;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+/*==================================================
+TABLE
+==================================================*/
+
+.scd-table-section{
+    margin-top:35px;
+}
+
+.scd-table-card{
+    padding:35px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.20);
+}
+
+.scd-table-responsive{
+    overflow:auto;
+}
+
+.scd-table-card table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.scd-table-card th{
+    color:#fff;
+    text-align:left;
+    padding:20px;
+    font-size:16px;
+}
+
+.scd-table-card td{
+    padding:20px;
+    color:#eee;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.scd-table-card tr:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.scd-status{
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    color:#fff;
+    font-weight:600;
+}
+
+.scd-status.done{
+    background:#00b894;
+}
+
+.scd-status.progress{
+    background:#0072ff;
+}
+
+.scd-status.hold{
+    background:#ff9800;
+}
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:1200px){
+
+.scd-stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.scd-service-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.scd-main-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.scd-title-row{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.scd-title-row h2{
+    font-size:24px;
+}
+
+.scd-stats-grid{
+    grid-template-columns:1fr;
+}
+
+.scd-stat-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.scd-service-wrapper{
+    padding:25px;
+}
+
+.scd-service-grid{
+    grid-template-columns:1fr;
+}
+
+.scd-panel{
+    padding:25px;
+}
+
+.scd-meeting{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.scd-meeting button{
+    width:100%;
+}
+
+.scd-table-card{
+    padding:20px;
+}
+
+.scd-table-card table{
+    min-width:700px;
+}
+
+}
+
+/*==================================================
+SMALL MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+.scd-stat-info h2{
+    font-size:30px;
+}
+
+.scd-service-card{
+    padding:28px 20px;
+}
+
+.scd-service-icon{
+    width:75px;
+    height:75px;
+    font-size:28px;
+}
+
+.scd-panel-head h2{
+    font-size:22px;
+}
+
+}
+    </style>
+
+    <script>
+        /*==========================================================
+CLIENT DASHBOARD CONTENT
+PART 3 - JAVASCRIPT
+NON-CONFLICTING
+PREFIX : scd-
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*=========================================
+SCROLL REVEAL ANIMATION
+=========================================*/
+
+const scdItems = document.querySelectorAll(
+    ".scd-stat-card, .scd-service-card, .scd-panel, .scd-table-card"
+);
+
+const scdObserver = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:0.15
+    }
+
+);
+
+scdItems.forEach((item,index)=>{
+
+    item.style.opacity="0";
+    item.style.transform="translateY(60px)";
+    item.style.transition=`all .8s ease ${index*0.08}s`;
+
+    scdObserver.observe(item);
+
+});
+
+/*=========================================
+NUMBER COUNTER
+=========================================*/
+
+const counters = document.querySelectorAll(".scd-stat-info h2");
+
+counters.forEach(counter=>{
+
+    const text = counter.textContent.trim();
+
+    // Revenue Card
+    if(text.includes("₹")){
+
+        let end = 4.8;
+        let current = 0;
+
+        const timer = setInterval(()=>{
+
+            current += 0.1;
+
+            counter.textContent = "₹" + current.toFixed(1) + "L";
+
+            if(current >= end){
+
+                counter.textContent = "₹4.8L";
+                clearInterval(timer);
+
+            }
+
+        },40);
+
+    }
+
+    // Numeric Cards
+    else{
+
+        const end = parseInt(text);
+
+        let current = 0;
+
+        const timer = setInterval(()=>{
+
+            current++;
+
+            counter.textContent = current;
+
+            if(current >= end){
+
+                counter.textContent = end;
+
+                clearInterval(timer);
+
+            }
+
+        },25);
+
+    }
+
+});
+
+/*=========================================
+SERVICE CARD HOVER GLOW
+=========================================*/
+
+document.querySelectorAll(".scd-service-card").forEach(card=>{
+
+    card.addEventListener("mouseenter",()=>{
+
+        card.style.boxShadow="0 20px 45px rgba(0,198,255,.35)";
+
+    });
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.boxShadow="none";
+
+    });
+
+});
+
+/*=========================================
+STAT CARD FLOAT EFFECT
+=========================================*/
+
+document.querySelectorAll(".scd-stat-card").forEach((card,index)=>{
+
+    card.style.animation=`scdFloat 5s ease-in-out ${index*0.3}s infinite`;
+
+});
+
+/*=========================================
+JOIN BUTTON
+=========================================*/
+
+document.querySelectorAll(".scd-meeting button").forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+        btn.innerHTML='<i class="fa-solid fa-circle-check"></i> Joined';
+
+        btn.style.background="linear-gradient(135deg,#00c853,#00e676)";
+
+        btn.disabled=true;
+
+    });
+
+});
+
+/*=========================================
+SERVICE BUTTON
+=========================================*/
+
+document.querySelectorAll(".scd-service-card a").forEach(link=>{
+
+    link.addEventListener("click",(e)=>{
+
+        e.preventDefault();
+
+        window.location.href="404.html";
+
+    });
+
+});
+
+/*=========================================
+TABLE ROW EFFECT
+=========================================*/
+
+document.querySelectorAll(".scd-table-card tbody tr").forEach(row=>{
+
+    row.addEventListener("mouseenter",()=>{
+
+        row.style.transform="scale(1.01)";
+        row.style.transition=".3s";
+
+    });
+
+    row.addEventListener("mouseleave",()=>{
+
+        row.style.transform="scale(1)";
+
+    });
+
+});
+
+});
+
+/*==========================================================
+FLOAT ANIMATION
+==========================================================*/
+
+const scdStyle=document.createElement("style");
+
+scdStyle.innerHTML=`
+
+@keyframes scdFloat{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+`;
+
+document.head.appendChild(scdStyle);
+    </script>
+
+    <style>
+        /*==========================================================
+STACKLY DASHBOARD
+dashboard.css
+PART 1
+==========================================================*/
+
+/*=========================
+GOOGLE FONT
+=========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:#eef4ff;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+/*=========================
+BACKGROUND
+=========================*/
+
+.stk-dashboard-bg{
+    position:fixed;
+    inset:0;
+    background:url("./corp1.webp") center center/cover no-repeat;
+    z-index:-3;
+}
+
+.stk-dashboard-overlay{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(
+    135deg,
+    rgba(28,44,120,.88),
+    rgba(103,58,183,.78),
+    rgba(0,188,212,.60));
+    backdrop-filter:blur(2px);
+    z-index:-2;
+}
+
+/*=========================
+MAIN LAYOUT
+=========================*/
+
+.stk-main{
+    margin-left:280px;
+    padding:30px;
+    min-height:100vh;
+    transition:.35s;
+}
+
+/*=========================
+SIDEBAR
+=========================*/
+
+.stk-sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:
+    rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border-right:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.25);
+
+    overflow:auto;
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.stk-logo-area{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.15);
+
+}
+
+.stk-logo-area img{
+
+    width:170px;
+
+}
+
+.stk-close-sidebar{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#ff5f6d,#ffc371);
+
+    font-size:18px;
+
+}
+
+/*=========================
+SIDEBAR MENU
+=========================*/
+
+.stk-sidebar-nav{
+
+    padding:25px 15px;
+
+}
+
+.stk-sidebar-nav ul{
+
+    list-style:none;
+
+}
+
+.stk-sidebar-nav li{
+
+    margin-bottom:14px;
+
+}
+
+.stk-sidebar-nav a,
+.stk-logout-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.stk-sidebar-nav a:hover,
+.stk-sidebar-nav li.active a,
+.stk-logout-btn:hover{
+
+    background:
+    linear-gradient(135deg,#5d7cff,#00d4ff);
+
+    transform:translateX(6px);
+
+    box-shadow:
+    0 12px 25px rgba(0,212,255,.35);
+
+}
+
+.stk-sidebar-nav i{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+/*=========================
+TOP BAR
+=========================*/
+
+.stk-topbar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 25px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+}
+
+/*=========================
+MENU BUTTON
+=========================*/
+
+.stk-menu-btn{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:20px;
+
+    background:
+    linear-gradient(135deg,#6a11cb,#2575fc);
+
+}
+
+/*=========================
+SEARCH
+=========================*/
+
+.stk-search{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#ffffff;
+
+    border-radius:50px;
+
+    padding:0 20px;
+
+    height:52px;
+
+}
+
+.stk-search i{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+.stk-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:15px;
+
+    color:#222;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/*=========================
+RIGHT AREA
+=========================*/
+
+.stk-top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/*=========================
+ICON BUTTON
+=========================*/
+
+.stk-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:
+    linear-gradient(135deg,#ff9966,#ff5e62);
+
+    transition:.35s;
+
+}
+
+.stk-icon:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+    0 10px 20px rgba(255,94,98,.45);
+
+}
+
+/*=========================
+USER BOX
+=========================*/
+
+.stk-user-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:
+    rgba(255,255,255,.18);
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+}
+
+.stk-user-box img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #ffffff;
+
+}
+
+.stk-user-box h4{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#fff;
+
+}
+
+.stk-user-box span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#f5f5f5;
+
+}
+
+/*==========================================================
+HERO SECTION
+==========================================================*/
+
+.stk-hero{
+    margin-bottom:35px;
+}
+
+.stk-hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    padding:45px;
+    border-radius:28px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.20);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+}
+
+.stk-tag{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:#222;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.stk-hero h1{
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.stk-hero p{
+    max-width:650px;
+    line-height:1.9;
+    color:#f4f4f4;
+    margin-bottom:30px;
+}
+
+.stk-primary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    color:#fff;
+    font-weight:600;
+    transition:.4s;
+}
+
+.stk-primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,114,255,.45);
+}
+
+/*==========================================================
+PROFILE CARD
+==========================================================*/
+
+.stk-profile-card{
+    width:320px;
+    text-align:center;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.stk-profile-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #fff;
+    margin-bottom:20px;
+}
+
+.stk-profile-card h3{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.stk-profile-card p{
+    color:#eeeeee;
+    margin-bottom:15px;
+    word-break:break-word;
+}
+
+.stk-profile-card span{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#43cea2,#185a9d);
+    font-weight:600;
+}
+
+/*==========================================================
+CARDS
+==========================================================*/
+
+.stk-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.stk-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:28px;
+    border-radius:22px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.20);
+    transition:.35s;
+    overflow:hidden;
+    position:relative;
+}
+
+.stk-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,
+    rgba(255,255,255,.15),
+    transparent);
+}
+
+.stk-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+}
+
+.stk-card h4{
+    font-size:15px;
+    margin-bottom:10px;
+    color:#ededed;
+}
+
+.stk-card h2{
+    font-size:34px;
+    font-weight:700;
+}
+
+.stk-card i{
+    font-size:45px;
+    color:#ffffff;
+    opacity:.85;
+}
+
+/*==========================================================
+CHART SECTION
+==========================================================*/
+
+.stk-chart-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.stk-chart-box{
+    padding:30px;
+    border-radius:24px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.20);
+}
+
+.stk-chart-box h3{
+    margin-bottom:25px;
+    font-size:22px;
+    font-weight:600;
+}
+
+.stk-chart-box canvas{
+    width:100% !important;
+    height:320px !important;
+}
+
+/*==========================================================
+TABLE
+==========================================================*/
+
+.stk-table-section{
+    margin-bottom:50px;
+}
+
+.stk-table-card{
+    padding:30px;
+    border-radius:24px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.20);
+    overflow:auto;
+}
+
+.stk-title{
+    margin-bottom:25px;
+}
+
+.stk-title h2{
+    font-size:28px;
+    font-weight:600;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table thead{
+    background:rgba(255,255,255,.15);
+}
+
+table th{
+    padding:18px;
+    text-align:left;
+    font-size:15px;
+    font-weight:600;
+}
+
+table td{
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    color:#f4f4f4;
+}
+
+table tbody tr{
+    transition:.3s;
+}
+
+table tbody tr:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/*==========================================================
+STATUS BADGES
+==========================================================*/
+
+.success,
+.warning,
+.danger{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.success{
+    background:#1db954;
+    color:#fff;
+}
+
+.warning{
+    background:#ff9800;
+    color:#fff;
+}
+
+.danger{
+    background:#ff3b30;
+    color:#fff;
+}
+
+/*==========================================================
+ATTRACTIVE LOGOUT POPUP
+==========================================================*/
+
+.stk-popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    z-index:99999;
+}
+
+.stk-popup-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.stk-popup{
+    width:430px;
+    max-width:90%;
+    padding:40px 30px;
+    text-align:center;
+    border-radius:28px;
+    background:linear-gradient(135deg,#7b2ff7,#f107a3);
+    color:#fff;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    animation:stkPopupScale .35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.stk-popup::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    top:-70px;
+    right:-70px;
+}
+
+.stk-popup::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-60px;
+    left:-60px;
+}
+
+.stk-popup-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#f107a3;
+    font-size:38px;
+    margin-bottom:20px;
+    box-shadow:0 15px 30px rgba(255,255,255,.25);
+}
+
+.stk-popup h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.stk-popup p{
+    font-size:16px;
+    line-height:1.7;
+    color:#f7f7f7;
+    margin-bottom:28px;
+}
+
+.stk-popup-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.stk-cancel,
+.stk-confirm{
+    min-width:140px;
+    padding:14px 25px;
+    border:none;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.stk-cancel{
+    background:#ffffff;
+    color:#333;
+}
+
+.stk-confirm{
+    background:linear-gradient(135deg,#00e676,#00b894);
+    color:#fff;
+}
+
+.stk-cancel:hover,
+.stk-confirm:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+/*==========================================================
+ANIMATIONS
+==========================================================*/
+
+@keyframes stkPopupScale{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+@keyframes stkFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+.stk-card,
+.stk-profile-card,
+.stk-chart-box{
+    animation:stkFloat 5s ease-in-out infinite;
+}
+
+/*==========================================================
+CUSTOM SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#d7d7d7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#00c6ff,#0072ff);
+    border-radius:50px;
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:1200px){
+
+.stk-main{
+    margin-left:0;
+    padding:20px;
+}
+
+.stk-sidebar{
+    left:-100%;
+}
+
+.stk-sidebar.active{
+    left:0;
+}
+
+.stk-close-sidebar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stk-menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stk-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.stk-chart-grid{
+    grid-template-columns:1fr;
+}
+
+.stk-hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.stk-profile-card{
+    width:100%;
+    max-width:380px;
+}
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+.stk-topbar{
+    flex-wrap:wrap;
+    padding:18px;
+}
+
+.stk-search{
+    width:100%;
+    order:3;
+}
+
+.stk-top-right{
+    width:100%;
+    justify-content:space-between;
+}
+
+.stk-user-box{
+    flex:1;
+}
+
+.stk-user-box img{
+    width:48px;
+    height:48px;
+}
+
+.stk-user-box h4{
+    font-size:14px;
+}
+
+.stk-user-box span{
+    font-size:12px;
+}
+
+.stk-hero-content{
+    padding:25px;
+}
+
+.stk-hero h1{
+    font-size:34px;
+}
+
+.stk-cards{
+    grid-template-columns:1fr;
+}
+
+.stk-card{
+    padding:22px;
+}
+
+.stk-chart-box{
+    padding:20px;
+}
+
+.stk-chart-box canvas{
+    height:250px !important;
+}
+
+table{
+    min-width:650px;
+}
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+.stk-main{
+    padding:15px;
+}
+
+.stk-topbar{
+    border-radius:18px;
+}
+
+.stk-search{
+    height:48px;
+}
+
+.stk-search input{
+    font-size:14px;
+}
+
+.stk-hero h1{
+    font-size:28px;
+}
+
+.stk-hero p{
+    font-size:14px;
+}
+
+.stk-primary-btn{
+    width:100%;
+}
+
+.stk-popup{
+    padding:30px 20px;
+}
+
+.stk-popup h2{
+    font-size:26px;
+}
+
+.stk-popup p{
+    font-size:14px;
+}
+
+.stk-popup-buttons{
+    flex-direction:column;
+}
+
+.stk-confirm,
+.stk-cancel{
+    width:100%;
+}
+
+}
+
+/*==========================================================
+DESKTOP ENHANCEMENTS
+==========================================================*/
+
+@media(min-width:1400px){
+
+.stk-main{
+    padding:35px;
+}
+
+.stk-hero h1{
+    font-size:56px;
+}
+
+.stk-card h2{
+    font-size:40px;
+}
+
+}
+
+/*==========================================================
+HOVER EFFECTS
+==========================================================*/
+
+.stk-sidebar-nav a:hover i,
+.stk-logout-btn:hover i{
+    transform:rotate(-8deg) scale(1.15);
+    transition:.3s;
+}
+
+.stk-card:hover i{
+    transform:scale(1.15) rotate(10deg);
+    transition:.3s;
+}
+
+.stk-user-box img:hover,
+.stk-profile-card img:hover{
+    transform:rotate(8deg) scale(1.08);
+    transition:.4s;
+}
+
+/*==========================================================
+END OF FILE
+==========================================================*/
+    </style>
+
+    <script>
+        /*==========================================================
+STACKLY DASHBOARD
+dashboard.js
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+/*======================================================
+    LOCAL STORAGE USER DETAILS
+======================================================*/
+
+const userName =
+    localStorage.getItem("userName") ||
+    localStorage.getItem("name") ||
+    "Guest User";
+
+const userEmail =
+    localStorage.getItem("userEmail") ||
+    localStorage.getItem("email") ||
+    "guest@example.com";
+
+const userRole =
+    localStorage.getItem("userRole") ||
+    localStorage.getItem("role") ||
+    "User";
+
+// Topbar
+
+const topName = document.getElementById("userName");
+const topRole = document.getElementById("userRole");
+
+if (topName) topName.textContent = userName;
+if (topRole) topRole.textContent = userRole;
+
+// Hero Card
+
+const profileName = document.getElementById("profileName");
+const profileEmail = document.getElementById("profileEmail");
+const profileRole = document.getElementById("profileRole");
+
+if (profileName) profileName.textContent = userName;
+if (profileEmail) profileEmail.textContent = userEmail;
+if (profileRole) profileRole.textContent = userRole;
+
+/*======================================================
+    MOBILE SIDEBAR
+======================================================*/
+
+const menuBtn = document.getElementById("stkMenuBtn");
+const closeBtn = document.getElementById("stkCloseSidebar");
+const sidebar = document.getElementById("stkSidebar");
+
+if (menuBtn) {
+
+    menuBtn.addEventListener("click", () => {
+
+        sidebar.classList.add("active");
+
+    });
+
+}
+
+if (closeBtn) {
+
+    closeBtn.addEventListener("click", () => {
+
+        sidebar.classList.remove("active");
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (
+        window.innerWidth <= 1200 &&
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+
+        sidebar.classList.remove("active");
+
+    }
+
+});
+
+/*======================================================
+    LOGOUT POPUP
+======================================================*/
+
+const logoutBtn = document.getElementById("stkLogoutBtn");
+const popup = document.getElementById("logoutPopup");
+const cancelBtn = document.getElementById("cancelLogout");
+const confirmBtn = document.getElementById("confirmLogout");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", () => {
+
+        popup.classList.add("active");
+
+    });
+
+}
+
+if (cancelBtn) {
+
+    cancelBtn.addEventListener("click", () => {
+
+        popup.classList.remove("active");
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === popup) {
+
+        popup.classList.remove("active");
+
+    }
+
+});
+
+if (confirmBtn) {
+
+    confirmBtn.addEventListener("click", () => {
+
+        popup.classList.remove("active");
+
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userEmail");
+        localStorage.removeItem("userRole");
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 400);
+
+    });
+
+}
+
+/*======================================================
+    ANIMATED COUNTERS
+======================================================*/
+
+function animateCounter(id, target) {
+
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    let current = 0;
+
+    const speed = target / 100;
+
+    const counter = setInterval(() => {
+
+        current += speed;
+
+        if (current >= target) {
+
+            current = target;
+
+            clearInterval(counter);
+
+        }
+
+        element.textContent = Math.floor(current);
+
+    }, 20);
+
+}
+
+animateCounter("usersCount", 1520);
+
+/*======================================================
+    BAR CHART
+======================================================*/
+
+const barCanvas = document.getElementById("barChart");
+
+if (barCanvas) {
+
+    new Chart(barCanvas, {
+
+        type: "bar",
+
+        data: {
+
+            labels: [
+
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun"
+
+            ],
+
+            datasets: [
+
+                {
+
+                    label: "Revenue",
+
+                    data: [
+
+                        12,
+                        19,
+                        15,
+                        28,
+                        25,
+                        35
+
+                    ],
+
+                    backgroundColor: [
+
+                        "#6C63FF",
+                        "#00C9FF",
+                        "#FF6B6B",
+                        "#00E676",
+                        "#FFB300",
+                        "#7C4DFF"
+
+                    ],
+
+                    borderRadius: 10
+
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    labels: {
+
+                        color: "#ffffff"
+
+                    }
+
+                }
+
+            },
+
+            scales: {
+
+                x: {
+
+                    ticks: {
+
+                        color: "#ffffff"
+
+                    },
+
+                    grid: {
+
+                        color: "rgba(255,255,255,.10)"
+
+                    }
+
+                },
+
+                y: {
+
+                    ticks: {
+
+                        color: "#ffffff"
+
+                    },
+
+                    grid: {
+
+                        color: "rgba(255,255,255,.10)"
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
+
+/*======================================================
+    PIE CHART
+======================================================*/
+
+const pieCanvas = document.getElementById("pieChart");
+
+if (pieCanvas) {
+
+    new Chart(pieCanvas, {
+
+        type: "pie",
+
+        data: {
+
+            labels: [
+
+                "Desktop",
+                "Mobile",
+                "Tablet"
+
+            ],
+
+            datasets: [
+
+                {
+
+                    data: [
+
+                        58,
+                        28,
+                        14
+
+                    ],
+
+                    backgroundColor: [
+
+                        "#6C63FF",
+                        "#00E5FF",
+                        "#FF4081"
+
+                    ],
+
+                    borderWidth: 0
+
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    position: "bottom",
+
+                    labels: {
+
+                        color: "#ffffff",
+
+                        padding: 20
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
+
+/*======================================================
+    SCROLL ANIMATION
+======================================================*/
+
+const cards = document.querySelectorAll(
+
+    ".stk-card,.stk-chart-box,.stk-profile-card,.stk-table-card"
+
+);
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold: 0.2
+
+    }
+
+);
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+    card.style.transform = "translateY(50px)";
+    card.style.transition = ".8s ease";
+
+    observer.observe(card);
+
+});
+
+});
+
+/*======================================================
+SEARCH
+======================================================*/
+
+const searchInput = document.getElementById("dashboardSearch");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keypress", function (e) {
+
+        if (e.key === "Enter") {
+
+            const value = this.value.trim();
+
+            if (value !== "") {
+
+                window.location.href = "404.html";
+
+            }
+
+        }
+
+    });
+
+}
+    </script>
+</body>
+
+</html>

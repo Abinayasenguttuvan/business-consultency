@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Corporate Consulting | Login</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+   
+
+</head>
+
+<body>
+
+    <!--=============================
+            Background
+    ==============================-->
+
+    <div class="background-overlay"></div>
+
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+
+    <!--=============================
+            Back Home
+    ==============================-->
+
+    <a href="index.html"
+        class="back-home">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back To Home
+
+    </a>
+
+    <!--=============================
+            Login Wrapper
+    ==============================-->
+
+    <section class="login-wrapper">
+
+        <!--=========================
+            LEFT CONTENT
+        ==========================-->
+
+        
+        <div class="left-content">
+
+            <!-- Company Logo -->
+        
+            <div class="login-logo">
+        
+                <a href="index.html">
+        
+                    <img src="./logo.webp"
+                         alt="Business Consulting Logo">
+        
+                </a>
+        
+            </div>
+        
+            <!-- Business Badge -->
+        
+            <span class="small-title">
+        
+                BUSINESS CONSULTING
+        
+            </span>
+        
+            <h1>
+        
+                Empowering Your
+        
+                <span>Business Growth</span>
+        
+            </h1>
+        
+            <p>
+        
+                Welcome back! Log in to access your secure consulting dashboard,
+                manage projects, monitor business performance and collaborate
+                with experts.
+        
+            </p>
+        
+            
+            <!-- Feature Cards -->
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <h4>Business Growth</h4>
+
+                        <p>Accelerate your success.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <h4>Expert Team</h4>
+
+                        <p>Professional consultants.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <h4>Secure Access</h4>
+
+                        <p>Protected information.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <div>
+
+                        <h4>24/7 Support</h4>
+
+                        <p>Always here for you.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--=========================
+            LOGIN CARD
+        ==========================-->
+
+        <div class="login-card">
+
+            <div class="login-header">
+
+                <h2>
+
+                    Welcome Back
+
+                </h2>
+
+                <p>
+
+                    Sign in to continue your business journey.
+
+                </p>
+
+            </div>
+
+            <form id="loginForm">
+
+                <!-- Name -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input type="text"
+                            id="name"
+                            placeholder="Enter your full name">
+
+                    </div>
+
+                    <small id="nameError"></small>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email Address
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input type="email"
+                            id="email"
+                            placeholder="Enter your email">
+
+                    </div>
+
+                    <small id="emailError"></small>
+
+                </div>
+
+                <!-- Role -->
+
+                <!-- ===========================
+        ROLE DROPDOWN
+============================ -->
+
+<div class="input-group">
+
+    <label>Select Role</label>
+
+    <div class="custom-dropdown" id="roleDropdown">
+
+        <!-- Selected Item -->
+
+        <div class="dropdown-selected" id="selectedRole">
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <span id="selectedRoleText">
+                Choose Role
+            </span>
+
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+
+        </div>
+
+        <!-- Dropdown List -->
+
+        <ul class="dropdown-menu">
+
+            <li class="dropdown-item" data-value="Admin">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                Admin
+
+            </li>
+
+            <li class="dropdown-item" data-value="Client">
+
+                <i class="fa-solid fa-user"></i>
+
+                Client
+
+            </li>
+
+            
+        </ul>
+
+        <!-- Hidden Input (used by your validation & redirect code) -->
+
+        <input
+            type="hidden"
+            id="role"
+            name="role"
+            value="">
+
+    </div>
+
+    <small id="roleError"></small>
+
+</div>
+               
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Password
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password"
+                            id="password"
+                            placeholder="Enter password">
+
+                        <i class="fa-solid fa-eye togglePassword"
+                            id="togglePassword"></i>
+
+                    </div>
+
+                    <small id="passwordError"></small>
+
+                </div>
+
+                <!-- Remember -->
+
+                <div class="remember-row">
+
+                    <label class="remember">
+
+                        <input type="checkbox"
+                            id="remember">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="404.html">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <!-- Login -->
+
+                <button
+                    type="submit"
+                    class="login-btn">
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <!-- Divider -->
+
+            <div class="divider">
+
+                <span>
+
+                    OR CONTINUE WITH
+
+                </span>
+
+            </div>
+
+            <!-- Social Login -->
+
+
+            
+
+            <div class="social-login">
+
+                <button class="social-btn google">
+
+                    <img
+                src="./google (1).webp"
+                alt="Google" style="width:22px;
+                height:22px;">
+
+                    Google
+
+                </button>
+
+                <button class="social-btn microsoft">
+
+                    <img
+                src="./microsoft.webp"
+                alt="Google" style="width:22px;
+                height:22px;">
+
+                    Microsoft
+
+                </button>
+
+                <button class="social-btn linkedin">
+
+                    <img
+                src="./linked.webp"
+                alt="Google" style="width:22px;
+                height:22px;">
+
+
+                    LinkedIn
+
+                </button>
+
+            </div>
+
+            <!-- Privacy -->
+
+            <div class="privacy-box">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <p>
+
+                    We respect your privacy.
+                    Your personal information is encrypted,
+                    securely stored, and never shared with
+                    third parties. Your trust and data security
+                    are our highest priorities.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Success Popup -->
+
+    <div id="successPopup"
+        class="success-popup">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <h3>
+
+            Login Successful
+
+        </h3>
+
+        <p>
+
+            Redirecting to your dashboard...
+
+        </p>
+
+    </div>
+
+    <!-- Loader -->
+
+    <!-- <div class="page-loader">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div> -->
+
+    <style>
+        /*=========================================
+        CUSTOM ROLE DROPDOWN
+=========================================*/
+
+.custom-dropdown{
+
+position:relative;
+
+width:100%;
+
+}
+
+/* Selected Box */
+
+.dropdown-selected{
+
+display:flex;
+
+align-items:center;
+
+width:100%;
+
+height:58px;
+
+padding:0 18px;
+
+border-radius:14px;
+
+background:rgba(255,255,255,.13);
+
+border:1px solid rgba(255,255,255,.18);
+
+cursor:pointer;
+
+transition:.35s;
+
+user-select:none;
+
+}
+
+.dropdown-selected:hover{
+
+border-color:#00e5ff;
+
+}
+
+.dropdown-selected.active{
+
+border-color:#00e5ff;
+
+box-shadow:0 0 20px rgba(0,229,255,.25);
+
+}
+
+.dropdown-selected i:first-child{
+
+width:40px;
+
+font-size:18px;
+
+color:#8be9ff;
+
+flex-shrink:0;
+
+}
+
+.dropdown-selected span{
+
+flex:1;
+
+color:#fff;
+
+font-size:15px;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+.dropdown-arrow{
+
+color:#8be9ff;
+
+transition:.35s;
+
+font-size:14px;
+
+}
+
+.dropdown-selected.active .dropdown-arrow{
+
+transform:rotate(180deg);
+
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+
+position:absolute;
+
+top:calc(100% + 10px);
+
+left:0;
+
+width:100%;
+
+list-style:none;
+
+padding:8px;
+
+margin:0;
+
+border-radius:14px;
+
+background:#ffffff;
+
+box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+overflow:hidden;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(-10px);
+
+transition:.3s ease;
+
+z-index:9999;
+
+}
+
+/* Show Menu */
+
+.custom-dropdown.open .dropdown-menu{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
+/* Menu Item */
+
+.dropdown-item{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:15px 18px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+color:#2d3748;
+
+font-size:15px;
+
+font-weight:500;
+
+transition:.25s;
+
+}
+
+.dropdown-item i{
+
+color:#00bcd4;
+
+width:22px;
+
+text-align:center;
+
+}
+
+.dropdown-item:hover{
+
+background:#00bcd4;
+
+color:#fff;
+
+}
+
+.dropdown-item:hover i{
+
+color:#fff;
+
+}
+
+/* Scroll if many roles */
+
+.dropdown-menu{
+
+max-height:220px;
+
+overflow-y:auto;
+
+}
+
+.dropdown-menu::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb{
+
+background:#00bcd4;
+
+border-radius:20px;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.dropdown-selected{
+
+height:55px;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.dropdown-selected{
+
+height:52px;
+
+padding:0 16px;
+
+}
+
+.dropdown-selected span{
+
+font-size:14px;
+
+}
+
+.dropdown-item{
+
+padding:14px 16px;
+
+font-size:14px;
+
+}
+
+.dropdown-menu{
+
+top:calc(100% + 8px);
+
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.dropdown-selected{
+
+height:50px;
+
+}
+
+.dropdown-selected i:first-child{
+
+width:35px;
+
+font-size:16px;
+
+}
+
+.dropdown-arrow{
+
+font-size:13px;
+
+}
+
+.dropdown-item{
+
+padding:13px 14px;
+
+}
+
+.dropdown-menu{
+
+width:100%;
+
+left:0;
+
+}
+
+}
+        /*==================================================
+        GOOGLE FONT
+==================================================*/
+
+/*=========================================
+        LOGIN LOGO
+=========================================*/
+
+.login-logo{
+
+width:100%;
+
+margin-bottom:35px;
+
+display:flex;
+
+justify-content:flex-start;
+
+align-items:center;
+
+}
+
+.login-logo a{
+
+display:inline-block;
+
+}
+
+.login-logo img{
+
+width:185px;
+
+height:auto;
+
+display:block;
+
+object-fit:contain;
+
+transition:.4s ease;
+
+filter:drop-shadow(0 8px 20px rgba(0,0,0,.30));
+
+}
+
+.login-logo img:hover{
+
+transform:scale(1.05);
+
+}
+
+@media (max-width:1200px){
+
+.login-logo img{
+
+    width:165px;
+
+}
+
+}
+
+@media (max-width:992px){
+
+.login-logo{
+
+    justify-content:center;
+
+    margin-bottom:28px;
+
+}
+
+.login-logo img{
+
+    width:150px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.login-logo{
+
+    justify-content:center;
+
+    margin-bottom:25px;
+
+}
+
+.login-logo img{
+
+    width:130px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.login-logo img{
+
+    width:110px;
+
+}
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==================================================
+        RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:#fff;
+
+    background:
+        linear-gradient(rgba(6,18,35,.78),rgba(6,18,35,.82)),
+        url("./corp1.webp") center center/cover no-repeat fixed;
+
+    position:relative;
+
+}
+
+/*==================================================
+        OVERLAY
+==================================================*/
+
+.background-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,172,193,.18),
+        rgba(0,98,255,.18),
+        rgba(0,200,83,.15)
+    );
+
+    backdrop-filter:blur(2px);
+
+    z-index:-2;
+
+}
+
+/*==================================================
+        FLOATING SHAPES
+==================================================*/
+
+.floating-shape{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(15px);
+
+    opacity:.25;
+
+    z-index:-1;
+
+    animation:floatShape 10s ease-in-out infinite;
+
+}
+
+.shape1{
+
+    width:250px;
+
+    height:250px;
+
+    background:#00bcd4;
+
+    top:5%;
+
+    left:5%;
+
+}
+
+.shape2{
+
+    width:320px;
+
+    height:320px;
+
+    background:#0d6efd;
+
+    right:8%;
+
+    bottom:10%;
+
+    animation-delay:2s;
+
+}
+
+.shape3{
+
+    width:170px;
+
+    height:170px;
+
+    background:#00c853;
+
+    top:60%;
+
+    left:35%;
+
+    animation-delay:4s;
+
+}
+
+/*==================================================
+        BACK BUTTON
+==================================================*/
+
+.back-home{
+
+    position:absolute;
+
+    top:30px;
+
+    left:40px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.14);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+
+    transition:.4s;
+
+    z-index:100;
+
+}
+
+.back-home:hover{
+
+    background:#00bcd4;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(0,188,212,.35);
+
+}
+
+.back-home i{
+
+    font-size:15px;
+
+}
+
+/*==================================================
+        WRAPPER
+==================================================*/
+
+.login-wrapper{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    padding:120px 60px 70px;
+
+}
+
+/*==================================================
+        LEFT CONTENT
+==================================================*/
+
+.left-content{
+
+    flex:1;
+
+    animation:slideLeft 1s ease;
+
+}
+
+.small-title{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:rgba(0,188,212,.15);
+
+    border:1px solid rgba(0,188,212,.35);
+
+    border-radius:40px;
+
+    color:#7ffcff;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    margin-bottom:28px;
+
+    font-weight:600;
+
+}
+
+.left-content h1{
+
+    font-size:60px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.left-content h1 span{
+
+    color:#00e5ff;
+
+}
+
+.left-content p{
+
+    font-size:18px;
+
+    color:#d9e5f5;
+
+    line-height:1.9;
+
+    max-width:620px;
+
+    margin-bottom:40px;
+
+}
+
+/*==================================================
+        FEATURE GRID
+==================================================*/
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.feature-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.09);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    transition:.4s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(0,188,212,.16);
+
+    box-shadow:0 20px 35px rgba(0,188,212,.22);
+
+}
+
+.feature-card i{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#00bcd4,#0d6efd);
+
+}
+
+.feature-card h4{
+
+    font-size:18px;
+
+    margin-bottom:5px;
+
+}
+
+.feature-card p{
+
+    margin:0;
+
+    font-size:14px;
+
+    color:#d4dde9;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+        LOGIN CARD
+==================================================*/
+
+.login-card{
+
+    width:530px;
+
+    max-width:100%;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.30);
+
+    animation:slideRight 1s ease;
+
+}
+
+.login-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.login-header h2{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.login-header p{
+
+    color:#d9e3ef;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+        FORM
+==================================================*/
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.13);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    transition:.35s;
+
+}
+
+.input-box:hover{
+
+    border-color:#00e5ff;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#00e5ff;
+
+    box-shadow:0 0 20px rgba(0,229,255,.25);
+
+}
+
+.input-box i:first-child{
+
+    width:60px;
+
+    text-align:center;
+
+    color:#8be9ff;
+
+    font-size:18px;
+
+}
+
+.input-box input,
+.input-box select{
+
+    flex:1;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:#fff;
+
+    font-size:15px;
+
+    padding:18px 18px 18px 0;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.input-box input::placeholder{
+
+    color:#d4dce7;
+
+}
+
+.input-box select{
+
+    cursor:pointer;
+
+}
+
+.input-box select option{
+
+    color:#222;
+
+}
+
+.togglePassword{
+
+    width:60px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.togglePassword:hover{
+
+    color:#00e5ff;
+
+}
+
+/*==================================================
+        ERROR TEXT
+==================================================*/
+
+small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#ff9d9d;
+
+    font-size:13px;
+
+    min-height:18px;
+
+}
+
+/*==================================================
+        REMEMBER
+==================================================*/
+
+.remember-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:8px 0 30px;
+
+    gap:20px;
+
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+}
+
+.remember input{
+
+    accent-color:#00bcd4;
+
+    width:17px;
+
+    height:17px;
+
+}
+
+.remember-row a{
+
+    color:#7ffcff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.remember-row a:hover{
+
+    color:#fff;
+
+}
+
+/*==================================================
+        LOGIN BUTTON
+==================================================*/
+
+.login-btn{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:15px;
+
+    padding:17px;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #00bcd4,
+        #0d6efd
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.4s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 35px rgba(13,110,253,.35);
+
+}
+
+
+/*==================================================
+            DIVIDER
+==================================================*/
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 0 25px;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.25);
+}
+
+.divider span {
+    margin: 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #d8e9f5;
+    letter-spacing: 1px;
+}
+
+/*==================================================
+            SOCIAL LOGIN
+==================================================*/
+
+.social-login{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.social-btn{
+
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    padding:15px 10px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.10);
+
+    color:#fff;
+
+    font-size:15px;
+    font-weight:600;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.social-btn i{
+    font-size:20px;
+}
+
+.google:hover{
+
+    background:#ea4335;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 30px rgba(234,67,53,.35);
+
+}
+
+.microsoft:hover{
+
+    background:#0078d4;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 30px rgba(0,120,212,.35);
+
+}
+
+.linkedin:hover{
+
+    background:#0A66C2;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 30px rgba(10,102,194,.35);
+
+}
+
+/*==================================================
+            PRIVACY
+==================================================*/
+
+.privacy-box{
+
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.privacy-box i{
+
+    font-size:28px;
+
+    color:#00e5ff;
+
+    margin-top:4px;
+
+}
+
+.privacy-box p{
+
+    font-size:14px;
+
+    color:#d8e3ee;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+            SUCCESS POPUP
+==================================================*/
+
+.success-popup{
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(.5);
+
+    width:350px;
+
+    max-width:90%;
+
+    text-align:center;
+
+    padding:35px;
+
+    background:#ffffff;
+
+    color:#222;
+
+    border-radius:22px;
+
+    box-shadow:0 30px 60px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.45s;
+
+    z-index:9999;
+
+}
+
+.success-popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+.success-popup i{
+
+    font-size:65px;
+
+    color:#18b65b;
+
+    margin-bottom:20px;
+
+}
+
+.success-popup h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.success-popup p{
+
+    color:#666;
+
+}
+
+/*==================================================
+            PAGE LOADER
+==================================================*/
+
+.page-loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#061223;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    z-index:10000;
+
+    animation:loaderHide .8s ease forwards;
+
+    animation-delay:1.2s;
+
+}
+
+.page-loader span{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#00e5ff;
+
+    animation:bounce .7s infinite alternate;
+
+}
+
+.page-loader span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.page-loader span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+/*==================================================
+            ANIMATIONS
+==================================================*/
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes floatShape{
+
+    0%{
+
+        transform:translateY(0px) rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-30px) rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0px) rotate(360deg);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+@keyframes loaderHide{
+
+    to{
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+/*==================================================
+            TABLET
+==================================================*/
+
+@media(max-width:1100px){
+
+.login-wrapper{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:120px 35px 50px;
+
+}
+
+.left-content{
+
+    max-width:700px;
+
+}
+
+.left-content p{
+
+    margin:auto auto 40px;
+
+}
+
+.feature-grid{
+
+    margin-top:35px;
+
+}
+
+.login-card{
+
+    width:100%;
+    max-width:700px;
+
+}
+
+}
+
+/*==================================================
+            MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.back-home{
+
+    top:20px;
+    left:20px;
+    padding:12px 18px;
+    font-size:14px;
+
+}
+
+.login-wrapper{
+
+    padding:100px 20px 40px;
+
+}
+
+.left-content h1{
+
+    font-size:38px;
+
+}
+
+.left-content p{
+
+    font-size:15px;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.login-card{
+
+    padding:30px 22px;
+
+}
+
+.login-header h2{
+
+    font-size:30px;
+
+}
+
+.social-login{
+
+    grid-template-columns:1fr;
+
+}
+
+.remember-row{
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+
+}
+
+.input-box input,
+.input-box select{
+
+    font-size:14px;
+
+}
+
+}
+
+/*==================================================
+            SMALL MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+.left-content h1{
+
+    font-size:30px;
+
+}
+
+.small-title{
+
+    font-size:12px;
+
+}
+
+.feature-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.feature-card i{
+
+    margin-bottom:8px;
+
+}
+
+.login-card{
+
+    border-radius:22px;
+
+}
+
+.login-header h2{
+
+    font-size:26px;
+
+}
+
+.login-btn{
+
+    font-size:16px;
+
+}
+
+.social-btn{
+
+    font-size:14px;
+
+}
+
+.privacy-box{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.privacy-box i{
+
+    margin:auto;
+
+}
+
+.success-popup{
+
+    padding:25px;
+
+}
+
+.success-popup h3{
+
+    font-size:22px;
+
+}
+
+.success-popup i{
+
+    font-size:55px;
+
+}
+
+}
+
+/*==================================================
+            LARGE DESKTOP
+==================================================*/
+
+@media(min-width:1600px){
+
+.login-wrapper{
+
+    max-width:1650px;
+
+}
+
+.left-content h1{
+
+    font-size:72px;
+
+}
+
+.login-card{
+
+    width:600px;
+
+    padding:55px;
+
+}
+
+}
+    </style>
+
+
+<script>
+
+/*=========================================
+        CUSTOM ROLE DROPDOWN
+=========================================*/
+
+const roleDropdown = document.getElementById("roleDropdown");
+const selectedRole = document.getElementById("selectedRole");
+const selectedRoleText = document.getElementById("selectedRoleText");
+const roleInput = document.getElementById("role");
+
+const roleItems =
+    document.querySelectorAll(".dropdown-item");
+
+/*==============================
+        OPEN / CLOSE
+==============================*/
+
+selectedRole.addEventListener("click", function (e) {
+
+    e.stopPropagation();
+
+    roleDropdown.classList.toggle("open");
+
+    selectedRole.classList.toggle("active");
+
+});
+
+/*==============================
+        SELECT ROLE
+==============================*/
+
+roleItems.forEach(function (item) {
+
+    item.addEventListener("click", function () {
+
+        const value =
+            this.getAttribute("data-value");
+
+        selectedRoleText.innerHTML = value;
+
+        roleInput.value = value;
+
+        roleDropdown.classList.remove("open");
+
+        selectedRole.classList.remove("active");
+
+        /* Remove validation message */
+
+        document.getElementById("roleError").innerHTML = "";
+
+    });
+
+});
+
+/*==============================
+        CLOSE WHEN CLICK OUTSIDE
+==============================*/
+
+document.addEventListener("click", function (e) {
+
+    if (!roleDropdown.contains(e.target)) {
+
+        roleDropdown.classList.remove("open");
+
+        selectedRole.classList.remove("active");
+
+    }
+
+});
+
+/*==============================
+        KEYBOARD SUPPORT
+==============================*/
+
+selectedRole.setAttribute("tabindex", "0");
+
+selectedRole.addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter" || e.key === " ") {
+
+        e.preventDefault();
+
+        roleDropdown.classList.toggle("open");
+
+        selectedRole.classList.toggle("active");
+
+    }
+
+    if (e.key === "Escape") {
+
+        roleDropdown.classList.remove("open");
+
+        selectedRole.classList.remove("active");
+
+    }
+
+});
+
+/*==============================
+        REMEMBER USER SUPPORT
+==============================*/
+
+window.addEventListener("DOMContentLoaded", function () {
+
+    const savedRole =
+        localStorage.getItem("userRole");
+
+    if (savedRole) {
+
+        roleInput.value = savedRole;
+
+        selectedRoleText.innerHTML = savedRole;
+
+    }
+
+});
+    /*=========================================
+        PAGE LOADER
+=========================================*/
+
+window.addEventListener("load", () => {
+
+    const loader = document.querySelector(".page-loader");
+
+    setTimeout(() => {
+
+        loader.style.display = "none";
+
+    }, 1800);
+
+});
+
+
+/*=========================================
+        PASSWORD SHOW / HIDE
+=========================================*/
+
+const togglePassword = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+togglePassword.addEventListener("click", () => {
+
+    const type =
+        password.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+
+    password.setAttribute("type", type);
+
+    togglePassword.classList.toggle("fa-eye");
+    togglePassword.classList.toggle("fa-eye-slash");
+
+});
+
+
+/*=========================================
+        REMEMBER ME
+=========================================*/
+
+const remember = document.getElementById("remember");
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    if (localStorage.getItem("rememberUser") === "true") {
+
+        document.getElementById("name").value =
+            localStorage.getItem("userName") || "";
+
+        document.getElementById("email").value =
+            localStorage.getItem("userEmail") || "";
+
+            const savedRole =
+    localStorage.getItem("userRole");
+
+if (savedRole) {
+
+    document.getElementById("role").value = savedRole;
+
+    document.getElementById("selectedRoleText").innerHTML = savedRole;
+
+}
+    }
+
+});
+
+
+/*=========================================
+        FORM VALIDATION
+=========================================*/
+
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    let isValid = true;
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const role =
+        document.getElementById("role").value;
+
+    const pass =
+        document.getElementById("password").value.trim();
+
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("roleError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+
+    /*============================
+            NAME
+    ============================*/
+
+    if (name === "") {
+
+        document.getElementById("nameError").innerHTML =
+            "Please enter your full name.";
+
+        isValid = false;
+
+    }
+
+    /*============================
+            EMAIL
+    ============================*/
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+
+        document.getElementById("emailError").innerHTML =
+            "Please enter your email.";
+
+        isValid = false;
+
+    } else if (!emailPattern.test(email)) {
+
+        document.getElementById("emailError").innerHTML =
+            "Please enter a valid email address.";
+
+        isValid = false;
+
+    }
+
+    /*============================
+            ROLE
+    ============================*/
+
+    if (role === "") {
+
+        document.getElementById("roleError").innerHTML =
+            "Please select your role.";
+
+        isValid = false;
+
+    }
+
+    /*============================
+            PASSWORD
+    ============================*/
+
+    if (pass === "") {
+
+        document.getElementById("passwordError").innerHTML =
+            "Please enter your password.";
+
+        isValid = false;
+
+    } else if (pass.length < 6) {
+
+        document.getElementById("passwordError").innerHTML =
+            "Password must contain at least 6 characters.";
+
+        isValid = false;
+
+    }
+
+    if (!isValid) return;
+
+    /*=====================================
+        SAVE USER DETAILS
+    =====================================*/
+
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userRole", role);
+
+    if (remember.checked) {
+
+        localStorage.setItem("rememberUser", "true");
+
+    } else {
+
+        localStorage.removeItem("rememberUser");
+
+    }
+
+    /*=====================================
+        SUCCESS POPUP
+    =====================================*/
+
+    const popup =
+        document.getElementById("successPopup");
+
+    popup.classList.add("show");
+
+    /*=====================================
+        REDIRECT
+    =====================================*/
+
+    setTimeout(() => {
+
+        if (role === "Admin") {
+
+            window.location.href = "admin-dashboard.html";
+
+        }
+
+        else if (role === "Client") {
+
+            window.location.href = "client-dashboard.html";
+
+        }
+
+        else if (role === "Employee") {
+
+            window.location.href = "employee-dashboard.html";
+
+        }
+
+        else {
+
+            window.location.href = "dashboard.html";
+
+        }
+
+    }, 2500);
+
+});
+
+
+/*=========================================
+        SOCIAL LOGIN
+=========================================*/
+
+document.querySelector(".google")
+    .addEventListener("click", function () {
+
+        alert("Google Login Integration Coming Soon.");
+
+    });
+
+document.querySelector(".microsoft")
+    .addEventListener("click", function () {
+
+        alert("Microsoft Login Integration Coming Soon.");
+
+    });
+
+document.querySelector(".linkedin")
+    .addEventListener("click", function () {
+
+        alert("LinkedIn Login Integration Coming Soon.");
+
+    });
+
+
+/*=========================================
+        INPUT ANIMATION
+=========================================*/
+
+const inputs = document.querySelectorAll("input, select");
+
+inputs.forEach((input) => {
+
+    input.addEventListener("focus", () => {
+
+        input.parentElement.style.transform = "scale(1.02)";
+
+    });
+
+    input.addEventListener("blur", () => {
+
+        input.parentElement.style.transform = "scale(1)";
+
+    });
+
+});
+
+
+/*=========================================
+        ENTER KEY LOGIN
+=========================================*/
+
+document.addEventListener("keypress", function (e) {
+
+    if (e.key === "Enter") {
+
+        form.requestSubmit();
+
+    }
+
+});
+
+
+/*=========================================
+        PREVENT BACK AFTER LOGIN
+=========================================*/
+
+history.pushState(null, null, location.href);
+
+window.onpopstate = function () {
+
+    history.go(1);
+
+};
+
+
+/*=========================================
+        WELCOME MESSAGE
+=========================================*/
+
+const currentHour = new Date().getHours();
+
+let greeting = "Welcome";
+
+if (currentHour < 12) {
+
+    greeting = "Hi welcome Good Morning !";
+
+}
+else if (currentHour < 17) {
+
+    greeting = "Hi Welcome Good Afternoon !";
+
+}
+else {
+
+    greeting = "Hi Welcome Good Evening !";
+
+}
+
+const heading = document.querySelector(".login-header h2");
+
+if (heading) {
+
+    heading.innerHTML = greeting;
+
+}
+    </script>
+
+</body>
+
+</html>
