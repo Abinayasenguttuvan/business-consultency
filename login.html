@@ -2612,6 +2612,9 @@ form.addEventListener("submit", function (e) {
 
     popup.classList.add("show");
 
+    setTimeout(() => {
+    popup.classList.remove("show");
+}, 1000);
     /*=====================================
         REDIRECT
     =====================================*/
@@ -2642,7 +2645,7 @@ form.addEventListener("submit", function (e) {
 
         }
 
-    }, 2500);
+    }, 1000);
 
 });
 
