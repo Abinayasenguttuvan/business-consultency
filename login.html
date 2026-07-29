@@ -366,6 +366,26 @@
 
             </form>
 
+            <!-- ==========================
+     SIGNUP LINK
+========================== -->
+
+<div class="signup-box">
+
+    <p>
+        Don't have an account?
+
+        <a href="register.html">
+
+            Sign Up
+
+        </a>
+
+    </p>
+
+</div>
+
+
             <!-- Divider -->
 
             <div class="divider">
@@ -476,6 +496,140 @@
     </div> -->
 
     <style>
+
+        /*=========================================
+SIGNUP LINK
+=========================================*/
+
+.signup-box{
+
+width:100%;
+
+text-align:center;
+
+margin:22px 0 10px;
+
+}
+
+.signup-box p{
+
+font-size:15px;
+
+color:#d8e3ee;
+
+line-height:1.7;
+
+}
+
+.signup-box a{
+
+color:#00e5ff;
+
+text-decoration:none;
+
+font-weight:700;
+
+margin-left:6px;
+
+transition:.35s ease;
+
+position:relative;
+
+}
+
+.signup-box a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-3px;
+
+width:0;
+
+height:2px;
+
+background:#00e5ff;
+
+transition:.35s ease;
+
+}
+
+.signup-box a:hover{
+
+color:#7ffcff;
+
+}
+
+.signup-box a:hover::after{
+
+width:100%;
+
+}
+
+@media (max-width:992px){
+
+.signup-box{
+
+    margin:20px 0 8px;
+
+}
+
+.signup-box p{
+
+    font-size:14px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.signup-box{
+
+    margin:18px 0 8px;
+
+}
+
+.signup-box p{
+
+    font-size:14px;
+
+}
+
+.signup-box a{
+
+    display:inline-block;
+
+    margin-left:4px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.signup-box{
+
+    margin:16px 0 6px;
+
+}
+
+.signup-box p{
+
+    font-size:13px;
+
+}
+
+.signup-box a{
+
+    font-size:14px;
+
+}
+
+}
         /*=========================================
         CUSTOM ROLE DROPDOWN
 =========================================*/
@@ -1069,25 +1223,15 @@ body{
 ==================================================*/
 
 .login-wrapper{
-
     max-width:1450px;
-
     margin:auto;
-
     min-height:100vh;
-
     display:flex;
-
-    align-items:center;
-
+    align-items:flex-start;   /* Changed */
     justify-content:space-between;
-
     gap:70px;
-
     padding:120px 60px 70px;
-
 }
-
 /*==================================================
         LEFT CONTENT
 ==================================================*/
